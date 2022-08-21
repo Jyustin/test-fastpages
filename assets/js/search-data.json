@@ -14,7 +14,7 @@
     
         ,"post1": {
             "title": "md",
-            "content": "THIS IS A HEADER . first post using md . this is a link to ebay . this is italizized text . this is bold text . == this should be highlighted text == .",
+            "content": "THIS IS A HEADER . this is a subheader . this is my first post using md . this is a link to ebay . this is italizized text . this is bold text .",
             "url": "https://jyustin.github.io/test-fastpages/markdown/2022/08/19/md.html",
             "relUrl": "/markdown/2022/08/19/md.html",
             "date": " • Aug 19, 2022"
