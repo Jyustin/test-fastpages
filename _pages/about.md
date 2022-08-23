@@ -1,11 +1,9 @@
 ---
 layout: page
-title: About Me
+title: About Me (Justin)
 permalink: /about/
 ---
 
-This website is powered by **[fastpages](https://github.com/fastai/fastpages)** [^1].
+### Hello! my name is Justin!
 
-
-
-[^1]:a blogging platform that natively supports Jupyter notebooks in addition to other formats.
+I am currently taking AP CSP and this is my blog for the class.
