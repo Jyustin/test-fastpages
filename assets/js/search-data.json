@@ -14,7 +14,7 @@
     
         ,"post1": {
             "title": "quizz project",
-            "content": "this is my online quiz coded in python . question1 = (&quot;how many eggs in a dozen&quot;) print(question1) input if answer == 12: print(&quot;yes&quot;) . Input In [2] input() = answer ^ SyntaxError: cannot assign to function call .",
+            "content": "this is my online quiz coded in python .",
             "url": "https://jyustin.github.io/test-fastpages/jupyter/2022/08/23/quizz.html",
             "relUrl": "/jupyter/2022/08/23/quizz.html",
             "date": " • Aug 23, 2022"
@@ -24,10 +24,10 @@
   
     
         ,"post2": {
-            "title": "Title",
-            "content": "&gt; notes - toc: true - badges: true - comments: true - categories: [jupyter] .",
-            "url": "https://jyustin.github.io/test-fastpages/2022/08/23/notes.html",
-            "relUrl": "/2022/08/23/notes.html",
+            "title": "notes for ap csp",
+            "content": "",
+            "url": "https://jyustin.github.io/test-fastpages/jupyter/2022/08/23/notes.html",
+            "relUrl": "/jupyter/2022/08/23/notes.html",
             "date": " • Aug 23, 2022"
         }
         
