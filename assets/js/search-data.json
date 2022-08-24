@@ -14,7 +14,7 @@
     
         ,"post1": {
             "title": "quizz project",
-            "content": "",
+            "content": "this is my online quiz coded in python . msg = input(&quot;Enter a greeting: &quot;) print(msg) .",
             "url": "https://jyustin.github.io/test-fastpages/jupyter/2022/08/23/quizz.html",
             "relUrl": "/jupyter/2022/08/23/quizz.html",
             "date": " • Aug 23, 2022"
