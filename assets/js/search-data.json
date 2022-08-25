@@ -46,6 +46,17 @@
   
     
         ,"post4": {
+            "title": "Title",
+            "content": "&gt; bashing - toc: true - badges: true - comments: true - categories: [jupyter] . echo &quot;Using conditional statement to create a project directory and project&quot; # Variable section export project_dir=$HOME/thisisabashtest # change vscode to different name to test git clone export project=$project_dir/test2fastpageslol # change APCSP to name of project from git clone export project_repo=&quot;https://github.com/Jyustin/test-fastpages&quot; # change to project of choice cd ~ # start in home directory # Conditional block to make a project directory if [ ! -d $project_dir ] then echo &quot;Directory $project_dir does not exists... makinng directory $project_dir&quot; mkdir -p $project_dir fi echo &quot;Directory $project_dir exists.&quot; # Conditional block to git clone a project from project_repo if [ ! -d $project ] then echo &quot;Directory $project does not exists... cloning $project_repo&quot; cd $project_dir git clone $project_repo cd ~ fi echo &quot;Directory $project exists.&quot; . Using conditional statement to create a project directory and project Directory /home/id/thisisabashtest does not exists... makinng directory /home/id/thisisabashtest Directory /home/id/thisisabashtest exists. Directory /home/id/thisisabashtest/test2fastpageslol does not exists... cloning https://github.com/Jyustin/test-fastpages Cloning into &#39;test-fastpages&#39;... remote: Enumerating objects: 1091, done. remote: Counting objects: 100% (984/984), done. remote: Compressing objects: 100% (426/426), done. remote: Total 1091 (delta 453), reused 868 (delta 399), pack-reused 107 Receiving objects: 100% (1091/1091), 9.92 MiB | 1.25 MiB/s, done. Resolving deltas: 100% (453/453), done. Directory /home/id/thisisabashtest/test2fastpageslol exists. .",
+            "url": "https://jyustin.github.io/test-fastpages/2022/08/24/bashhacks.html",
+            "relUrl": "/2022/08/24/bashhacks.html",
+            "date": " • Aug 24, 2022"
+        }
+        
+    
+  
+    
+        ,"post5": {
             "title": "md",
             "content": "THIS IS A HEADER . this is a subheader . this is my first post using md . this is a link to ebay . this is italizized text . this is bold text . this should be a picture of an orange below . .",
             "url": "https://jyustin.github.io/test-fastpages/markdown/2022/08/19/md.html",
