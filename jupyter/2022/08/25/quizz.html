@@ -148,12 +148,35 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"question 1: Name the Python output command mentioned in this lesson"</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">correct</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="nb">int</span><span class="p">(</span><span class="n">correct</span><span class="p">)</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"question 1: Name the Python output command mentioned in this lesson"</span><span class="p">)</span>
 <span class="n">answer_1</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
 <span class="k">if</span> <span class="n">answer_1</span> <span class="o">==</span> <span class="s2">"print"</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">"correct!"</span><span class="p">)</span>
+    <span class="n">correct</span> <span class="o">=</span> <span class="n">correct</span> <span class="o">+</span> <span class="mi">1</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">"wrong!"</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"question 2: If you see many lines of code in order, what would College Board call it?"</span><span class="p">)</span>
+<span class="n">answer_2</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+<span class="k">if</span> <span class="n">answer_2</span> <span class="o">==</span> <span class="s2">"sequence"</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"correct!"</span><span class="p">)</span>
+    <span class="n">correct</span> <span class="o">=</span> <span class="n">correct</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"wrong!"</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"question 3: Describe a keyword used in Python to define a function?"</span><span class="p">)</span>
+<span class="n">answer_3</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+<span class="k">if</span> <span class="n">answer_3</span> <span class="o">==</span> <span class="s2">"def"</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"correct!"</span><span class="p">)</span>
+    <span class="n">correct</span> <span class="o">=</span> <span class="n">correct</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"wrong!"</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"you got"</span><span class="p">,</span> <span class="n">correct</span><span class="p">,</span> <span class="s2">"correct!"</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -168,6 +191,11 @@ window.onload = wrap_img;
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>question 1: Name the Python output command mentioned in this lesson
 correct!
+question 2: If you see many lines of code in order, what would College Board call it?
+correct!
+question 3: Describe a keyword used in Python to define a function?
+correct!
+you got 3 !
 </pre>
 </div>
 </div>

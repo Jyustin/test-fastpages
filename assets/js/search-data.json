@@ -14,7 +14,7 @@
     
         ,"post1": {
             "title": "quizz project",
-            "content": "this is my online quiz coded in python . print(&quot;question 1: Name the Python output command mentioned in this lesson&quot;) answer_1 = input() if answer_1 == &quot;print&quot;: print(&quot;correct!&quot;) else: print(&quot;wrong!&quot;) . question 1: Name the Python output command mentioned in this lesson correct! .",
+            "content": "this is my online quiz coded in python . correct = 0 int(correct) print(&quot;question 1: Name the Python output command mentioned in this lesson&quot;) answer_1 = input() if answer_1 == &quot;print&quot;: print(&quot;correct!&quot;) correct = correct + 1 else: print(&quot;wrong!&quot;) print(&quot;question 2: If you see many lines of code in order, what would College Board call it?&quot;) answer_2 = input() if answer_2 == &quot;sequence&quot;: print(&quot;correct!&quot;) correct = correct + 1 else: print(&quot;wrong!&quot;) print(&quot;question 3: Describe a keyword used in Python to define a function?&quot;) answer_3 = input() if answer_3 == &quot;def&quot;: print(&quot;correct!&quot;) correct = correct + 1 else: print(&quot;wrong!&quot;) print(&quot;you got&quot;, correct, &quot;correct!&quot;) . question 1: Name the Python output command mentioned in this lesson correct! question 2: If you see many lines of code in order, what would College Board call it? correct! question 3: Describe a keyword used in Python to define a function? correct! you got 3 ! .",
             "url": "https://jyustin.github.io/test-fastpages/jupyter/2022/08/25/quizz.html",
             "relUrl": "/jupyter/2022/08/25/quizz.html",
             "date": " • Aug 25, 2022"
