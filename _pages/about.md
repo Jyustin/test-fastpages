@@ -11,5 +11,5 @@ I am currently taking AP CSP and this is my blog for the class.
 
 my favorite fruit is watermelon
 
-![watermelon](images/watermellon.jpg)
+![watermelon](images/watermelon.jpg)
 
