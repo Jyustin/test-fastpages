@@ -4,7 +4,9 @@ title: notes for ap csp
 permalink: /notes/
 ---
 these are some notes
+
 ###Lists and dictionaries
+
 Lists and Dictionaries can collect information. 
 You can add stuff to lists with .append(expression)
 
@@ -40,3 +42,7 @@ def recursive_loop(i):
     
 print("Recursive loop output\n")
 recursive_loop(0)
+
+
+HTML
+
