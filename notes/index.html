@@ -76,7 +76,43 @@ window.onload = wrap_img;
   </header>
 
   <div class="post-content">
-    <p>these are some notes</p>
+    <p>these are some notes
+###Lists and dictionaries
+Lists and Dictionaries can collect information. 
+You can add stuff to lists with .append(expression)</p>
+
+<p>for_loop
+this is a loop that pulls data out of a list
+def for_loop():
+    print(“For loop output\n”)
+    for record in InfoDb:
+        print_data(record)</p>
+
+<p>while_loop
+iterates through stuff similarily to for_loop, but this time it only iterates through a set amount
+ while loop algorithm contains an initial n and an index incrementing statement (n += 1)
+def while_loop():
+    print(“While loop output\n”)
+    i = 0
+    while i &lt; len(InfoDb):
+        record = InfoDb[i]
+        print_data(record)
+        i += 1
+    return</p>
+
+<p>while_loop()</p>
+
+<p>recursive loop
+this loops through itself by calling itself repeatedly.
+def recursive_loop(i):
+    if i &lt; len(InfoDb):
+        record = InfoDb[i]
+        print_data(record)
+        recursive_loop(i + 1)
+    return</p>
+
+<p>print(“Recursive loop output\n”)
+recursive_loop(0)</p>
 
   </div>
 
