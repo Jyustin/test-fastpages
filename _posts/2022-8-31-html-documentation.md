@@ -1,7 +1,7 @@
 ---
 toc: true
 layout: post
-description: experimenting using html
+description: experimenting using html, week 2
 categories: [markdown, week 2]
 title: html experiment
 ---
