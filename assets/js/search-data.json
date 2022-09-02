@@ -4,8 +4,8 @@
         "post0": {
             "title": "Jupyter note books test blog",
             "content": "print(&quot;hello real world&quot;) . hello world .",
-            "url": "https://jyustin.github.io/test-fastpages/2022/09/01/testbook.html",
-            "relUrl": "/2022/09/01/testbook.html",
+            "url": "https://jyustin.github.io/test-fastpages/python%20codes/2022/09/01/testbook.html",
+            "relUrl": "/python%20codes/2022/09/01/testbook.html",
             "date": " • Sep 1, 2022"
         }
         
@@ -48,8 +48,8 @@
         ,"post4": {
             "title": "lists and dictionaries",
             "content": "InfoDb = [] # InfoDB is a data structure with expected Keys and Values # Append to List a Dictionary of key/values related to a person and cars InfoDb.append({ &quot;FirstName&quot;: &quot;Justin&quot;, &quot;LastName&quot;: &quot;Nguyen&quot;, &quot;DOB&quot;: &quot;July 28 2006&quot;, &quot;Residence&quot;: &quot;San Diego&quot;, &quot;Email&quot;: &quot;supercatsd@gmail.com&quot;, &quot;Owns_Cars&quot;: [&quot;none&quot;] }) # Append to List a 2nd Dictionary of key/values InfoDb.append({ &quot;FirstName&quot;: &quot;bob&quot;, &quot;LastName&quot;: &quot;the&quot;, &quot;DOB&quot;: &quot;none&quot;, &quot;Residence&quot;: &quot;homeless&quot;, &quot;Email&quot;: &quot;no computer&quot;, &quot;Owns_Cars&quot;: [&quot;expensive car&quot;] }) # print function: given a dictionary of InfoDb content def print_data(d_rec): print(d_rec[&quot;FirstName&quot;], d_rec[&quot;LastName&quot;]) # using comma puts space between values print(&quot; t&quot;, &quot;Residence:&quot;, d_rec[&quot;Residence&quot;]) # t is a tab indent print(&quot; t&quot;, &quot;Birth Day:&quot;, d_rec[&quot;DOB&quot;]) print(&quot; t&quot;, &quot;Cars: &quot;, end=&quot;&quot;) # end=&quot;&quot; make sure no return occurs print(&quot;, &quot;.join(d_rec[&quot;Owns_Cars&quot;])) # join allows printing a string list with separator print() # for loop algorithm iterates on length of InfoDb def for_loop(): print(&quot;For loop output n&quot;) for record in InfoDb: print_data(record) for_loop() . For loop output Justin Nguyen Residence: San Diego Birth Day: July 28 2006 Cars: none bob the Residence: homeless Birth Day: none Cars: expensive car . dict = {&#39;1&#39;: &#39;2&#39;} for key in a_dict: print(key) . 1 .",
-            "url": "https://jyustin.github.io/test-fastpages/jupyter/2022/09/01/lists-and-dictionaries.html",
-            "relUrl": "/jupyter/2022/09/01/lists-and-dictionaries.html",
+            "url": "https://jyustin.github.io/test-fastpages/python%20codes/2022/09/01/lists-and-dictionaries.html",
+            "relUrl": "/python%20codes/2022/09/01/lists-and-dictionaries.html",
             "date": " • Sep 1, 2022"
         }
         
