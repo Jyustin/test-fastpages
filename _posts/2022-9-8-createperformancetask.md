@@ -5,6 +5,7 @@ description: ideas for a performance task
 categories: [markdown, week 3]
 title: performance task 
 ---
+<pre>
 
 ideas for performance task:
 1: simple game, perhaps snake (a line moves across a screen and grows when it passes berry units, but dies when it hits the border of the screen or hits itself)
@@ -14,7 +15,10 @@ meets row 3: will need lists for berries
 meets row 4: will need this
 meets row 5: will definetly need to use some sort of algorithm for generating berries
 meets row 6: will need functions to work
+I think this is a good idea, but I feel like it will 
+
 
 2: tic-tac-toe against a cpu (play tic-tac-toe against a cpu that randomly selects tiles, implementing cpu could be hard)
 
 3: text based adventure game (an adventure game based entirely on text by computer, pretty easy to build)
+</pre>
