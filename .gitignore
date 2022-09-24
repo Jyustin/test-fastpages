@@ -7,6 +7,9 @@ _site
 .jekyll-metadata
 *.xml
 vendor
+settings.ini
+Gemfile.lock
+images/copied_from_nb/
 _notebooks/.ipynb_checkpoints
 # Local Netlify folder
 .netlify
