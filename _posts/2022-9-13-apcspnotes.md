@@ -5,6 +5,9 @@ description: notes for apcsp topics like computing purposes and collaboration
 categories: [markdown, week 3]
 title: computing purpose and collaboration notes
 ---
+
+![]({{site.baseurl}}/images/colleg.png)
+
 # apcsp week 4 notes 
 
 ## collaboration
@@ -70,3 +73,8 @@ A statement is a single command.
 
 A group of statements is called a code segment
 
+### questions wrong
+
+I got one question on the first quiz wrong because I misread the question.
+
+I got 2 wrong on the 2nd quiz. It was sometimes hard to understand how sudo code worked and how it would run. The descriptions for the programs were also hard to understand.
