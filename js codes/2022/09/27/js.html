@@ -10,15 +10,15 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="hacks for javascript week 5" />
 <meta property="og:description" content="hacks for javascript week 5" />
-<link rel="canonical" href="https://jyustin.github.io/test-fastpages/js%20codes/2022/09/26/js.html" />
-<meta property="og:url" content="https://jyustin.github.io/test-fastpages/js%20codes/2022/09/26/js.html" />
+<link rel="canonical" href="https://jyustin.github.io/test-fastpages/js%20codes/2022/09/27/js.html" />
+<meta property="og:url" content="https://jyustin.github.io/test-fastpages/js%20codes/2022/09/27/js.html" />
 <meta property="og:site_name" content="blog for ap csp (Justin N)" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2022-09-26T00:00:00-05:00" />
+<meta property="article:published_time" content="2022-09-27T00:00:00-05:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="js/html table" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-09-26T00:00:00-05:00","datePublished":"2022-09-26T00:00:00-05:00","description":"hacks for javascript week 5","headline":"js/html table","mainEntityOfPage":{"@type":"WebPage","@id":"https://jyustin.github.io/test-fastpages/js%20codes/2022/09/26/js.html"},"url":"https://jyustin.github.io/test-fastpages/js%20codes/2022/09/26/js.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-09-27T00:00:00-05:00","datePublished":"2022-09-27T00:00:00-05:00","description":"hacks for javascript week 5","headline":"js/html table","mainEntityOfPage":{"@type":"WebPage","@id":"https://jyustin.github.io/test-fastpages/js%20codes/2022/09/27/js.html"},"url":"https://jyustin.github.io/test-fastpages/js%20codes/2022/09/27/js.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/test-fastpages/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://jyustin.github.io/test-fastpages/feed.xml" title="blog for ap csp (Justin N)" /><link rel="shortcut icon" type="image/x-icon" href="/test-fastpages/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -73,8 +73,8 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">js/html table</h1><p class="page-description">hacks for javascript week 5</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-09-26T00:00:00-05:00" itemprop="datePublished">
-        Sep 26, 2022
+    <h1 class="post-title p-name" itemprop="name headline">js/html table</h1><p class="page-description">hacks for javascript week 5</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-09-27T00:00:00-05:00" itemprop="datePublished">
+        Sep 27, 2022
       </time>
        • <span class="read-time" title="Estimated read time">
     
@@ -140,7 +140,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-javascript"><pre><span></span><span class="kd">var</span> <span class="nx">msg</span> <span class="o">=</span> <span class="s2">"Hello, World!"</span><span class="p">;</span>
+<div class=" highlight hl-javascript"><pre><span></span><span class="kd">var</span> <span class="nx">msg</span> <span class="o">=</span> <span class="s2">"Hello, Worldo!"</span><span class="p">;</span>
 
 
 <span class="kd">function</span> <span class="nx">logIt</span><span class="p">(</span><span class="nx">output</span><span class="p">)</span> <span class="p">{</span>
@@ -206,52 +206,50 @@ window.onload = wrap_img;
 <span class="nx">compsci</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Classroom</span><span class="p">(</span><span class="nx">teacher</span><span class="p">,</span> <span class="nx">students</span><span class="p">);</span>
 
 
-
-
-
 <span class="c1">// define an HTML conversion "method" associated with Classroom</span>
 <span class="nx">Classroom</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">_toHtml</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="c1">// HTML Style is build using inline structure</span>
-    <span class="kd">var</span> <span class="nx">style</span> <span class="o">=</span> <span class="p">(</span>
-      <span class="s2">"display:inline-block;"</span> <span class="o">+</span>
-      <span class="s2">"border: 2px solid grey;"</span> <span class="o">+</span>
-      <span class="s2">"box-shadow: 0.8em 0.4em 0.4em grey;"</span>
-    <span class="p">);</span>
-  
-    <span class="c1">// HTML Body of Table is build as a series of concatenations (+=)</span>
-    <span class="kd">var</span> <span class="nx">body</span> <span class="o">=</span> <span class="s2">""</span><span class="p">;</span>
-    <span class="c1">// Heading for Array Columns</span>
+  <span class="c1">// HTML Style is build using inline structure</span>
+  <span class="kd">var</span> <span class="nx">style</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s2">"display:inline-block;"</span> <span class="o">+</span>
+    <span class="s2">"border: 2px solid red;"</span> <span class="o">+</span>
+    <span class="s2">"box-shadow: 0.8em 0.4em 0.4em blue;"</span>
+  <span class="p">);</span>
+
+  <span class="c1">// HTML Body of Table is build as a series of concatenations (+=)</span>
+  <span class="kd">var</span> <span class="nx">body</span> <span class="o">=</span> <span class="s2">""</span><span class="p">;</span>
+  <span class="c1">// Heading for Array Columns</span>
+  <span class="nx">body</span> <span class="o">+=</span> <span class="s2">"&lt;tr&gt;"</span><span class="p">;</span>
+  <span class="nx">body</span> <span class="o">+=</span> <span class="s2">"&lt;th&gt;&lt;u&gt;"</span> <span class="o">+</span> <span class="s2">"Name"</span> <span class="o">+</span> <span class="s2">"&lt;/u&gt;&lt;/th&gt;"</span><span class="p">;</span>
+  <span class="nx">body</span> <span class="o">+=</span> <span class="s2">"&lt;th&gt;&lt;u&gt;"</span> <span class="o">+</span> <span class="s2">"GitHub ID"</span> <span class="o">+</span> <span class="s2">"&lt;/u&gt;&lt;/th&gt;"</span><span class="p">;</span>
+  <span class="nx">body</span> <span class="o">+=</span> <span class="s2">"&lt;th&gt;&lt;u&gt;"</span> <span class="o">+</span> <span class="s2">"Class Of"</span> <span class="o">+</span> <span class="s2">"&lt;/u&gt;&lt;/th&gt;"</span><span class="p">;</span>
+  <span class="nx">body</span> <span class="o">+=</span> <span class="s2">"&lt;th&gt;&lt;u&gt;"</span> <span class="o">+</span> <span class="s2">"Role"</span> <span class="o">+</span> <span class="s2">"&lt;/u&gt;&lt;/th&gt;"</span><span class="p">;</span>
+  <span class="nx">body</span> <span class="o">+=</span> <span class="s2">"&lt;/tr&gt;"</span><span class="p">;</span>
+  <span class="c1">// Data of Array, iterate through each row of compsci.classroom </span>
+  <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">row</span> <span class="k">of</span> <span class="nx">compsci</span><span class="p">.</span><span class="nx">classroom</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// tr for each row, a new line</span>
     <span class="nx">body</span> <span class="o">+=</span> <span class="s2">"&lt;tr&gt;"</span><span class="p">;</span>
-    <span class="nx">body</span> <span class="o">+=</span> <span class="s2">"&lt;th&gt;"</span> <span class="o">+</span> <span class="s2">"Name"</span> <span class="o">+</span> <span class="s2">"&lt;/th&gt;"</span><span class="p">;</span>
-    <span class="nx">body</span> <span class="o">+=</span> <span class="s2">"&lt;th&gt;"</span> <span class="o">+</span> <span class="s2">"GitHub ID"</span> <span class="o">+</span> <span class="s2">"&lt;/th&gt;"</span><span class="p">;</span>
-    <span class="nx">body</span> <span class="o">+=</span> <span class="s2">"&lt;th&gt;"</span> <span class="o">+</span> <span class="s2">"Class Of"</span> <span class="o">+</span> <span class="s2">"&lt;/th&gt;"</span><span class="p">;</span>
-    <span class="nx">body</span> <span class="o">+=</span> <span class="s2">"&lt;th&gt;"</span> <span class="o">+</span> <span class="s2">"Role"</span> <span class="o">+</span> <span class="s2">"&lt;/th&gt;"</span><span class="p">;</span>
-    <span class="nx">body</span> <span class="o">+=</span> <span class="s2">"&lt;/tr&gt;"</span><span class="p">;</span>
-    <span class="c1">// Data of Array, iterate through each row of compsci.classroom </span>
-    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">row</span> <span class="k">of</span> <span class="nx">compsci</span><span class="p">.</span><span class="nx">classroom</span><span class="p">)</span> <span class="p">{</span>
-      <span class="c1">// tr for each row, a new line</span>
-      <span class="nx">body</span> <span class="o">+=</span> <span class="s2">"&lt;tr&gt;"</span><span class="p">;</span>
-      <span class="c1">// td for each column of data</span>
-      <span class="nx">body</span> <span class="o">+=</span> <span class="s2">"&lt;td&gt;"</span> <span class="o">+</span> <span class="nx">row</span><span class="p">.</span><span class="nx">name</span> <span class="o">+</span> <span class="s2">"&lt;/td&gt;"</span><span class="p">;</span>
-      <span class="nx">body</span> <span class="o">+=</span> <span class="s2">"&lt;td&gt;"</span> <span class="o">+</span> <span class="nx">row</span><span class="p">.</span><span class="nx">ghID</span> <span class="o">+</span> <span class="s2">"&lt;/td&gt;"</span><span class="p">;</span>
-      <span class="nx">body</span> <span class="o">+=</span> <span class="s2">"&lt;td&gt;"</span> <span class="o">+</span> <span class="nx">row</span><span class="p">.</span><span class="nx">classOf</span> <span class="o">+</span> <span class="s2">"&lt;/td&gt;"</span><span class="p">;</span>
-      <span class="nx">body</span> <span class="o">+=</span> <span class="s2">"&lt;td&gt;"</span> <span class="o">+</span> <span class="nx">row</span><span class="p">.</span><span class="nx">role</span> <span class="o">+</span> <span class="s2">"&lt;/td&gt;"</span><span class="p">;</span>
-      <span class="c1">// tr to end line</span>
-      <span class="nx">body</span> <span class="o">+=</span> <span class="s2">"&lt;tr&gt;"</span><span class="p">;</span>
-    <span class="p">}</span>
-  
-     <span class="c1">// Build and HTML fragment of div, table, table body</span>
-    <span class="k">return</span> <span class="p">(</span>
-        <span class="s2">"&lt;table&gt;"</span> <span class="o">+</span>
-          <span class="nx">body</span> <span class="o">+</span>
-        <span class="s2">"&lt;/table&gt;"</span> <span class="o">+</span>
-      <span class="s2">"&lt;/div&gt;"</span>
-    <span class="p">);</span>
-  
-  <span class="p">};</span>
-  
-  <span class="c1">// IJavaScript HTML processor receive parameter of defined HTML fragment</span>
-  <span class="nx">$$</span><span class="p">.</span><span class="nx">html</span><span class="p">(</span><span class="nx">compsci</span><span class="p">.</span><span class="nx">_toHtml</span><span class="p">());</span>
+    <span class="c1">// td for each column of data</span>
+    <span class="nx">body</span> <span class="o">+=</span> <span class="s2">"&lt;td&gt;"</span> <span class="o">+</span> <span class="nx">row</span><span class="p">.</span><span class="nx">name</span> <span class="o">+</span> <span class="s2">"&lt;/td&gt;"</span><span class="p">;</span>
+    <span class="nx">body</span> <span class="o">+=</span> <span class="s2">"&lt;td&gt;"</span> <span class="o">+</span> <span class="nx">row</span><span class="p">.</span><span class="nx">ghID</span> <span class="o">+</span> <span class="s2">"&lt;/td&gt;"</span><span class="p">;</span>
+    <span class="nx">body</span> <span class="o">+=</span> <span class="s2">"&lt;td&gt;"</span> <span class="o">+</span> <span class="nx">row</span><span class="p">.</span><span class="nx">classOf</span> <span class="o">+</span> <span class="s2">"&lt;/td&gt;"</span><span class="p">;</span>
+    <span class="nx">body</span> <span class="o">+=</span> <span class="s2">"&lt;td&gt;"</span> <span class="o">+</span> <span class="nx">row</span><span class="p">.</span><span class="nx">role</span> <span class="o">+</span> <span class="s2">"&lt;/td&gt;"</span><span class="p">;</span>
+    <span class="c1">// tr to end line</span>
+    <span class="nx">body</span> <span class="o">+=</span> <span class="s2">"&lt;tr&gt;"</span><span class="p">;</span>
+  <span class="p">}</span>
+
+   <span class="c1">// Build and HTML fragment of div, table, table body</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="s2">"&lt;div style='"</span> <span class="o">+</span> <span class="nx">style</span> <span class="o">+</span> <span class="s2">"'&gt;"</span> <span class="o">+</span>
+      <span class="s2">"&lt;table&gt;"</span> <span class="o">+</span>
+        <span class="nx">body</span> <span class="o">+</span>
+      <span class="s2">"&lt;/table&gt;"</span> <span class="o">+</span>
+    <span class="s2">"&lt;/div&gt;"</span>
+  <span class="p">);</span>
+
+<span class="p">};</span>
+
+<span class="c1">// IJavaScript HTML processor receive parameter of defined HTML fragment</span>
+<span class="nx">$$</span><span class="p">.</span><span class="nx">html</span><span class="p">(</span><span class="nx">compsci</span><span class="p">.</span><span class="nx">_toHtml</span><span class="p">());</span>
 </pre></div>
 
     </div>
@@ -265,12 +263,12 @@ window.onload = wrap_img;
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
-<table>
+<div style="display:inline-block;border: 2px solid red;box-shadow: 0.8em 0.4em 0.4em blue;"><table>
 <tr>
-<th>Name</th>
-<th>GitHub ID</th>
-<th>Class Of</th>
-<th>Role</th>
+<th><u>Name</u></th>
+<th><u>GitHub ID</u></th>
+<th><u>Class Of</u></th>
+<th><u>Role</u></th>
 </tr>
 <tr>
 <td>Mr M</td>
@@ -314,7 +312,7 @@ window.onload = wrap_img;
  
 
 </tr>
-</table>
+</table></div>
 </div>
 </div>
 </div>
@@ -331,7 +329,7 @@ window.onload = wrap_img;
         theme="github-light"
         crossorigin="anonymous"
         async>
-</script><a class="u-url" href="/test-fastpages/js%20codes/2022/09/26/js.html" hidden></a>
+</script><a class="u-url" href="/test-fastpages/js%20codes/2022/09/27/js.html" hidden></a>
 </article>
 
       </div>
