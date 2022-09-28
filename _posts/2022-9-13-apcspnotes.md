@@ -73,6 +73,52 @@ A statement is a single command.
 
 A group of statements is called a code segment
 
+## Program design and development
+
+How is program developed?
+
+start with idea
+
+developed with specific purpose in mind
+
+create plan.
+
+sometimes development is exploratory. discovering the new.
+
+developers investigate problem and reflect. investigation is important in development.
+
+determine constraints, user concerns, requirements.
+
+after investigating developers design program
+
+-brainstorm ideas
+
+-plan user experience
+
+How is program developed?
+
+developers decide on program requirements, then use outline to make prototype.
+
+make sure program is tested.
+
+refine and revise program based on reflection
+
+test
+
+### working with others on development
+
+program development is usually team based.
+
+Individuals work on different components. 
+
+MAKE SURE TO CREDIT OTHERS. NAMES MUST BE WRITTEN IN DOCUMENTATION. GIVE CREDIT WHERE CREDIT IT DUE, EVEN FOR SMALL THINGS.
+
+you can use comments to give credit 
+
+you can also use comment to notify bugs.
+
+using other's code segments is useful in saving time. You can use other's code segments but you have to give credit in documentation.
+
 ### questions wrong
 
 I got one question on the first quiz wrong because I misread the question.
