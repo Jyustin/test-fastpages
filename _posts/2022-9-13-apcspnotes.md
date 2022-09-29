@@ -119,8 +119,24 @@ you can also use comment to notify bugs.
 
 using other's code segments is useful in saving time. You can use other's code segments but you have to give credit in documentation.
 
+Program documentation is a description of code segments, programs,and how it was developed.
+
+Program documentation describes program, its requirements, its functions/methods, and it's development, as well as contributors. 
+
+documentation improves productivity. it is helpful to remember 
+things and tell others what you were thinking.
+
+comments are the best way to do documentation. use good comments to remind yourself of stuff or help other programmers know what you were thinking  
+
+Use comments to help others who read your code
+
+
 ### questions wrong
 
 I got one question on the first quiz wrong because I misread the question.
 
 I got 2 wrong on the 2nd quiz. It was sometimes hard to understand how sudo code worked and how it would run. The descriptions for the programs were also hard to understand.
+
+I got all 3 right on the last quiz, but the 2nd question was kind of hard to understand.
+
+![]({{site.baseurl}}/images/question.png)
