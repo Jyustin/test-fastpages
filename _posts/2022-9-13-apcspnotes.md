@@ -8,6 +8,10 @@ title: computing purpose and collaboration notes
 
 ![]({{site.baseurl}}/images/colleg.png)
 
+
+![]({{site.baseurl}}/images/internetquiz.png)
+
+
 # apcsp week 4 notes 
 
 ## collaboration
@@ -129,6 +133,33 @@ things and tell others what you were thinking.
 comments are the best way to do documentation. use good comments to remind yourself of stuff or help other programmers know what you were thinking  
 
 Use comments to help others who read your code
+
+# 4.1 
+
+## how do computers connect to network?
+
+computers used to not be able to communicate along networks. now computers can send and recieve data. this data is transfered in packets. Packets have source and destination. Packets like envelopes.
+
+packet switching: a msg is broken into packets and sent. the packets are rebuilt on the recipients device.
+
+Bandwidth is max amount of data sent in a fixed amount of time on computer network.
+
+Packets help move data a little bit at a time.
+
+## how does the internet work?
+
+Protocol is agreed-upon set of rules the specify behavior of system.
+
+protocols dictate rules for info being transferred, data goes thru layers.
+
+Network access Layer. data hops from our computer to internet Layer Data Transmission.
+
+Data Transmission: data goes through routers and go through paths. no definite path.
+
+Transport Layer: TCP looks over packets fixes errors. UCP is more lax.
+
+Application layer: ips are changed to names. 
+
 
 
 ### questions wrong
