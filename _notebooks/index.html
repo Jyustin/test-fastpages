@@ -1,0 +1,65 @@
+{% extends "layouts/base.html" %}
+{% set project = "Home" %}
+
+{% block body %}
+    <!-- Start of body content specific to page -->
+    <div class="px-5 py-5 mx-auto">
+        <h1 class="text-black"><strong>Overview of Our Tetris Project</strong></h1>
+        <div class="row">
+            <div class="col-4">
+                <div class="card">
+                    <img class="card-img-top" src="{{ url_for('static', filename='assets/agdiagram.png') }}" alt="Python Development" height="400">
+                    <div class="card-body">
+                    <h5 class="card-title">What is <mark>our project</mark>? What will we be using?</h5>
+                    <p class="card-text">
+                        <ol>
+                            <li>Our project is remaking and coding our own version of Tetris!</li>
+                            <li>We will utilize Visuals Studio Code (VS Code) as our primary editor, Interactive Development Environment (IDE).</li>
+                            <li>We will utilize GitHub to control and share our code, its changes, branches, pull requests, issues, and more will be through GitHub.</li>
+                            <li>DevOps. Python programmers should have a passion for managing the environment and learning automation (Git, Linux, Bash, Python Packages, Docker).</li>
+                        </ol>
+                    </p>
+                    <a href={{url_for('ProgramFP')}} class="btn btn-primary">More about our Program's Purpose/Function!</a>
+                    </div>
+                </div>
+            </div> 
+            <div class="col-4">
+                <div class="card">
+                    <img class="card-img-top" src="{{ url_for('static', filename='assets/tetris.jpeg') }}" alt="Flask Development" height="350">
+                    <div class="card-body">
+                    <h5 class="card-title">Where does <mark>Tetris</mark> originate from?</h5>
+                    <p class="card-text">
+                        <ol>
+                            <li>Tetris originates from Moscow.</li>
+                            <li>The creator of this game is Alexey Pajitnov based on one of his favorite childhood games.</li>
+                            <li>At Soviet Academy of Sciences, Alexey Pajitnov works as a software engineer unintentionally created this game</li>
+                        </ol>
+                    </p>
+                    <a href="https://tetris.com/play-tetris/" class="btn btn-primary">Actual Tetris Game</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card">
+                    <img class="code.png" src="{{ url_for('static', filename='assets/code.png') }}" alt="Code Photo" height="250">
+                    <div class="card-body">
+                    <h5 class="card-title">Interested in <mark>the code</mark>?</h5>
+                    <p class="card-text">
+                        <ol>
+                            <li>Our game is written in these 2 languages: JavaScript and HTML.</li>
+                            <li>HTML will be used for the frontend coding; things like block color, size...</li>
+                            <li>JavaScript will be used for things like calculating the user's score saving the user's data onto a score board...</li>
+                        </ol>
+                    </p>
+                    <a href="https://peacock.ml/game/" class="btn btn-primary">Click here to play our game!</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+{% endblock %}
+
+<!- This is turning off birds background from base.html -->
+{% block background %}
+{% endblock %}
