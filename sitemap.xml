@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>https://jyustin.github.io/test-fastpages/final%20week/2022/04/11/Nightmuseum.html</loc>
-<lastmod>2022-04-11T00:00:00-05:00</lastmod>
+<loc>https://jyustin.github.io/test-fastpages/final%20week/2022/04/06/Nightmuseum.html</loc>
+<lastmod>2022-04-06T00:00:00-05:00</lastmod>
+</url>
+<url>
+<loc>https://jyustin.github.io/test-fastpages/final%20week/2022/04/07/final.html</loc>
+<lastmod>2022-04-07T00:00:00-05:00</lastmod>
 </url>
 <url>
 <loc>https://jyustin.github.io/test-fastpages/markdown/week%200/2022/08/19/md.html</loc>
@@ -149,5 +153,8 @@
 </url>
 <url>
 <loc>https://jyustin.github.io/test-fastpages/page2/</loc>
+</url>
+<url>
+<loc>https://jyustin.github.io/test-fastpages/page3/</loc>
 </url>
 </urlset>
