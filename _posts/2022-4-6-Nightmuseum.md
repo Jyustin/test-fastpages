@@ -8,10 +8,10 @@ title: Night at the Museum reflection
 
 # looking at other's projects
 
-Our team spent a lot of time at N@TM trying to scrap together an API to present, so we didn't have much time to view other's projects. I did get a chance to see one teams project though. They were a clock website that would give the user time from certain times zones, as well as a alarm system. I was pretty impressed by their work. They explained to me that their project was a javacript file that drew from a different file with all the information about the timezones. their frontend and backend were well defined, unlike our project, which did not really have defined frontend/backend. 
+Our team spent a lot of time at N@TM trying to scrap together an API to present, so we didn't have much time to view other's projects. I did get a chance to see one teams project though. They were a clock website that would give the user time from certain times zones, as well as a alarm system. I was pretty impressed by their work. They explained to me that their project was a javascript file that drew from a different file with all the information about the timezones. their frontend and backend were well defined, unlike our project, which did not really have defined frontend/backend. 
 
 
-I also looked at another project with information about stocks. What impressed me the most was the fact that the project was very sleek and professional. Hopefully next time the project I work on will be nice and neat. It really made me feel like the project was something well designed. 
+I also looked at another project with information about stocks. What impressed me the most was the fact that the project was very sleek and professional. Hopefully next time the project I work on will be nice and neat. It really made me feel like the project was something well designed. I also felt like the roles of their team were very well defined. I feel like with our team, the roles of our team were very flexible, but they were not well defined. I think better structure of the team would possibly help our team in the future. I guess what I take from this is that frontend development and a clean frontend are essential to creating the image of a stable, functioning program/product. 
 
 
 # Reflection 
