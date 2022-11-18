@@ -35,7 +35,7 @@ add 16 more lightbulbs -->
             </tr>
             <tr>
                 <td><button type="button" id="add1" onclick="add(1)">+1</button></td>
-                <td id="binary">000000000000000000000000</td>
+                <td id="binary">00000000</td>
                 <td id="octal">0</td>
                 <td id="hexadecimal">0</td>
                 <td id="decimal">0</td>
@@ -76,6 +76,8 @@ add 16 more lightbulbs -->
                 <td><input type='text' id="numb3{{ i }}" Value="0" size="1" readonly></td>
                 <td><input type='text' id="numb2{{ i }}" Value="0" size="1" readonly></td>
                 <td><input type='text' id="numb1{{ i }}" Value="0" size="1" readonly></td>
+            <td><button type="button" id="butt{{ i }}" onclick="javascript:on()">add 1</button></td>
+            </tr>
             </table>
         </div>
     </div>
@@ -225,9 +227,6 @@ add 16 more lightbulbs -->
         }
         }
     }
-    function lights() {
-        if (binary = 111111111111111111111111) {
-            console.log("all on")}}
     function decimal() {
         over = document.getElementById("binary").innerHTML;
         console.log(over)
@@ -236,6 +235,17 @@ add 16 more lightbulbs -->
         }
         return(over)
                }
+    function on() {
+        one = document.getElementById("decimal").innerHTML;
+        one = parseInt(one)
+        one = one + 2
+        console.log(one)
+        alert("added two, " + one)
+
+        if (one > 256) {
+            alert("overflow")
+        }
+    }
             
 
 
