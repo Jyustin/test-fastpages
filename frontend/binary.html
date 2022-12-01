@@ -168,6 +168,16 @@ add 16 more lightbulbs -->
                 
             </tr>
             <tr><td id="is0n"></td></tr>
+                <td><input type="text" id="numb8" value="0" size="1" readonly="" /></td>
+                <td><input type="text" id="numb7" value="0" size="1" readonly="" /></td>
+                <td><input type="text" id="numb6" value="0" size="1" readonly="" /></td>
+                <td><input type="text" id="numb5" value="0" size="1" readonly="" /></td>
+                <td><input type="text" id="numb4" value="0" size="1" readonly="" /></td>
+                <td><input type="text" id="numb3" value="0" size="1" readonly="" /></td>
+                <td><input type="text" id="numb2" value="0" size="1" readonly="" /></td>
+                <td><input type="text" id="numb1" value="0" size="1" readonly="" /></td>
+            <td><button type="button" id="butt" onclick="javascript:on()">add 1 to decimal</button></td>
+            &lt;/tr&gt;
             <tr>
                 
                 <td><input type="text" id="numbers0" value="0" size="1" readonly="" /></td>
@@ -186,16 +196,6 @@ add 16 more lightbulbs -->
                 
                 <td><input type="text" id="numbers7" value="0" size="1" readonly="" /></td>
                 </tr>
-                <td><input type="text" id="numb8" value="0" size="1" readonly="" /></td>
-                <td><input type="text" id="numb7" value="0" size="1" readonly="" /></td>
-                <td><input type="text" id="numb6" value="0" size="1" readonly="" /></td>
-                <td><input type="text" id="numb5" value="0" size="1" readonly="" /></td>
-                <td><input type="text" id="numb4" value="0" size="1" readonly="" /></td>
-                <td><input type="text" id="numb3" value="0" size="1" readonly="" /></td>
-                <td><input type="text" id="numb2" value="0" size="1" readonly="" /></td>
-                <td><input type="text" id="numb1" value="0" size="1" readonly="" /></td>
-            <td><button type="button" id="butt" onclick="javascript:on()">add 1</button></td>
-            &lt;/tr&gt;
             </table>
         </div>
     </div>
@@ -358,10 +358,10 @@ add 16 more lightbulbs -->
         one = parseInt(one)
         one = one + 2
         console.log(one)
-        alert("added two, " + one)
-
         if (one > 256) {
-            alert("overflow")
+            alert("overflow, is not printable")
+        } else if (one < 256) {
+            alert("added two, " + one)
         }
     }
             
