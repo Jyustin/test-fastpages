@@ -64,10 +64,6 @@ add 16 more lightbulbs -->
                 {% endfor %}
             </tr>
             <tr><td id="is0n"></td></tr>
-            <tr>{% comment %}Value of bit{% endcomment %}
-                {% for i in (0..bits) %}
-                <td><input type='text' id="numbers{{ i }}" Value="0" size="1" readonly></td>
-                {% endfor %}</tr>
                 <td><input type='text' id="numb8{{ i }}" Value="0" size="1" readonly></td>
                 <td><input type='text' id="numb7{{ i }}" Value="0" size="1" readonly></td>
                 <td><input type='text' id="numb6{{ i }}" Value="0" size="1" readonly></td>
@@ -76,8 +72,12 @@ add 16 more lightbulbs -->
                 <td><input type='text' id="numb3{{ i }}" Value="0" size="1" readonly></td>
                 <td><input type='text' id="numb2{{ i }}" Value="0" size="1" readonly></td>
                 <td><input type='text' id="numb1{{ i }}" Value="0" size="1" readonly></td>
-            <td><button type="button" id="butt{{ i }}" onclick="javascript:on()">add 1</button></td>
+            <td><button type="button" id="butt{{ i }}" onclick="javascript:on()">add 1 to decimal</button></td>
             </tr>
+            <tr>{% comment %}Value of bit{% endcomment %}
+                {% for i in (0..bits) %}
+                <td><input type='text' id="numbers{{ i }}" Value="0" size="1" readonly></td>
+                {% endfor %}</tr>
             </table>
         </div>
     </div>
@@ -240,10 +240,10 @@ add 16 more lightbulbs -->
         one = parseInt(one)
         one = one + 2
         console.log(one)
-        alert("added two, " + one)
-
         if (one > 256) {
-            alert("overflow")
+            alert("overflow, is not printable")
+        } else if (one < 256) {
+            alert("added two, " + one)
         }
     }
             
