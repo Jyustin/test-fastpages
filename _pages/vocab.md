@@ -20,3 +20,8 @@ iteration: when something is repeated. usually done using loops. REPEAT N TIMES 
 conditional statements: when the code acts based on different conditions based on user input or stored data.
 
 NESTED CONDITIONAL: conditional statement in a conditional statement
+
+Sequencing: when you do certain steps in order, for example, doing the first step then the second then the third, etc.
+
+Selection: when the programmer decides between two different outcomes.
+
