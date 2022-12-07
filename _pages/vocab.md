@@ -16,6 +16,10 @@ permalink: /vocab/
 | NESTED CONDITIONAL     | conditional statement in a conditional statement                                                           |
 | Sequencing             | when you do certain steps in order, for example, doing the first step then the second then the third, etc. |
 | Selection              | when the programmer decides between two different outcomes.                                                |
+| variable               | a way of storing information in a computer program, which could later be changed, referenced, and used     |
+| objects                | a structure that can take on a data-type value                                                             |
+
+
 
 
 
