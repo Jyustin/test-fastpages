@@ -5,7 +5,7 @@ permalink: /vocab/
 ---
 
 
-|       vocab term       |                                                 definition                                                 |
+|   basic vocab terms    |                                                 definition                                                 |
 |:----------------------:|:----------------------------------------------------------------------------------------------------------:|
 | list                   | data type that can have data appended to it with .append(expression).                                      |
 | dictionary             | data type that stores data in key:value pairs                                                              |
@@ -18,8 +18,8 @@ permalink: /vocab/
 | Selection              | when the programmer decides between two different outcomes.                                                |
 | variable               | a way of storing information in a computer program, which could later be changed, referenced, and used     |
 | objects                | a structure that can take on a data-type value                                                             |
-
-
+| Boolean information    |                                                                                                            |
+f
 
 
 
