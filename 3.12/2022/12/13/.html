@@ -310,7 +310,7 @@ Qais is writing code to calculate formulas from his math class. He's currently w
 <p>Highlight which of these is the best procedure for calculating and displaying average speed.</p>
 <p>PROCEDURE calcAvgSpeed (distance, time) { DISPLAY (distance/time) }</p>
 <p>PROCEDURE calcAvgSpeed (distance) { DISPLAY (distance/time) }</p>
-<p><code>PROCEDURE calcAvgSpeed (distance, time) { DISPLAY (time/distance) }</code></p>
+<p><code>PROCEDURE calcAvgSpeed (distance, time) { DISPLAY (time/distance) }</code> This is the correct equation, the others have the wrong equation or don't add the extra variables needed.</p>
 <p>Problem 2: Procedures with return values</p>
 <p>James Hunter is looking through his classmate's program and sees a procedure called heightenEmotions: PROCEDURE heightenEmotions(myEmotion)</p>
 <p>{ moreEnergy ← CONCAT(myEmotion, "!!!")</p>
@@ -331,9 +331,9 @@ Bubz is writing a program to calculate the carbon footprint of his activities. T
 <p>}</p>
 <p>Bubz wants to use that procedure to calculate the total footprint for his two upcoming flights: LA to NY: 2,451 miles and 118 passengers NY to London: 3,442 miles and 252 passengers</p>
 <p>Which of these code snippets successfully calculates and stores her total footprint? Highlight 2 answers.</p>
-<p><code>totalFootprint ← calcFlightFootprint(2451, 118) + calcFlightFootprint(3442, 252)</code></p>
+<p><code>totalFootprint ← calcFlightFootprint(2451, 118) + calcFlightFootprint(3442, 252)</code> this is adding the 2 flights co2 production seperately</p>
 <p>totalFootprint ← calcFlightFootprint(2451, 118 + 3442, 252)</p>
-<p><code>totalFootprint ← calcFlightFootprint((2451, 118) + (3442, 252))</code></p>
+<p><code>totalFootprint ← calcFlightFootprint((2451, 118) + (3442, 252))</code> this is summing up the passengers and miles and then calculating the total flight footprint</p>
 <p>laNyCarbon ← calcFlightFootprint(2451, 118) nyLondonCarbon ← calcFlightFootprint(3442, 252) totalFootprint ← laNyCarbon + nyLondonCarbon</p>
 
 </div>
