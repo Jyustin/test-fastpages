@@ -64,3 +64,4 @@ I also learned that learning problem solving skills and critical thinking skills
 
 Lastly, I learned that agile methodology and planning are huge parts of projects in Stem and software development that should not be disregarded.
 
+![]({{site.baseurl}}/images/image0.jpeg)  
