@@ -19,9 +19,39 @@ permalink: /vocab/
 | variable               | a way of storing information in a computer program, which could later be changed, referenced, and used     |
 | objects                | a structure that can take on a data-type value                                                             |
 | Boolean information    |                                                                                                            |
-f
 
+# code vocab
 
+### if, else, and elif statements
+
+an if statement will run a set of code if a certain requirement is met. adding else will mean another piece of code runs if the requirement is not met.
+
+lastly, elif means that if that first condition is not met but the other is, that code in the elif will run. 
+
+code example below 
+
+``if (time < 10) {
+  greeting = "Good morning";
+} else if (time < 20) {
+  greeting = "Good day";
+} else {
+  greeting = "Good evening";
+}``
+
+### nested statements
+
+a nested statement will just be that statement within the same statement. 
+
+example:
+
+if a = 2:
+    if b = 3:
+        print("ok")
+        this would be a nested if statement as it is an if statement in an if statement
+
+### for and while loops
+
+these are loops that iterate through something or keep something running
 
 
 
