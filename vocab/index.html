@@ -129,8 +129,36 @@ window.onload = wrap_img;
       <td style="text-align: center">a structure that can take on a data-type value</td>
     </tr>
     <tr>
-      <td style="text-align: center">Boolean information</td>
-      <td style="text-align: center"> </td>
+      <td style="text-align: center">Concatenation</td>
+      <td style="text-align: center">when you add strings or integers together. can’t add strings and integers</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Hexadecimal</td>
+      <td style="text-align: center">numbering system from 1-16. 1-9 are numbers and 9-16 go from a-f</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">bits</td>
+      <td style="text-align: center">A binary digit, either 0 or 1</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">bytes</td>
+      <td style="text-align: center">group of binary digits operating as a unit</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">floating point</td>
+      <td style="text-align: center">positive or negative numbers that can include decimals</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">.upper</td>
+      <td style="text-align: center">simply makes a string uppercase</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">.lower</td>
+      <td style="text-align: center">changes string to lowercase</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">RGB</td>
+      <td style="text-align: center">a mix of colors using binary. (x, y, z) determines color, x is red, y is green, z is blue. 0 is dark</td>
     </tr>
   </tbody>
 </table>
@@ -159,14 +187,86 @@ window.onload = wrap_img;
 
 <p>example:</p>
 
-<p>if a = 2:
+<p><code class="language-plaintext highlighter-rouge">if a = 2:
     if b = 3:
-        print(“ok”)
-        this would be a nested if statement as it is an if statement in an if statement</p>
+        print("ok")
+        this would be a nested if statement as it is an if statement in an if statement</code></p>
 
 <h3 id="for-and-while-loops">for and while loops</h3>
 
 <p>these are loops that iterate through something or keep something running</p>
+
+<p><code class="language-plaintext highlighter-rouge">i = 1
+while i &lt; 6:
+  print(i)
+  i += 1</code></p>
+
+<p><code class="language-plaintext highlighter-rouge">fruits = ["apple", "banana", "cherry"]
+for x in fruits:
+  print(x)</code></p>
+
+<p><code class="language-plaintext highlighter-rouge">for x in range(2, 6):
+  print(x)</code>
+this one uses range, printing all numbers from 2 to 5</p>
+
+<h3 id="boolean-expression">Boolean expression</h3>
+
+<p>statements that can be true or false</p>
+
+<p>``a = 200
+b = 33</p>
+
+<p>if b &gt; a:
+  print(“b is greater than a”)
+else:
+  print(“b is not greater than a”)``</p>
+
+<p>this is boolean expression because the 2 outputs are true or false.</p>
+
+<p>### simple concatenation ex:</p>
+
+<p><code class="language-plaintext highlighter-rouge">a = 1
+b = 2
+print(a + b)</code>
+plus sign is concatenation</p>
+
+<h3 id="truth-tables">truth tables</h3>
+
+<p>truth tables essentially can be used to simplify code and show what the outputs for things can be</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>x</th>
+      <th>y</th>
+      <th>x &amp; y</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>t</td>
+      <td>t</td>
+      <td>t</td>
+    </tr>
+    <tr>
+      <td>t</td>
+      <td>f</td>
+      <td>f</td>
+    </tr>
+    <tr>
+      <td>f</td>
+      <td>t</td>
+      <td>f</td>
+    </tr>
+    <tr>
+      <td>f</td>
+      <td>f</td>
+      <td>f</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>example</p>
 
 
   </div>
