@@ -54,10 +54,10 @@ a nested statement will just be that statement within the same statement.
 
 example:
 
-if a = 2:
+``if a = 2:
     if b = 3:
         print("ok")
-        this would be a nested if statement as it is an if statement in an if statement
+        this would be a nested if statement as it is an if statement in an if statement``
 
 ### for and while loops
 
