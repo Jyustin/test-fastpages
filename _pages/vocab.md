@@ -18,7 +18,17 @@ permalink: /vocab/
 | Selection              | when the programmer decides between two different outcomes.                                                |
 | variable               | a way of storing information in a computer program, which could later be changed, referenced, and used     |
 | objects                | a structure that can take on a data-type value                                                             |
-| Boolean information    |                                                                                                            |
+|  Concatenation         |when you add strings or integers together. can't add strings and integers                                   |
+|  Hexadecimal           | numbering system from 1-16. 1-9 are numbers and 9-16 go from a-f                                           |
+|  bits                  | A binary digit, either 0 or 1                                                                              |
+|  bytes                 | group of binary digits operating as a unit                                                                 |
+|  floating point        | positive or negative numbers that can include decimals                                                     |
+| .upper                 | simply makes a string uppercase                                                                            |
+| .lower                 | changes string to lowercase                                                                                |
+| RGB                    | a mix of colors using binary. (x, y, z) determines color, x is red, y is green, z is blue. 0 is dark       |
+
+
+
 
 # code vocab
 
@@ -53,5 +63,51 @@ if a = 2:
 
 these are loops that iterate through something or keep something running
 
+``i = 1
+while i < 6:
+  print(i)
+  i += 1``
 
+``fruits = ["apple", "banana", "cherry"]
+for x in fruits:
+  print(x)``
+
+``for x in range(2, 6):
+  print(x)``
+this one uses range, printing all numbers from 2 to 5
+
+
+### Boolean expression    
+
+statements that can be true or false
+
+``a = 200
+b = 33
+
+if b > a:
+  print("b is greater than a")
+else:
+  print("b is not greater than a")``
+
+  this is boolean expression because the 2 outputs are true or false.
+
+  ### simple concatenation ex:
+
+``a = 1
+b = 2
+print(a + b)``
+plus sign is concatenation
+
+### truth tables 
+
+truth tables essentially can be used to simplify code and show what the outputs for things can be
+
+| x | y | x & y |
+|---|---|-------|
+| t | t | t     |
+| t | f | f     |
+| f | t | f     |
+| f | f | f     |
+
+example
 
