@@ -102,7 +102,7 @@
     
         ,"post9": {
             "title": "frontend coding hacks 1/15",
-            "content": "hacks below . letter 1: . &lt;button onclick=store_letter()&gt;store&lt;/button&gt; . &lt;/div&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt; .",
+            "content": "hacks below . letter 1: . store . &lt;/div&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt; .",
             "url": "https://jyustin.github.io/test-fastpages/performancetask/2023/01/14/fronty.html",
             "relUrl": "/performancetask/2023/01/14/fronty.html",
             "date": " • Jan 14, 2023"
