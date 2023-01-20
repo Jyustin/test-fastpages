@@ -90,3 +90,8 @@ ensure that my written portion is thorough enough to get enough points.
 My program will need a list with multiple elements that uses data for certain things and manages complexity
 a well defined function and purpose, an algorithm that plays an integral role in the program's function and uses iteration,
 sequencing, and selection, and well defined user inputs and outputs.
+
+# performance task scoring PART 3 
+
+# submission 4
+
