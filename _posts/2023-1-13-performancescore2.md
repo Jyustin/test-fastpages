@@ -90,20 +90,3 @@ ensure that my written portion is thorough enough to get enough points.
 My program will need a list with multiple elements that uses data for certain things and manages complexity
 a well defined function and purpose, an algorithm that plays an integral role in the program's function and uses iteration,
 sequencing, and selection, and well defined user inputs and outputs.
-
-# performance task scoring PART 3 
-
-# submission 4
-
-| score | CB score | reasoning                                                                                                                                   |
-|-------|----------|---------------------------------------------------------------------------------------------------------------------------------------------|
-| 1     | 1        | the program purpose as well as it's inputs and outputs are described and do exist.                                                          |
-| 1     | 1        | a list with the ability to store data and use it exists, and it contributes to the overall program.                                         |
-| 1     | 1        | the list does manage complexity and a solution without the list is not only plausible but exists.                                           |
-| 1     | 1        | a student developed procedure exists and it does take in parameters and is called in the 2nd code segment.                                  |
-| 1     | 1        | sequencing, selection, and iteration are all used in the  procedure. the procedure is also thoroughly explained so that I could rebuild it. |
-| 1     | 0        | there are different calls passed through the procedure that give different outputs. the outputs are also the expected ones.                 |
-
-# reflection
-
-I think that I am doing better on knowing how College Board will grade my performance task. I was tripped up on the last section however, as I wasn't thorough enough in my grading.

@@ -41,3 +41,33 @@ It's not just the explanation that determines if your code will meet the require
 
 # submission 3
 
+
+| my score | AP score | my reasoning                                                                                                                      |
+|----------|----------|-----------------------------------------------------------------------------------------------------------------------------------|
+| 1        | 1        | the program purpose and it's functionality are shown in the video,  and are talked about in written portion. nothing missing.     |
+| 0        | 0        | I don't see any defined list that stores or uses data so no point can be given.                                                   |
+| 0        | 0        | Since I don't see any list they are talking about I can't give a point. there is no truly defined solution without lists as well. |
+| 0        | 0        | there are no defined parameters for the function so no point can be given.                                                        |
+| 0        | 0        | I don't see any use of iteration in the function so no point can be  given.                                                       |
+| 0        | 0        | there are no specific arguments that are being passed in during testing, only certain conditions, so no point is given.           |
+
+# reflection 
+when doing my CB Performance task, I should make sure to remember to go through the requirements for row 4 and 5 before developing the main function, in order to ensure that I don't accidentally leave anything out that would cause me to lose points. Losing points on small things looks like a common trend, and I don't want that to happen to me.
+
+# submission 4
+
+| score | CB score | reasoning                                                                                                                                   |
+|-------|----------|---------------------------------------------------------------------------------------------------------------------------------------------|
+| 1     | 1        | the program purpose as well as it's inputs and outputs are described and do exist.                                                          |
+| 1     | 1        | a list with the ability to store data and use it exists, and it contributes to the overall program.                                         |
+| 1     | 1        | the list does manage complexity and a solution without the list is not only plausible but exists.                                           |
+| 1     | 1        | a student developed procedure exists and it does take in parameters and is called in the 2nd code segment.                                  |
+| 1     | 1        | sequencing, selection, and iteration are all used in the  procedure. the procedure is also thoroughly explained so that I could rebuild it. |
+| 1     | 0        | there are different calls passed through the procedure that give different outputs. the outputs are also the expected ones.                 |
+
+# reflection
+
+I think that I am doing better on knowing how College Board will grade my performance task. I was tripped up on the last section however, as I wasn't thorough enough in my grading. When I do my CB performance task, I should refer back to the performance task I graded with full marks and compare mine to theirs, to see if my performance task will get full credit.
+
+# FINAL REFLECTION
+although it looks like you could leave out some things from the written part and still get points if you have them in your code, I am going to make sure that my writen sections goes over each requirement of the CBPT rubric to ensure that I know whether or not my performance task will get full credit. additionally, I will need to be sure that I am constantly referring to the rubric when I am coding my task, so that I don't accidentally leave anything out. I think that the hardest part of this will be making sure I am hitting all of the small requirements, not the actual project itself.
