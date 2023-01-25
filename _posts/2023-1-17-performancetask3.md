@@ -2,7 +2,6 @@
 title: performance task 3 scoring
 layout: default
 description: learning perfomance task scoring
-permalink: /frontend/binary
 categories: []
 tags: [college board]
 ---
