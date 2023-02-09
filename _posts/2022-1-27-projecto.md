@@ -32,8 +32,13 @@ the list I am using does manage complexity by storing the fact data and a soluti
 ## Row 4
 I do have a function for calling random facts, but I plan on making a seperate function for questions that will include parameters and contribute to the program. EXPLICIT PARAMETERS IMPORTANT
 
+UPDATE: have the function for generating questions now and it has an explicit parameter for the correct answer of the question.
+
+
 ## Row 5
 My function will use sequencing by simply needing certain code parts to run before others, selection by using if else statements for right or wrong answer, and iteration to keep the question going until right answer is given.
+
+UPDATE: I now have a function that includes sequencing, (the function), selection (if else statement for correct answer or not), and iteration (a while loop that checks if answer is right or wrong after 1st time question is wrong).
 
 ## Row 6
 My testing will be passing in an incorrect answer and a correct answer and showing how the program reacts to those, may need to be change in future according to needs.
