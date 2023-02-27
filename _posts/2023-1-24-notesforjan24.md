@@ -1,6 +1,6 @@
 ---
 title: some stuff from1/24/23
-layout: default
+layout: base
 description: why me?
 categories: []
 tags: [discussion]
