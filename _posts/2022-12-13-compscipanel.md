@@ -1,6 +1,6 @@
 ---
 title: compsci technical buisness panel notes
-layout: default
+layout: base
 description: extra credit
 permalink: /frontend/binary
 categories: []

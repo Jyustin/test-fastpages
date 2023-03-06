@@ -1,6 +1,6 @@
 ---
 title: performance task 2 scoring
-layout: default
+layout: base
 description: learning perfomance task scoring
 permalink: /frontend/binary
 categories: []

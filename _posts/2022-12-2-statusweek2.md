@@ -1,6 +1,6 @@
 ---
 title: week 2 status
-layout: default
+layout: base
 description: week 2
 permalink: /frontend/binary
 categories: []
