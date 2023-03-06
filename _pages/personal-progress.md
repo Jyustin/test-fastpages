@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: base
 title: personal csp progress
 permalink: /personal-progress/
 ---

@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: base
 title: notes for ap csp
 permalink: /notes/
 ---
