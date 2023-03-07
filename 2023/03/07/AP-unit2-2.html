@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      10 min read
+      12 min read
     
 </span></p>
 
@@ -267,6 +267,64 @@ window.onload = wrap_img;
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">FileNotFoundError</span>                         Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">/home/id/vscode/test-fastpages/_notebooks/2023-03-07-AP-unit2-2.ipynb Cell 5</span> in <span class="ansi-cyan-fg">&lt;cell line: 22&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/id/vscode/test-fastpages/_notebooks/2023-03-07-AP-unit2-2.ipynb#W4sdnNjb2RlLXJlbW90ZQ%3D%3D?line=21'&gt;22&lt;/a&gt;</span> if __name__ == "__main__":
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/id/vscode/test-fastpages/_notebooks/2023-03-07-AP-unit2-2.ipynb#W4sdnNjb2RlLXJlbW90ZQ%3D%3D?line=22'&gt;23&lt;/a&gt;</span>     # print parameter supplied image
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/id/vscode/test-fastpages/_notebooks/2023-03-07-AP-unit2-2.ipynb#W4sdnNjb2RlLXJlbW90ZQ%3D%3D?line=23'&gt;24&lt;/a&gt;</span>     green_square = image_data(images=[{'source': "Internet", 'label': "Green Square", 'file': "green-square-16.png"}])
+<span class="ansi-green-fg">---&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/id/vscode/test-fastpages/_notebooks/2023-03-07-AP-unit2-2.ipynb#W4sdnNjb2RlLXJlbW90ZQ%3D%3D?line=24'&gt;25&lt;/a&gt;</span>     image_display(green_square)
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/id/vscode/test-fastpages/_notebooks/2023-03-07-AP-unit2-2.ipynb#W4sdnNjb2RlLXJlbW90ZQ%3D%3D?line=26'&gt;27&lt;/a&gt;</span>     # display default images from image_data()
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/id/vscode/test-fastpages/_notebooks/2023-03-07-AP-unit2-2.ipynb#W4sdnNjb2RlLXJlbW90ZQ%3D%3D?line=27'&gt;28&lt;/a&gt;</span>     default_images = image_data()
+
+<span class="ansi-green-intense-fg ansi-bold">/home/id/vscode/test-fastpages/_notebooks/2023-03-07-AP-unit2-2.ipynb Cell 5</span> in <span class="ansi-cyan-fg">image_display</span><span class="ansi-blue-fg">(images)</span>
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/id/vscode/test-fastpages/_notebooks/2023-03-07-AP-unit2-2.ipynb#W4sdnNjb2RlLXJlbW90ZQ%3D%3D?line=15'&gt;16&lt;/a&gt;</span> def image_display(images):
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/id/vscode/test-fastpages/_notebooks/2023-03-07-AP-unit2-2.ipynb#W4sdnNjb2RlLXJlbW90ZQ%3D%3D?line=16'&gt;17&lt;/a&gt;</span>     for image in images:  
+<span class="ansi-green-fg">---&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/id/vscode/test-fastpages/_notebooks/2023-03-07-AP-unit2-2.ipynb#W4sdnNjb2RlLXJlbW90ZQ%3D%3D?line=17'&gt;18&lt;/a&gt;</span>         display(Image(filename=image['filename']))
+
+File <span class="ansi-green-fg">~/.local/lib/python3.8/site-packages/IPython/core/display.py:957</span>, in <span class="ansi-cyan-fg">Image.__init__</span><span class="ansi-blue-fg">(self, data, url, filename, format, embed, width, height, retina, unconfined, metadata, alt)</span>
+<span class="ansi-green-intense-fg ansi-bold">    955</span> self.unconfined = unconfined
+<span class="ansi-green-intense-fg ansi-bold">    956</span> self.alt = alt
+<span class="ansi-green-fg">--&gt; 957</span> super(Image, self).__init__(data=data, url=url, filename=filename,
+<span class="ansi-green-intense-fg ansi-bold">    958</span>         metadata=metadata)
+<span class="ansi-green-intense-fg ansi-bold">    960</span> if self.width is None and self.metadata.get('width', {}):
+<span class="ansi-green-intense-fg ansi-bold">    961</span>     self.width = metadata['width']
+
+File <span class="ansi-green-fg">~/.local/lib/python3.8/site-packages/IPython/core/display.py:327</span>, in <span class="ansi-cyan-fg">DisplayObject.__init__</span><span class="ansi-blue-fg">(self, data, url, filename, metadata)</span>
+<span class="ansi-green-intense-fg ansi-bold">    324</span> elif self.metadata is None:
+<span class="ansi-green-intense-fg ansi-bold">    325</span>     self.metadata = {}
+<span class="ansi-green-fg">--&gt; 327</span> self.reload()
+<span class="ansi-green-intense-fg ansi-bold">    328</span> self._check_data()
+
+File <span class="ansi-green-fg">~/.local/lib/python3.8/site-packages/IPython/core/display.py:992</span>, in <span class="ansi-cyan-fg">Image.reload</span><span class="ansi-blue-fg">(self)</span>
+<span class="ansi-green-intense-fg ansi-bold">    990</span> """Reload the raw data from file or URL."""
+<span class="ansi-green-intense-fg ansi-bold">    991</span> if self.embed:
+<span class="ansi-green-fg">--&gt; 992</span>     super(Image,self).reload()
+<span class="ansi-green-intense-fg ansi-bold">    993</span>     if self.retina:
+<span class="ansi-green-intense-fg ansi-bold">    994</span>         self._retina_shape()
+
+File <span class="ansi-green-fg">~/.local/lib/python3.8/site-packages/IPython/core/display.py:353</span>, in <span class="ansi-cyan-fg">DisplayObject.reload</span><span class="ansi-blue-fg">(self)</span>
+<span class="ansi-green-intense-fg ansi-bold">    351</span> if self.filename is not None:
+<span class="ansi-green-intense-fg ansi-bold">    352</span>     encoding = None if "b" in self._read_flags else "utf-8"
+<span class="ansi-green-fg">--&gt; 353</span>     with open(self.filename, self._read_flags, encoding=encoding) as f:
+<span class="ansi-green-intense-fg ansi-bold">    354</span>         self.data = f.read()
+<span class="ansi-green-intense-fg ansi-bold">    355</span> elif self.url is not None:
+<span class="ansi-green-intense-fg ansi-bold">    356</span>     # Deferred import
+
+<span class="ansi-red-fg">FileNotFoundError</span>: [Errno 2] No such file or directory: 'images/green-square-16.png'</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -629,6 +687,53 @@ window.onload = wrap_img;
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">FileNotFoundError</span>                         Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">/home/id/vscode/test-fastpages/_notebooks/2023-03-07-AP-unit2-2.ipynb Cell 10</span> in <span class="ansi-cyan-fg">&lt;cell line: 128&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">    &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/id/vscode/test-fastpages/_notebooks/2023-03-07-AP-unit2-2.ipynb#X12sdnNjb2RlLXJlbW90ZQ%3D%3D?line=126'&gt;127&lt;/a&gt;</span> # Jupyter Notebook Visualization of Images
+<span class="ansi-green-intense-fg ansi-bold">    &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/id/vscode/test-fastpages/_notebooks/2023-03-07-AP-unit2-2.ipynb#X12sdnNjb2RlLXJlbW90ZQ%3D%3D?line=127'&gt;128&lt;/a&gt;</span> if __name__ == "__main__":
+<span class="ansi-green-fg">--&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/id/vscode/test-fastpages/_notebooks/2023-03-07-AP-unit2-2.ipynb#X12sdnNjb2RlLXJlbW90ZQ%3D%3D?line=128'&gt;129&lt;/a&gt;</span>     for ido in image_objects(): # ido is an Imaged Data Object
+<span class="ansi-green-intense-fg ansi-bold">    &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/id/vscode/test-fastpages/_notebooks/2023-03-07-AP-unit2-2.ipynb#X12sdnNjb2RlLXJlbW90ZQ%3D%3D?line=130'&gt;131&lt;/a&gt;</span>         print("---- meta data -----")
+<span class="ansi-green-intense-fg ansi-bold">    &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/id/vscode/test-fastpages/_notebooks/2023-03-07-AP-unit2-2.ipynb#X12sdnNjb2RlLXJlbW90ZQ%3D%3D?line=131'&gt;132&lt;/a&gt;</span>         print(ido.label)
+
+<span class="ansi-green-intense-fg ansi-bold">/home/id/vscode/test-fastpages/_notebooks/2023-03-07-AP-unit2-2.ipynb Cell 10</span> in <span class="ansi-cyan-fg">image_objects</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">    &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/id/vscode/test-fastpages/_notebooks/2023-03-07-AP-unit2-2.ipynb#X12sdnNjb2RlLXJlbW90ZQ%3D%3D?line=117'&gt;118&lt;/a&gt;</span> path, images = image_data()
+<span class="ansi-green-intense-fg ansi-bold">    &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/id/vscode/test-fastpages/_notebooks/2023-03-07-AP-unit2-2.ipynb#X12sdnNjb2RlLXJlbW90ZQ%3D%3D?line=118'&gt;119&lt;/a&gt;</span> for image in images:
+<span class="ansi-green-fg">--&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/id/vscode/test-fastpages/_notebooks/2023-03-07-AP-unit2-2.ipynb#X12sdnNjb2RlLXJlbW90ZQ%3D%3D?line=119'&gt;120&lt;/a&gt;</span>     id_Objects.append(Image_Data(source=image['source'], 
+<span class="ansi-green-intense-fg ansi-bold">    &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/id/vscode/test-fastpages/_notebooks/2023-03-07-AP-unit2-2.ipynb#X12sdnNjb2RlLXJlbW90ZQ%3D%3D?line=120'&gt;121&lt;/a&gt;</span>                               label=image['label'],
+<span class="ansi-green-intense-fg ansi-bold">    &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/id/vscode/test-fastpages/_notebooks/2023-03-07-AP-unit2-2.ipynb#X12sdnNjb2RlLXJlbW90ZQ%3D%3D?line=121'&gt;122&lt;/a&gt;</span>                               file=image['file'],
+<span class="ansi-green-intense-fg ansi-bold">    &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/id/vscode/test-fastpages/_notebooks/2023-03-07-AP-unit2-2.ipynb#X12sdnNjb2RlLXJlbW90ZQ%3D%3D?line=122'&gt;123&lt;/a&gt;</span>                               path=path,
+<span class="ansi-green-intense-fg ansi-bold">    &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/id/vscode/test-fastpages/_notebooks/2023-03-07-AP-unit2-2.ipynb#X12sdnNjb2RlLXJlbW90ZQ%3D%3D?line=123'&gt;124&lt;/a&gt;</span>                               ))
+<span class="ansi-green-intense-fg ansi-bold">    &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/id/vscode/test-fastpages/_notebooks/2023-03-07-AP-unit2-2.ipynb#X12sdnNjb2RlLXJlbW90ZQ%3D%3D?line=124'&gt;125&lt;/a&gt;</span> return id_Objects
+
+<span class="ansi-green-intense-fg ansi-bold">/home/id/vscode/test-fastpages/_notebooks/2023-03-07-AP-unit2-2.ipynb Cell 10</span> in <span class="ansi-cyan-fg">Image_Data.__init__</span><span class="ansi-blue-fg">(self, source, label, file, path, baseWidth)</span>
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/id/vscode/test-fastpages/_notebooks/2023-03-07-AP-unit2-2.ipynb#X12sdnNjb2RlLXJlbW90ZQ%3D%3D?line=15'&gt;16&lt;/a&gt;</span> self._baseWidth = baseWidth
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/id/vscode/test-fastpages/_notebooks/2023-03-07-AP-unit2-2.ipynb#X12sdnNjb2RlLXJlbW90ZQ%3D%3D?line=17'&gt;18&lt;/a&gt;</span> # Open image and scale to needs
+<span class="ansi-green-fg">---&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/id/vscode/test-fastpages/_notebooks/2023-03-07-AP-unit2-2.ipynb#X12sdnNjb2RlLXJlbW90ZQ%3D%3D?line=18'&gt;19&lt;/a&gt;</span> self._img = pilImage.open(self._filename)
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/id/vscode/test-fastpages/_notebooks/2023-03-07-AP-unit2-2.ipynb#X12sdnNjb2RlLXJlbW90ZQ%3D%3D?line=19'&gt;20&lt;/a&gt;</span> self._format = self._img.format
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/id/vscode/test-fastpages/_notebooks/2023-03-07-AP-unit2-2.ipynb#X12sdnNjb2RlLXJlbW90ZQ%3D%3D?line=20'&gt;21&lt;/a&gt;</span> self._mode = self._img.mode
+
+File <span class="ansi-green-fg">/usr/lib/python3/dist-packages/PIL/Image.py:2809</span>, in <span class="ansi-cyan-fg">open</span><span class="ansi-blue-fg">(fp, mode)</span>
+<span class="ansi-green-intense-fg ansi-bold">   2806</span>     filename = fp
+<span class="ansi-green-intense-fg ansi-bold">   2808</span> if filename:
+<span class="ansi-green-fg">-&gt; 2809</span>     fp = builtins.open(filename, "rb")
+<span class="ansi-green-intense-fg ansi-bold">   2810</span>     exclusive_fp = True
+<span class="ansi-green-intense-fg ansi-bold">   2812</span> try:
+
+<span class="ansi-red-fg">FileNotFoundError</span>: [Errno 2] No such file or directory: '/home/id/vscode/test-fastpages/_notebooks/images/green-square-16.png'</pre>
+</div>
+</div>
+
 </div>
 </div>
 
