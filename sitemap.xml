@@ -241,6 +241,10 @@
 <lastmod>2023-03-11T00:00:00-06:00</lastmod>
 </url>
 <url>
+<loc>https://jyustin.github.io/test-fastpages/ap/2023/03/11/testingwytf.html</loc>
+<lastmod>2023-03-11T00:00:00-06:00</lastmod>
+</url>
+<url>
 <loc>https://jyustin.github.io/test-fastpages/about/</loc>
 </url>
 <url>
@@ -275,5 +279,8 @@
 </url>
 <url>
 <loc>https://jyustin.github.io/test-fastpages/page4/</loc>
+</url>
+<url>
+<loc>https://jyustin.github.io/test-fastpages/page5/</loc>
 </url>
 </urlset>
