@@ -172,12 +172,18 @@ window.onload = wrap_img;
 
 <span class="n">x</span> <span class="o">=</span> <span class="n">steamdata</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">steamdata</span>
+<span class="n">z</span> <span class="o">=</span> <span class="n">steamdata</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+
 <span class="n">avg</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="s1">'positive_ratio'</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
 <span class="n">avg2</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="s1">'price_final'</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">avg3</span> <span class="o">=</span> <span class="n">z</span><span class="p">[</span><span class="s1">'price_final'</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">"the average positive ratio of the top 10 most popular steam games is "</span><span class="p">,</span><span class="n">avg</span><span class="p">,</span> <span class="s2">"%"</span><span class="p">)</span>
-
+<span class="nb">print</span><span class="p">(</span><span class="s2">""</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"the average cost of a steam game is "</span><span class="p">,</span> <span class="n">avg2</span><span class="p">,</span> <span class="s2">"usd"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">""</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"the average cost of the top 100 most popular steam games is "</span><span class="p">,</span> <span class="n">avg3</span><span class="p">,</span> <span class="s2">"usd"</span><span class="p">)</span>
+
 
 
 <span class="n">steamdata</span><span class="p">[</span><span class="s1">'date_release'</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">steamdata</span><span class="p">[</span><span class="s1">'date_release'</span><span class="p">])</span>
@@ -244,7 +250,10 @@ window.onload = wrap_img;
 3764         39.99           39.99       0.0        True  
 7155         39.99           39.99       0.0        True  
 the average positive ratio of the top 10 most popular steam games is  86.8 %
+
 the average cost of a steam game is  8.750796431357113 usd
+
+the average cost of the top 100 most popular steam games is  20.706500000000002 usd
        app_id                        title date_release   win    mac  linux  \
 16051  282010         Carmageddon Max Pack   1997-06-30  True  False  False   
 32559  232770                       POSTAL   1997-11-14  True   True   True   
@@ -363,7 +372,7 @@ Counter-Strike: Global Offensive
 
 <span class="n">the</span> <span class="n">average</span> <span class="n">cost</span> <span class="n">of</span> <span class="n">a</span> <span class="n">steam</span> <span class="n">game</span> <span class="ow">is</span>  <span class="mf">8.750796431357113</span> <span class="n">usd</span>
 
-
+<span class="n">the</span> <span class="n">average</span> <span class="n">cost</span> <span class="n">of</span> <span class="n">the</span> <span class="n">top</span> <span class="mi">100</span> <span class="n">most</span> <span class="n">popular</span> <span class="n">steam</span> <span class="n">games</span> <span class="ow">is</span>  <span class="mf">20.706500000000002</span> <span class="n">usd</span>
 <span class="o">--</span><span class="n">the</span> <span class="n">top</span> <span class="mi">10</span> <span class="n">oldest</span> <span class="n">steam</span> <span class="n">games</span> <span class="p">(</span><span class="n">by</span> <span class="n">date</span> <span class="n">of</span> <span class="n">release</span><span class="p">)</span><span class="o">------</span>
 
        <span class="n">app_id</span>                        <span class="n">title</span> <span class="n">date_release</span>   <span class="n">win</span>    <span class="n">mac</span>  <span class="n">linux</span>  \
