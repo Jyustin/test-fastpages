@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      6 min read
+      7 min read
     
 </span></p>
 
@@ -185,6 +185,9 @@ window.onload = wrap_img;
 <span class="k">def</span> <span class="nf">datasortfunc</span><span class="p">()</span> <span class="p">:</span> <span class="c1">#sort by release date</span>
     <span class="n">datasort</span> <span class="o">=</span> <span class="n">steamdata</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">'date_release'</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">datasort</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+    <span class="n">data2</span> <span class="o">=</span> <span class="n">datasort</span><span class="p">[[</span><span class="s1">'title'</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">to_string</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"&lt;---the 10 earliest games on steam ---&gt;"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">data2</span><span class="p">)</span>
 
 
 
@@ -277,6 +280,18 @@ the average cost of a steam game is  8.750796431357113 usd
 17624            4.99       0.0        True  
 12938            4.99       0.0        True  
 9365             4.99       0.0        True  
+&lt;---the 10 earliest games on steam ---&gt;
+                      title
+       Carmageddon Max Pack
+                     POSTAL
+                  Half-Life
+      Team Fortress Classic
+Legacy of Kain: Soul Reaver
+  Half-Life: Opposing Force
+             Counter-Strike
+                   Ricochet
+      Half-Life: Blue Shift
+         Deathmatch Classic
 just the title of the top 10 games
                            title
 Counter-Strike: Global Offensive
@@ -386,7 +401,18 @@ Counter-Strike: Global Offensive
 <span class="mi">17624</span>            <span class="mf">4.99</span>       <span class="mf">0.0</span>        <span class="kc">True</span>  
 <span class="mi">12938</span>            <span class="mf">4.99</span>       <span class="mf">0.0</span>        <span class="kc">True</span>  
 <span class="mi">9365</span>             <span class="mf">4.99</span>       <span class="mf">0.0</span>        <span class="kc">True</span>  
-
+<span class="o">&lt;---</span><span class="n">the</span> <span class="mi">10</span> <span class="n">earliest</span> <span class="n">games</span> <span class="n">on</span> <span class="n">steam</span> <span class="o">---&gt;</span>
+       <span class="n">title</span>
+<span class="n">Carmageddon</span> <span class="n">Max</span> <span class="n">Pack</span>
+      <span class="n">POSTAL</span>
+   <span class="n">Half</span><span class="o">-</span><span class="n">Life</span>
+<span class="n">Team</span> <span class="n">Fortress</span> <span class="n">Classic</span>
+<span class="n">Legacy</span> <span class="n">of</span> <span class="n">Kain</span><span class="p">:</span> <span class="n">Soul</span> <span class="n">Reaver</span>
+<span class="n">Half</span><span class="o">-</span><span class="n">Life</span><span class="p">:</span> <span class="n">Opposing</span> <span class="n">Force</span>
+<span class="n">Counter</span><span class="o">-</span><span class="n">Strike</span>
+    <span class="n">Ricochet</span>
+<span class="n">Half</span><span class="o">-</span><span class="n">Life</span><span class="p">:</span> <span class="n">Blue</span> <span class="n">Shift</span>
+<span class="n">Deathmatch</span> <span class="n">Classic</span>
 <span class="n">just</span> <span class="n">the</span> <span class="n">title</span> <span class="n">of</span> <span class="n">the</span> <span class="n">top</span> <span class="mi">10</span> <span class="n">games</span>
                            <span class="n">title</span>
 <span class="n">Counter</span><span class="o">-</span><span class="n">Strike</span><span class="p">:</span> <span class="n">Global</span> <span class="n">Offensive</span>
