@@ -164,7 +164,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
 <span class="n">steamdata</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'files/games.csv'</span><span class="p">)</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">'user_reviews'</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"--the top 10 most popular steam games (by user reviews)------"</span><span class="p">)</span>
@@ -189,6 +189,9 @@ window.onload = wrap_img;
 
 
 <span class="n">datasortfunc</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"just the title of the top 10 games"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">steamdata</span><span class="p">[[</span><span class="s1">'title'</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">to_string</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -274,6 +277,18 @@ the average cost of a steam game is  8.750796431357113 usd
 17624            4.99       0.0        True  
 12938            4.99       0.0        True  
 9365             4.99       0.0        True  
+just the title of the top 10 games
+                           title
+Counter-Strike: Global Offensive
+             PUBG: BATTLEGROUNDS
+                          Dota 2
+              Grand Theft Auto V
+ Tom Clancy's Rainbow Six® Siege
+                 Team Fortress 2
+                        Terraria
+                     Garry's Mod
+                            Rust
+       The Witcher® 3: Wild Hunt
 </pre>
 </div>
 </div>
@@ -291,7 +306,7 @@ the average cost of a steam game is  8.750796431357113 usd
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="n">complete</span> <span class="n">output</span> 
+<div class=" highlight hl-ipython3"><pre><span></span> <span class="n">complete</span> <span class="n">output</span> 
 <span class="o">--</span><span class="n">the</span> <span class="n">top</span> <span class="mi">10</span> <span class="n">most</span> <span class="n">popular</span> <span class="n">steam</span> <span class="n">games</span> <span class="p">(</span><span class="n">by</span> <span class="n">user</span> <span class="n">reviews</span><span class="p">)</span><span class="o">------</span>
        <span class="n">app_id</span>                             <span class="n">title</span> <span class="n">date_release</span>   <span class="n">win</span>    <span class="n">mac</span>  \
 <span class="mi">19041</span>     <span class="mi">730</span>  <span class="n">Counter</span><span class="o">-</span><span class="n">Strike</span><span class="p">:</span> <span class="n">Global</span> <span class="n">Offensive</span>   <span class="mi">2012</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">21</span>  <span class="kc">True</span>   <span class="kc">True</span>   
@@ -370,7 +385,20 @@ the average cost of a steam game is  8.750796431357113 usd
 <span class="mi">11441</span>            <span class="mf">9.99</span>       <span class="mf">0.0</span>        <span class="kc">True</span>  
 <span class="mi">17624</span>            <span class="mf">4.99</span>       <span class="mf">0.0</span>        <span class="kc">True</span>  
 <span class="mi">12938</span>            <span class="mf">4.99</span>       <span class="mf">0.0</span>        <span class="kc">True</span>  
-<span class="mi">9365</span>             <span class="mf">4.99</span>       <span class="mf">0.0</span>        <span class="kc">True</span>
+<span class="mi">9365</span>             <span class="mf">4.99</span>       <span class="mf">0.0</span>        <span class="kc">True</span>  
+
+<span class="n">just</span> <span class="n">the</span> <span class="n">title</span> <span class="n">of</span> <span class="n">the</span> <span class="n">top</span> <span class="mi">10</span> <span class="n">games</span>
+                           <span class="n">title</span>
+<span class="n">Counter</span><span class="o">-</span><span class="n">Strike</span><span class="p">:</span> <span class="n">Global</span> <span class="n">Offensive</span>
+             <span class="n">PUBG</span><span class="p">:</span> <span class="n">BATTLEGROUNDS</span>
+                          <span class="n">Dota</span> <span class="mi">2</span>
+              <span class="n">Grand</span> <span class="n">Theft</span> <span class="n">Auto</span> <span class="n">V</span>
+ <span class="n">Tom</span> <span class="n">Clancy</span><span class="s1">'s Rainbow Six® Siege</span>
+                 <span class="n">Team</span> <span class="n">Fortress</span> <span class="mi">2</span>
+                        <span class="n">Terraria</span>
+                     <span class="n">Garry</span><span class="s1">'s Mod</span>
+                            <span class="n">Rust</span>
+       <span class="n">The</span> <span class="n">Witcher</span><span class="err">®</span> <span class="mi">3</span><span class="p">:</span> <span class="n">Wild</span> <span class="n">Hunt</span>
 </pre></div>
 
     </div>
