@@ -135,7 +135,7 @@ window.onload = wrap_img;
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
 
-<span class="n">database</span> <span class="o">=</span> <span class="s1">'instance/sqlite.db'</span> <span class="c1"># this is location of database</span>
+<span class="n">database</span> <span class="o">=</span> <span class="s1">'instance/users.db'</span> <span class="c1"># this is location of database</span>
 
     
     <span class="c1"># Connect to the database file</span>
@@ -177,24 +177,6 @@ window.onload = wrap_img;
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>(0, 'id', 'INTEGER', 1, None, 1)
-(1, '_name', 'VARCHAR(255)', 1, None, 0)
-(2, '_uid', 'VARCHAR(255)', 1, None, 0)
-(3, '_password', 'VARCHAR(255)', 1, None, 0)
-(4, '_dob', 'DATE', 0, None, 0)
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -357,15 +339,14 @@ window.onload = wrap_img;
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>A new user record 1 has been created
-A new user record 15 has been created
 A new user record 2 has been created
-The row with uid 2 was successfully deleted
-(1, 'octavia', 'new database')
-(15, '15', 'testing create')
-The row with uid 15 was successfully deleted
-(1, 'octavia', 'new database')
-The row with user id 1 the text has been updated
-(1, 'octavia', 'changing comment with update')
+(1, 'testing', 'this is a test')
+(2, 'potato', 'example of create')
+The row with user id 2 the text has been updated
+The row with uid 1 was successfully deleted
+(2, 'potato', 'update example')
+(2, 'potato', 'update example')
+(2, 'potato', 'update example')
 </pre>
 </div>
 </div>
