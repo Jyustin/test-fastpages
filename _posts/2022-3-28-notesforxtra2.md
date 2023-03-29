@@ -3,7 +3,7 @@ toc: true
 layout: post
 description: extra credit
 categories: []
-title: extra credit 3/28/22
+title: extra credit 3/28/23
 ---
 (this little blurb of text is all unimportant stuff you can skip if you want)
 First of all, I managed to get to the event right as the presentation was starting, as my band mentoring session was cut short. I admit I was not there exactly at 3:50, in fact I was about 5 minutes late, but the presentators said they were starting right about that time, so I think I got there right as they started. 
