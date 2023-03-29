@@ -76,13 +76,12 @@ take away from this is that
 
 # extra photos and a video
 
+![]({{site.baseurl}}/images/IMG_1486.JPG)  
 
-![image](/images/IMG_1486.JPG)
+![]({{site.baseurl}}/images/IMG_1487.JPG)  
 
-![image](/images/IMG_1487.JPG)
 
-<html>
-<video width="320" height="240" controls>
-  <source src="/videos/IMG_1490.MOV" type="video/mp4">
+![]({{site.baseurl}}<video width="320" height="240" controls>
+  <source src="/videos/IMG_1490.MOV">
 Your browser does not support the video tag.
-</video></html>
+</video>)
