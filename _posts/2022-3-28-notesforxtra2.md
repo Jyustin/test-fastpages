@@ -72,7 +72,8 @@ You can get payed if you pursue masters degree
 
 there was a lot of helpful advice in this presentation about life in college and advice for paying for college, getting internships, etc. 
 I do feel like there was more about Cal state than actual helpful advice, but there as definetly some key takeaways from this event. Biggest thing I can
-take away from this is that 
+take away from this is that there are a lot of benefits from expanding your circle of connections like increased internship opportunities. Another key takeaway is that
+there are a lot of ways for students to reduce the cost of college, however you need to put in some work to reduce your cost of college. Lastly, Calstate, and most likely other colleges, will have different research and internship programs for people to apply for that can have great benefits for students, however you need to find these opportunities through googling, hearing it from people, or just checking email or notifications often.
 
 # extra photos and a video
 
@@ -82,3 +83,7 @@ take away from this is that
 
 <html>
 <div style="padding:75% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/812634848?h=972c3d7862&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="IMG_1490.MOV"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script> </html>
+
+There was a cool lab at where we got to use a battery to cause a toothbrush to vibrate.
+
+AND I WON A BEANIE (and some pens)
