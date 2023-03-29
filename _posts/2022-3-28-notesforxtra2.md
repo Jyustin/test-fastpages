@@ -6,8 +6,7 @@ categories: []
 title: extra credit 3/28/22
 ---
 (this little blurb of text is all unimportant stuff you can skip if you want)
-First of all, I managed to get to the event right as the presentation was starting, as my band mentoring session was canceled. I admit I was not there exactly at 3:50, in fact I was about 5 minutes late, but the presentators said they were starting right about that time, so I think I got there right as they started. I have proof that I was there, and you could even ask Mortensen and he will say I was there
-
+First of all, I managed to get to the event right as the presentation was starting, as my band mentoring session was canceled. I admit I was not there exactly at 3:50, in fact I was about 5 minutes late, but the presentators said they were starting right about that time, so I think I got there right as they started. 
 
 # uncategorized notes
 
@@ -82,8 +81,8 @@ take away from this is that
 
 ![image](/images/IMG_1487.JPG)
 
-
+<html>
 <video width="320" height="240" controls>
   <source src="/videos/IMG_1490.MOV" type="video/mp4">
 Your browser does not support the video tag.
-</video>
+</video></html>
