@@ -657,7 +657,7 @@ song 19 : All Of The Girls You Loved Before
             <span class="n">genres</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"add a genre to the program"</span><span class="p">)</span>
             <span class="n">my_album</span><span class="p">[</span><span class="s2">"genre"</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">genres</span><span class="p">)</span>
             <span class="n">newGenre</span> <span class="o">=</span> <span class="p">[]</span>
-            <span class="p">[</span><span class="n">newGenre</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">my_album</span><span class="p">[</span><span class="s2">"genre"</span><span class="p">]</span> <span class="k">if</span> <span class="n">x</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">newGenre</span><span class="p">]</span> <span class="c1"># use list comprehension to remove duplicates (wow im so good at coding)</span>
+            <span class="p">[</span><span class="n">newGenre</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">my_album</span><span class="p">[</span><span class="s2">"genre"</span><span class="p">]</span> <span class="k">if</span> <span class="n">x</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">newGenre</span><span class="p">]</span> <span class="c1"># use list comprehension to remove duplicates </span>
             <span class="n">my_album</span><span class="p">[</span><span class="s2">"genre"</span><span class="p">]</span> <span class="o">=</span> <span class="n">newGenre</span> <span class="c1"># add genre</span>
             <span class="nb">print</span><span class="p">(</span><span class="n">my_album</span><span class="p">[</span><span class="s2">"genre"</span><span class="p">])</span>
         
@@ -681,15 +681,16 @@ song 19 : All Of The Girls You Loved Before
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>['euro']
-['euro']
-['euro']
-['euro', 'dnb']
-['euro', 'dnb']
+<pre>unrecognized command!
 unrecognized command!
-['euro', 'dnb', 'genre']
-unrecognized command!
-{1: 'U.N Owen Was her?'}
+{1: 'U.N Owen Was her?', '2': 'test'}
+you have quit lol
+ZUN
+ZUN
+you have quit lol
+['DNB']
+['DNB']
+{1: 'U.N Owen Was her?', '2': 'test'}
 </pre>
 </div>
 </div>
