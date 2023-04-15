@@ -1,12 +1,9 @@
 ---
-toc: true
-comments: true
-layout: post
-title: Computers and Networks (Unit 4)
-description: Add Definitions from Unit 4 Computer Systems and Networks
+title: computing hacks
+layout: base
+description: testing
 categories: []
-type: ap
-week: 29
+tags: [discussion]
 ---
 
 ## Requirements
