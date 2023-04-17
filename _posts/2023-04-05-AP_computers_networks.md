@@ -39,10 +39,6 @@ Define or describe usage of Computer using Computer Programs. Pictures are prefe
 - Inspect Running Code
 - Inspect Variables
 
-
-# ans (diagram of computer use using computer program)
-
-
 ### The Internet
 > Watch/review College Board Daily Video for 4.1.1
 
@@ -68,6 +64,34 @@ Define or describe usage of Computer using Computer Programs. Pictures are prefe
 
 - Complete True of False Questions
 
+# ans + review/notes
+
+More lines/connections means more resources are needed, however less lines generally lead to less security against faults.
+
+redundant: the network can allow devices to communicate even if connections fail. also known as fault-tolerant.
+
+more devices = stronger network connections
+
+QUESTION 1:
+
+the network is fault tolerant.
+
+Question 2: 
+
+No. Also, you can easily determine fault tolerance by looking at each letter and seeing if there is more than 1 "line" connected to that letter. only 1 line = no fault tolerance.
+
+Question 3:
+
+No.
+
+Question 4 (on 4.2 now):
+
+C is false. C claims data will only take 1 route from 1 device to another. this is not true, the data can travel many different paths based on needs.
+
+Question 5:
+
+A. connect from A-B, as A only has one path right now.
+
 # big idea 4 notes
 
 
@@ -82,10 +106,6 @@ Computer Device
 Bandwidth
 
 Computer Network
-
-
-
-
 
 - Essential Knowledge
     - The internet is a computer network consisting of interconnected networks that use standardized, open (nonproprierary) communication protocols.
@@ -133,6 +153,18 @@ The "ip" layer is responsible for packetizing data received from the TCP layer o
 The "network" layer is responsible for ***routing data packets between networks*** using the Internet Protocol (IP). This layer handles tasks such as packet addressing and routing, fragmentation and reassembly, and ***network congestion*** control.
 
 
+
+# diagrams 
+
+### a quick flowchart for basic understanding of what programs do when run, NOT ABOUT NETWORKING
+
+![]({{site.baseurl}}/images/computing.png)
+
+### 2nd diagram for general networking
+
+![]({{site.baseurl}}/images/networking diagram v2-1.png)
+
+
 ### Fault Tolerance
 > Watch both Daily videos for 4.2
 
@@ -160,6 +192,7 @@ network web.
 - Review this [article](https://www.anyscale.com/blog/writing-your-first-distributed-python-application-with-ray)...  Can you get parallel code on images to work more effectively?  I have not tried Ray.
 
 - Code example from ChatGPT using squares.  This might be more interesting if nums we generated to be a lot bigger.
+
 
 ```python
 import ray
