@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>hacks for tri 3 review ticket 5 (parallel computing, Hashmaps) | blog for ap csp (Justin N)</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="hacks for tri 3 review ticket 5 (parallel computing, Hashmaps)" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="why do my ipynb files not work?" />
+<meta property="og:description" content="why do my ipynb files not work?" />
+<link rel="canonical" href="https://jyustin.github.io/test-fastpages/2023/04/16/tri3reviewticket5hacks.html" />
+<meta property="og:url" content="https://jyustin.github.io/test-fastpages/2023/04/16/tri3reviewticket5hacks.html" />
+<meta property="og:site_name" content="blog for ap csp (Justin N)" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-04-16T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="hacks for tri 3 review ticket 5 (parallel computing, Hashmaps)" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-04-16T00:00:00-05:00","datePublished":"2023-04-16T00:00:00-05:00","description":"why do my ipynb files not work?","headline":"hacks for tri 3 review ticket 5 (parallel computing, Hashmaps)","mainEntityOfPage":{"@type":"WebPage","@id":"https://jyustin.github.io/test-fastpages/2023/04/16/tri3reviewticket5hacks.html"},"url":"https://jyustin.github.io/test-fastpages/2023/04/16/tri3reviewticket5hacks.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/test-fastpages/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://jyustin.github.io/test-fastpages/feed.xml" title="blog for ap csp (Justin N)" /><link rel="shortcut icon" type="image/x-icon" href="/test-fastpages/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/test-fastpages/">blog for ap csp (Justin N)</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/test-fastpages/about/">About Me (Justin)</a><a class="page-link" href="/test-fastpages/apis/">api</a><a class="page-link" href="/test-fastpages/notes/">notes for ap csp</a><a class="page-link" href="/test-fastpages/personal-progress/">personal csp progress</a><a class="page-link" href="/test-fastpages/search/">Search</a><a class="page-link" href="/test-fastpages/categories/">Tags</a><a class="page-link" href="/test-fastpages/vocab/">vocab for ap csp</a><a class="page-link" href="/test-fastpages/js/">Javascript week 5 hack</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">hacks for tri 3 review ticket 5 (parallel computing, Hashmaps)</h1><p class="page-description">why do my ipynb files not work?</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-04-16T00:00:00-05:00" itemprop="datePublished">
+        Apr 16, 2023
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      7 min read
+    
+</span></p>
+
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <div class="px-2">
+
+    <a href="https://github.com/Jyustin/test-fastpages/tree/master/_notebooks/2023-3-31-tri3reviewticket5hacks.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/test-fastpages/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/Jyustin/test-fastpages/master?filepath=_notebooks%2F2023-3-31-tri3reviewticket5hacks.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/test-fastpages/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/Jyustin/test-fastpages/blob/master/_notebooks/2023-3-31-tri3reviewticket5hacks.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/test-fastpages/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          <div class="px-2">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2FJyustin%2Ftest-fastpages%2Fblob%2Fmaster%2F_notebooks%2F2023-3-31-tri3reviewticket5hacks.ipynb" target="_blank">
+      <img class="notebook-badge-image" src="/test-fastpages/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
+  </a>
+</div>
+
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h1"><a href="#Parallel-computing-hacks-(start-here!)">Parallel computing hacks (start here!) </a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#Hacks">Hacks </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#HACCCS-response">HACCCS response </a></li>
+<li class="toc-entry toc-h1"><a href="#notes-from-video">notes from video </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#simple-Example">simple Example </a></li>
+<li class="toc-entry toc-h2"><a href="#Example-1">Example 1 </a></li>
+<li class="toc-entry toc-h2"><a href="#Example-2">Example 2 </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#list-comprehension-example">list comprehension example </a></li>
+<li class="toc-entry toc-h1"><a href="#END-OF-PARALLEL-HACKS">END OF PARALLEL HACKS </a></li>
+<li class="toc-entry toc-h1"><a href="#START-OF-HASHMAP-HACKS">START OF HASHMAP HACKS </a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#Hacks">Hacks </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#working-on-hacks">working on hacks </a></li>
+<li class="toc-entry toc-h1"><a href="#creating-own-album-with-python">creating own album with python </a></li>
+<li class="toc-entry toc-h1"><a href="#answering-questions">answering questions </a></li>
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2023-3-31-tri3reviewticket5hacks.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Parallel-computing-hacks-(start-here!)">
+<a class="anchor" href="#Parallel-computing-hacks-(start-here!)" aria-hidden="true"><span class="octicon octicon-link"></span></a>Parallel computing hacks (start here!)<a class="anchor-link" href="#Parallel-computing-hacks-(start-here!)"> </a>
+</h1>
+<h2 id="Hacks">
+<a class="anchor" href="#Hacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hacks<a class="anchor-link" href="#Hacks"> </a>
+</h2>
+<blockquote>
+<p>AP Classroom. Provide answers and thoughts on theoritical question form college board Video in section 4.3.  They start at about the 9 minute mark.</p>
+<ul>
+<li>Example 1</li>
+<li>Example 2</li>
+</ul>
+<p>Data Structures.  Build a List Comprehension example</p>
+<ul>
+<li>list = [calc(item) for item in items]</li>
+</ul>
+</blockquote>
+<h1 id="HACCCS-response">
+<a class="anchor" href="#HACCCS-response" aria-hidden="true"><span class="octicon octicon-link"></span></a>HACCCS response<a class="anchor-link" href="#HACCCS-response"> </a>
+</h1>
+<h1 id="notes-from-video">
+<a class="anchor" href="#notes-from-video" aria-hidden="true"><span class="octicon octicon-link"></span></a>notes from video<a class="anchor-link" href="#notes-from-video"> </a>
+</h1>
+<p>Sequential computing is a computational model in which operations are performed in order one at a time</p>
+<p>Parallel computing is a computational model where the program is broken into multiple smaller sequential computing operations,, some of which are performed simultaneously.</p>
+<p>Computers handle a lot of tasks at once</p>
+<p>running tasks can be done sequentially, in parallel.</p>
+<p>tasks are done one at a time in sequential programming (like conveyor belt)</p>
+<p>IN PARALLEL COMPUTING:parallel computing schedules tasks to be executed at same tme
+parallel computing overall processes data faster and it scales more effectively.</p>
+<h3 id="simple-Example">
+<a class="anchor" href="#simple-Example" aria-hidden="true"><span class="octicon octicon-link"></span></a>simple Example<a class="anchor-link" href="#simple-Example"> </a>
+</h3>
+<p>Core 1: task A takes 45 ms</p>
+<p>Core 2: task B takes 50 ms</p>
+<p>Core 3: Task C takes 25 ms; task D takes 30 ms</p>
+<p>Core 4: Task E takes 40 ms</p>
+<p>Total time: 55 ms (core 3 runs task C and D in sequence)</p>
+<p>Basically, 5 tasks are spread out between 4 cores,  and all complete tasks at once, finally being done when all cores finish their individual task.</p>
+<p>Obviously, if we run all tasks in sequential on 1 core, the time becomes much longer.</p>
+<p>Distributive computing: we now distribute our tasks among dfferent computers, not just among 1 physical computer. This needs network connection. Can take longer if network is bad.</p>
+<h2 id="Example-1">
+<a class="anchor" href="#Example-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example 1<a class="anchor-link" href="#Example-1"> </a>
+</h2>
+<p>A particular computer has 2 identical processors which can run in parallel. Each process must be executed on 1 processor and each processor can only run 1 process at a time.</p>
+<p>whats the minimum amount of time (approx) to execute all 3 processes when 2 processor run in paallel?</p>
+<p>process X: 50 sec</p>
+<p>process Y: 10 sec</p>
+<p>process Z: 30 sec</p>
+<p>I think this would take 50 seconds, as we can run process X on one processor while the other runs Y and Z.</p>
+<p>I WAS RIGHT!</p>
+<p>This is a pretty good example for why parallel is good, but how can we develop programs for parallel processing if we don't have multiple processors to test on?</p>
+<h2 id="Example-2">
+<a class="anchor" href="#Example-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example 2<a class="anchor-link" href="#Example-2"> </a>
+</h2>
+<p>What is the difference in execution time between runniing the 2 processes in parallel in place of running on single processor?</p>
+<p>sequential: 70 seconds</p>
+<p>Parallel: 45 seconds</p>
+<p>70 - 45 = 25 seconds</p>
+<p>My ans: difference of 25 seconds</p>
+<p>I was right</p>
+<p>difference of 25 seconds is pretty large and seems unrealistic, but I think it demonstrates why we need to optimize for parallel computing.</p>
+<h1 id="list-comprehension-example">
+<a class="anchor" href="#list-comprehension-example" aria-hidden="true"><span class="octicon octicon-link"></span></a>list comprehension example<a class="anchor-link" href="#list-comprehension-example"> </a>
+</h1>
+<blockquote>
+<p>Data Structures.  Build a List Comprehension example</p>
+<ul>
+<li>list = [calc(item) for item in items]</li>
+</ul>
+</blockquote>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">items</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"cinnamon"</span><span class="p">,</span> <span class="s2">"cupcake batter"</span><span class="p">,</span> <span class="s2">"fig"</span><span class="p">]</span>
+
+<span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">40</span><span class="p">]</span>
+
+<span class="n">newlist</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span>  <span class="k">if</span> <span class="n">x</span> <span class="o">!=</span> <span class="s2">"fig"</span> <span class="k">else</span> <span class="s2">"date"</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">items</span><span class="p">]</span> <span class="c1"># remove fig from items</span>
+
+<span class="n">numlist</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">]</span>
+
+<span class="nb">sum</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
+    <span class="nb">sum</span> <span class="o">=</span> <span class="nb">sum</span> <span class="o">+</span> <span class="n">y</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">sum</span><span class="p">)</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="n">newlist</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1
+3
+23
+63
+['cinnamon', 'cupcake batter', 'date']
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="END-OF-PARALLEL-HACKS">
+<a class="anchor" href="#END-OF-PARALLEL-HACKS" aria-hidden="true"><span class="octicon octicon-link"></span></a>END OF PARALLEL HACKS<a class="anchor-link" href="#END-OF-PARALLEL-HACKS"> </a>
+</h1>
+<h1 id="START-OF-HASHMAP-HACKS">
+<a class="anchor" href="#START-OF-HASHMAP-HACKS" aria-hidden="true"><span class="octicon octicon-link"></span></a>START OF HASHMAP HACKS<a class="anchor-link" href="#START-OF-HASHMAP-HACKS"> </a>
+</h1>
+<h2 id="Hacks">
+<a class="anchor" href="#Hacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hacks<a class="anchor-link" href="#Hacks"> </a>
+</h2>
+<ul>
+<li>Answer <em>ALL</em> questions in the code segments</li>
+<li>Create a diagram or comparison illustration (Canva).<ul>
+<li>What are the pro and cons of using this data structure? </li>
+<li>Dictionary vs List    </li>
+</ul>
+</li>
+<li>Expand upon the code given to you, possible improvements in comments</li>
+<li>
+<p>Build your own album showing features of a python dictionary</p>
+</li>
+<li>
+<p>For Mr. Yeung's class: Justify your favorite Taylor Swift song, answer may effect seed</p>
+</li>
+</ul>
+<h1 id="working-on-hacks">
+<a class="anchor" href="#working-on-hacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>working on hacks<a class="anchor-link" href="#working-on-hacks"> </a>
+</h1>
+<p><img src="/test-fastpages/images/copied_from_nb/images/diagram.png" alt="img"></p>
+<h1 id="creating-own-album-with-python">
+<a class="anchor" href="#creating-own-album-with-python" aria-hidden="true"><span class="octicon octicon-link"></span></a>creating own album with python<a class="anchor-link" href="#creating-own-album-with-python"> </a>
+</h1>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_album</span> <span class="o">=</span> <span class="p">{</span> <span class="c1"># initialize the album need to run each time</span>
+    <span class="s2">"title"</span><span class="p">:</span> <span class="s2">"I know how to use dictionaries"</span><span class="p">,</span>
+    <span class="s2">"artist"</span><span class="p">:</span> <span class="s2">"artist"</span><span class="p">,</span>
+    <span class="s2">"year"</span><span class="p">:</span> <span class="mi">1984</span><span class="p">,</span>
+    <span class="s2">"genre"</span><span class="p">:</span> <span class="p">[],</span>
+    <span class="s2">"tracks"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="mi">1</span><span class="p">:</span> <span class="s2">"U.N Owen Was her?"</span><span class="p">,</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">search_personal</span><span class="p">():</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">while</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span> <span class="c1"># use while loop so we can continue searching</span>
+        <span class="n">search</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"What would you like to know about the album? (type quit to leave)"</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">search</span> <span class="o">==</span> <span class="s2">"quit"</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"you have quit lol"</span><span class="p">)</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">elif</span> <span class="n">my_album</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">search</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"Invalid Search"</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">my_album</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">search</span><span class="o">.</span><span class="n">lower</span><span class="p">()))</span>
+    
+       
+<span class="c1">#search_personal()</span>
+
+<span class="n">my_tracks</span> <span class="o">=</span> <span class="n">my_album</span><span class="p">[</span><span class="s2">"tracks"</span><span class="p">]</span>
+<span class="k">def</span> <span class="nf">addtracks</span><span class="p">():</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">while</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span> <span class="c1"># use while loop so we can continue searching</span>
+        <span class="n">newTrack</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"add a new track (type tracks), change artist (type artist), show album (type search), add genre (type genre) or type quit"</span><span class="p">)</span>
+        
+        <span class="k">if</span> <span class="n">newTrack</span> <span class="o">==</span> <span class="s2">"quit"</span><span class="p">:</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+        
+        <span class="k">elif</span> <span class="n">newTrack</span> <span class="o">==</span> <span class="s2">"artist"</span><span class="p">:</span>
+            <span class="n">artists</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"type in artist name"</span><span class="p">)</span>
+            <span class="n">my_album</span><span class="p">[</span><span class="s2">"artist"</span><span class="p">]</span> <span class="o">=</span> <span class="n">artists</span>
+        
+        <span class="k">elif</span> <span class="n">newTrack</span> <span class="o">==</span> <span class="s2">"tracks"</span><span class="p">:</span>
+            <span class="n">newTrackz</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"type in new track name"</span><span class="p">)</span>
+            <span class="n">newTrack2</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"add position of new track:"</span><span class="p">)</span>
+            <span class="n">my_tracks</span><span class="p">[</span><span class="n">newTrack2</span><span class="p">]</span> <span class="o">=</span> <span class="n">newTrackz</span>
+        
+        <span class="k">elif</span> <span class="n">newTrack</span> <span class="o">==</span> <span class="s2">"search"</span><span class="p">:</span>
+            <span class="n">search_personal</span><span class="p">()</span>
+
+        
+        <span class="k">elif</span> <span class="n">newTrack</span> <span class="o">==</span> <span class="s2">"genre"</span><span class="p">:</span>
+            <span class="n">genres</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"add a genre to the program"</span><span class="p">)</span>
+            <span class="n">my_album</span><span class="p">[</span><span class="s2">"genre"</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">genres</span><span class="p">)</span>
+            <span class="n">newGenre</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="p">[</span><span class="n">newGenre</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">my_album</span><span class="p">[</span><span class="s2">"genre"</span><span class="p">]</span> <span class="k">if</span> <span class="n">x</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">newGenre</span><span class="p">]</span> <span class="c1"># use list comprehension to remove duplicates (wow im so good at coding)</span>
+            <span class="n">my_album</span><span class="p">[</span><span class="s2">"genre"</span><span class="p">]</span> <span class="o">=</span> <span class="n">newGenre</span> <span class="c1"># add genre</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">my_album</span><span class="p">[</span><span class="s2">"genre"</span><span class="p">])</span>
+        
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"unrecognized command!"</span><span class="p">)</span>
+
+<span class="n">addtracks</span><span class="p">()</span>
+ 
+
+<span class="c1">#search_personal()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_album</span><span class="p">[</span><span class="s2">"tracks"</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{1: 'U.N Owen Was her?', '2': 'discord', '3': 'maybe'}
+Invalid Search
+unknown
+unknown
+{1: 'U.N Owen Was her?', '2': 'discord', '3': 'maybe'}
+you have quit lol
+['touhou']
+['touhou']
+{1: 'U.N Owen Was her?', '2': 'discord', '3': 'maybe', '4': 'tomboyish girl in love'}
+you have quit lol
+{1: 'U.N Owen Was her?', '2': 'discord', '3': 'maybe', '4': 'tomboyish girl in love'}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="answering-questions">
+<a class="anchor" href="#answering-questions" aria-hidden="true"><span class="octicon octicon-link"></span></a>answering questions<a class="anchor-link" href="#answering-questions"> </a>
+</h1>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_set</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_set</span><span class="p">)</span>  
+
+<span class="c1"># What do you notice in the output?</span>
+<span class="c1"># THE output of the function is {1,2,3}. </span>
+<span class="c1"># There are no duplicate values </span>
+<span class="c1"># probably b/c we can't have duplciates in hashes.</span>
+
+<span class="c1"># Why do you think Sets are in the same tech talk as Hashmaps/Hashtables?</span>
+<span class="c1"># Sets are a good example of how collisions in hashing works and why we shouldn't have duplicate</span>
+<span class="c1"># Sets are a tool we can use for hashing if we don't want to use dictionaries.</span>
+
+<span class="c1"># Creating a dictionary with information about the album "Lover"</span>
+<span class="n">lover_album</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">"title"</span><span class="p">:</span> <span class="s2">"Lover"</span><span class="p">,</span>
+    <span class="s2">"artist"</span><span class="p">:</span> <span class="s2">"Taylor Swift"</span><span class="p">,</span>
+    <span class="s2">"year"</span><span class="p">:</span> <span class="mi">2019</span><span class="p">,</span>
+    <span class="s2">"genre"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"Pop"</span><span class="p">,</span> <span class="s2">"Synth-pop"</span><span class="p">],</span>
+    <span class="s2">"tracks"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="mi">1</span><span class="p">:</span> <span class="s2">"I Forgot That You Existed"</span><span class="p">,</span>
+        <span class="mi">2</span><span class="p">:</span> <span class="s2">"Cruel Summer"</span><span class="p">,</span>
+        <span class="mi">3</span><span class="p">:</span> <span class="s2">"Lover"</span><span class="p">,</span>
+        <span class="mi">4</span><span class="p">:</span> <span class="s2">"The Man"</span><span class="p">,</span>
+        <span class="mi">5</span><span class="p">:</span> <span class="s2">"The Archer"</span><span class="p">,</span>
+        <span class="mi">6</span><span class="p">:</span> <span class="s2">"I Think He Knows"</span><span class="p">,</span>
+        <span class="mi">7</span><span class="p">:</span> <span class="s2">"Miss Americana &amp; The Heartbreak Prince"</span><span class="p">,</span>
+        <span class="mi">8</span><span class="p">:</span> <span class="s2">"Paper Rings"</span><span class="p">,</span>
+        <span class="mi">9</span><span class="p">:</span> <span class="s2">"Cornelia Street"</span><span class="p">,</span>
+        <span class="mi">10</span><span class="p">:</span> <span class="s2">"Death By A Thousand Cuts"</span><span class="p">,</span>
+        <span class="mi">11</span><span class="p">:</span> <span class="s2">"London Boy"</span><span class="p">,</span>
+        <span class="mi">12</span><span class="p">:</span> <span class="s2">"Soon You'll Get Better (feat. Dixie Chicks)"</span><span class="p">,</span>
+        <span class="mi">13</span><span class="p">:</span> <span class="s2">"False God"</span><span class="p">,</span>
+        <span class="mi">14</span><span class="p">:</span> <span class="s2">"You Need To Calm Down"</span><span class="p">,</span>
+        <span class="mi">15</span><span class="p">:</span> <span class="s2">"Afterglow"</span><span class="p">,</span>
+        <span class="mi">16</span><span class="p">:</span> <span class="s2">"Me! (feat. Brendon Urie of Panic! At The Disco)"</span><span class="p">,</span>
+        <span class="mi">17</span><span class="p">:</span> <span class="s2">"It's Nice To Have A Friend"</span><span class="p">,</span>
+        <span class="mi">18</span><span class="p">:</span> <span class="s2">"Daylight"</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1"># What data structures do you see?</span>
+<span class="c1"># Lists</span>
+<span class="c1"># all of this is compiled into a dictionary</span>
+
+<span class="c1"># Printing the dictionary</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lover_album</span><span class="p">)</span>
+
+<span class="c1"># Retrieve value from dictionary with key</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lover_album</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'tracks'</span><span class="p">))</span>
+<span class="c1"># or</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lover_album</span><span class="p">[</span><span class="s1">'tracks'</span><span class="p">])</span>
+
+<span class="c1"># adding a value with a new key</span>
+<span class="n">lover_album</span><span class="p">[</span><span class="s2">"producer"</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Taylor Swift'</span><span class="p">,</span> <span class="s1">'Jack Antonoff'</span><span class="p">,</span> <span class="s1">'Joel Little'</span><span class="p">,</span> <span class="s1">'Taylor Swift'</span><span class="p">,</span> <span class="s1">'Louis Bell'</span><span class="p">,</span> <span class="s1">'Frank Dukes'</span><span class="p">]</span>
+<span class="c1"># What can you change to make sure there are no duplicate producers?</span>
+<span class="c1"># Just remove the duplicate manually lol</span>
+<span class="c1"># or use sets (that worked)</span>
+
+<span class="n">settest</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">lover_album</span><span class="p">[</span><span class="s2">"producer"</span><span class="p">])</span>
+
+
+<span class="c1"># Printing the dictionary</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lover_album</span><span class="p">[</span><span class="s2">"producer"</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">settest</span><span class="p">)</span>
+
+<span class="c1"># Adding a an key-value pair to an existing key </span>
+<span class="n">lover_album</span><span class="p">[</span><span class="s2">"tracks"</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="mi">19</span><span class="p">:</span> <span class="s2">"All Of The Girls You Loved Before"</span><span class="p">})</span>
+
+<span class="c1"># How would add an additional genre to the dictionary, like electropop? </span>
+<span class="c1"># </span>
+<span class="n">lover_album</span><span class="p">[</span><span class="s2">"genre"</span><span class="p">]</span> <span class="o">=</span><span class="p">[</span><span class="s2">"Pop"</span><span class="p">,</span> <span class="s2">"Synth-pop"</span><span class="p">,</span> <span class="s2">"electropop"</span><span class="p">]</span> <span class="c1"># will work, but maybe there is another way</span>
+<span class="c1"># </span>
+<span class="n">lover_album</span><span class="p">[</span><span class="s2">"genre"</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">"new genre"</span><span class="p">)</span> <span class="c1">#this method uses list methods but we now have duplicates if we run multiple times</span>
+
+<span class="c1"># Printing the dictionary</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lover_album</span><span class="p">[</span><span class="s2">"genre"</span><span class="p">])</span>
+
+<span class="c1"># Print lover_album in more readable format</span>
+<span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">lover_album</span><span class="o">.</span><span class="n">items</span><span class="p">():</span> <span class="c1"># iterate using a for loop for key and value</span>
+    <span class="c1">#print(str(k) + ": " + str(v)) dont need this....</span>
+    <span class="k">pass</span>
+
+<span class="c1"># Write your own code to print tracks in readable format</span>
+<span class="c1"># </span>
+<span class="c1">#</span>
+<span class="n">exe</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">trackS</span> <span class="o">=</span> <span class="n">lover_album</span><span class="p">[</span><span class="s2">"tracks"</span><span class="p">]</span>
+<span class="n">num</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">trackS</span><span class="o">.</span><span class="n">items</span><span class="p">():</span> <span class="c1"># iterate using a for loop for key and value</span>
+    <span class="n">exe</span> <span class="o">=</span> <span class="n">exe</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="n">num</span> <span class="o">=</span> <span class="n">num</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"song"</span><span class="p">,</span> <span class="n">exe</span><span class="p">,</span> <span class="s2">":"</span><span class="p">,</span> <span class="n">trackS</span><span class="p">[</span><span class="n">num</span><span class="p">])</span>
+
+<span class="c1"># Using conditionals to retrieve a random song</span>
+<span class="k">def</span> <span class="nf">search</span><span class="p">():</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">while</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span> <span class="c1"># use while loop so we can continue searching</span>
+        <span class="n">search</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"What would you like to know about the album? (type quit to exit)"</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">search</span> <span class="o">==</span> <span class="s2">"quit"</span><span class="p">:</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">elif</span> <span class="n">lover_album</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">search</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"Invalid Search"</span><span class="p">)</span>
+        
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">lover_album</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">search</span><span class="o">.</span><span class="n">lower</span><span class="p">()))</span>
+    
+<span class="n">search</span><span class="p">()</span>
+
+<span class="c1"># This is a very basic code segment, how can you improve upon this code?</span>
+<span class="c1"># use while loop so that we can continue searching</span>
+<span class="c1">#</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+</div>
+
+
+
+  </div><a class="u-url" href="/test-fastpages/2023/04/16/tri3reviewticket5hacks.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/test-fastpages/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="https://jyustin.github.io/test-fastpages/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/test-fastpages/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>Justin&#39;s personal fastpages blog</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
