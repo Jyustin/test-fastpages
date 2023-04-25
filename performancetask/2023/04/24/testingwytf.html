@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>coding hacks for 2.3 | blog for ap csp (Justin N)</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="coding hacks for 2.3" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="hacks" />
+<meta property="og:description" content="hacks" />
+<link rel="canonical" href="https://jyustin.github.io/test-fastpages/performancetask/2023/04/24/testingwytf.html" />
+<meta property="og:url" content="https://jyustin.github.io/test-fastpages/performancetask/2023/04/24/testingwytf.html" />
+<meta property="og:site_name" content="blog for ap csp (Justin N)" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-04-24T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="coding hacks for 2.3" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-04-24T00:00:00-05:00","datePublished":"2023-04-24T00:00:00-05:00","description":"hacks","headline":"coding hacks for 2.3","mainEntityOfPage":{"@type":"WebPage","@id":"https://jyustin.github.io/test-fastpages/performancetask/2023/04/24/testingwytf.html"},"url":"https://jyustin.github.io/test-fastpages/performancetask/2023/04/24/testingwytf.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/test-fastpages/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://jyustin.github.io/test-fastpages/feed.xml" title="blog for ap csp (Justin N)" /><link rel="shortcut icon" type="image/x-icon" href="/test-fastpages/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/test-fastpages/">blog for ap csp (Justin N)</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/test-fastpages/about/">About Me (Justin)</a><a class="page-link" href="/test-fastpages/apis/">api</a><a class="page-link" href="/test-fastpages/notes/">notes for ap csp</a><a class="page-link" href="/test-fastpages/personal-progress/">personal csp progress</a><a class="page-link" href="/test-fastpages/search/">Search</a><a class="page-link" href="/test-fastpages/categories/">Tags</a><a class="page-link" href="/test-fastpages/vocab/">vocab for ap csp</a><a class="page-link" href="/test-fastpages/js/">Javascript week 5 hack</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">coding hacks for 2.3</h1><p class="page-description">hacks</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-04-24T00:00:00-05:00" itemprop="datePublished">
+        Apr 24, 2023
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      7 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/test-fastpages/categories/#performancetask">performancetask</a>
+        
+      
+      </p>
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <div class="px-2">
+
+    <a href="https://github.com/Jyustin/test-fastpages/tree/master/_notebooks/2023-3-11-testingwytf.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/test-fastpages/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/Jyustin/test-fastpages/master?filepath=_notebooks%2F2023-3-11-testingwytf.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/test-fastpages/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/Jyustin/test-fastpages/blob/master/_notebooks/2023-3-11-testingwytf.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/test-fastpages/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          <div class="px-2">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2FJyustin%2Ftest-fastpages%2Fblob%2Fmaster%2F_notebooks%2F2023-3-11-testingwytf.ipynb" target="_blank">
+      <img class="notebook-badge-image" src="/test-fastpages/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
+  </a>
+</div>
+
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h1"><a href="#HACKS-that-are-completed">HACKS that are completed </a></li>
+<li class="toc-entry toc-h1"><a href="#pt-1:-Notes">pt 1: Notes </a></li>
+<li class="toc-entry toc-h1"><a href="#database-information">database information </a></li>
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2023-3-11-testingwytf.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="HACKS-that-are-completed">
+<a class="anchor" href="#HACKS-that-are-completed" aria-hidden="true"><span class="octicon octicon-link"></span></a>HACKS that are completed<a class="anchor-link" href="#HACKS-that-are-completed"> </a>
+</h1>
+<p>Score for quiz:</p>
+<p><img src="/test-fastpages/images/copied_from_nb/images/quiz2.png" alt="title"></p>
+<h1 id="pt-1:-Notes">
+<a class="anchor" href="#pt-1:-Notes" aria-hidden="true"><span class="octicon octicon-link"></span></a>pt 1: Notes<a class="anchor-link" href="#pt-1:-Notes"> </a>
+</h1>
+<p>Using the Pandas python library is neccessary for complex interactions with a premade database or one generated using a dictionary. the pandas library can select and sort through the data for us, like printing out a country with the highest covid deaths at the top of a list of all of the data. Although this library is very useful, I am not sure how I could integrate this with my project, as my project does not use python for anything but has markdown as it's frontend.</p>
+<p>Kaggle is a good source of premade databases for practicing working with databases. the databases also look legit.</p>
+<h1 id="database-information">
+<a class="anchor" href="#database-information" aria-hidden="true"><span class="octicon octicon-link"></span></a>database information<a class="anchor-link" href="#database-information"> </a>
+</h1>
+<p>the databases I used are crowd-sourced databases from kaggle, meaning that there is likely no biases in the database. This is because there is simply no reason for the developers to try and manipulate the data, as there is no potential gain they could earn from it. However, the database is most likely not up-to-date as steam is a constantly updating marketplace, and prices are constantly being updated and new games are constantly being added. If I wanted to give users information about steam I would use an API, not a database that cannot update itself.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">steamdata</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'files/games.csv'</span><span class="p">)</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">'user_reviews'</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"--the top 10 most popular steam games (by user reviews)------"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">steamdata</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">steamdata</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">steamdata</span>
+<span class="n">z</span> <span class="o">=</span> <span class="n">steamdata</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+
+<span class="n">avg</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="s1">'positive_ratio'</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">avg2</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="s1">'price_final'</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">avg3</span> <span class="o">=</span> <span class="n">z</span><span class="p">[</span><span class="s1">'price_final'</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"the average positive ratio of the top 10 most popular steam games is "</span><span class="p">,</span><span class="n">avg</span><span class="p">,</span> <span class="s2">"%"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">""</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"the average cost of a steam game is "</span><span class="p">,</span> <span class="n">avg2</span><span class="p">,</span> <span class="s2">"usd"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">""</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"the average cost of the top 100 most popular steam games is "</span><span class="p">,</span> <span class="n">avg3</span><span class="p">,</span> <span class="s2">"usd"</span><span class="p">)</span>
+
+
+
+<span class="n">steamdata</span><span class="p">[</span><span class="s1">'date_release'</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">steamdata</span><span class="p">[</span><span class="s1">'date_release'</span><span class="p">])</span>
+
+<span class="k">def</span> <span class="nf">datasortfunc</span><span class="p">()</span> <span class="p">:</span> <span class="c1">#sort by release date</span>
+    <span class="n">datasort</span> <span class="o">=</span> <span class="n">steamdata</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">'date_release'</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">datasort</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+    <span class="n">data2</span> <span class="o">=</span> <span class="n">datasort</span><span class="p">[[</span><span class="s1">'title'</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">to_string</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"&lt;---the 10 earliest games on steam ---&gt;"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">data2</span><span class="p">)</span>
+
+
+
+<span class="n">datasortfunc</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"just the title of the top 10 games"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">steamdata</span><span class="p">[[</span><span class="s1">'title'</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">to_string</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>--the top 10 most popular steam games (by user reviews)------
+       app_id                             title date_release   win    mac  \
+19041     730  Counter-Strike: Global Offensive   2012-08-21  True   True   
+19489  578080               PUBG: BATTLEGROUNDS   2017-12-21  True  False   
+8746      570                            Dota 2   2013-07-09  True   True   
+5347   271590                Grand Theft Auto V   2015-04-13  True  False   
+19473  359550   Tom Clancy's Rainbow Six® Siege   2015-12-01  True  False   
+9811      440                   Team Fortress 2   2007-10-10  True   True   
+7342   105600                          Terraria   2011-05-16  True   True   
+2335     4000                       Garry's Mod   2006-11-29  True   True   
+3764   252490                              Rust   2018-02-08  True   True   
+7155   292030         The Witcher® 3: Wild Hunt   2015-05-18  True  False   
+
+       linux                   rating  positive_ratio  user_reviews  \
+19041   True            Very Positive              88       6941137   
+19489  False                    Mixed              57       2142372   
+8746    True            Very Positive              82       1930493   
+5347   False            Very Positive              85       1367837   
+19473  False            Very Positive              87        939992   
+9811    True            Very Positive              93        935635   
+7342    True  Overwhelmingly Positive              97        867226   
+2335    True  Overwhelmingly Positive              96        795170   
+3764   False            Very Positive              87        722973   
+7155   False  Overwhelmingly Positive              96        640996   
+
+       price_final  price_original  discount  steam_deck  
+19041        14.99            0.00       0.0        True  
+19489         0.00            0.00       0.0        True  
+8746          0.00            0.00       0.0        True  
+5347          0.00            0.00       0.0        True  
+19473        19.99           19.99       0.0        True  
+9811          0.00            0.00       0.0        True  
+7342          9.99            9.99       0.0        True  
+2335          9.99            9.99       0.0        True  
+3764         39.99           39.99       0.0        True  
+7155         39.99           39.99       0.0        True  
+the average positive ratio of the top 10 most popular steam games is  86.8 %
+
+the average cost of a steam game is  8.750796431357113 usd
+
+the average cost of the top 100 most popular steam games is  20.706500000000002 usd
+       app_id                        title date_release   win    mac  linux  \
+16051  282010         Carmageddon Max Pack   1997-06-30  True  False  False   
+32559  232770                       POSTAL   1997-11-14  True   True   True   
+10014      70                    Half-Life   1998-11-08  True   True   True   
+9364       20        Team Fortress Classic   1999-04-01  True   True   True   
+35817  224920  Legacy of Kain: Soul Reaver   1999-09-08  True  False  False   
+11214      50    Half-Life: Opposing Force   1999-11-01  True   True   True   
+11441      10               Counter-Strike   2000-11-01  True   True   True   
+17624      60                     Ricochet   2000-11-01  True   True   True   
+12938     130        Half-Life: Blue Shift   2001-06-01  True   True   True   
+9365       40           Deathmatch Classic   2001-06-01  True   True   True   
+
+                        rating  positive_ratio  user_reviews  price_final  \
+16051            Very Positive              85           428         9.99   
+32559            Very Positive              85          2329         0.00   
+10014  Overwhelmingly Positive              96         68327         9.99   
+9364             Very Positive              85          5146         4.99   
+35817          Mostly Positive              73          1467         0.00   
+11214  Overwhelmingly Positive              95         14057         4.99   
+11441  Overwhelmingly Positive              97        132250         9.99   
+17624            Very Positive              80          3395         4.99   
+12938            Very Positive              91         10522         4.99   
+9365           Mostly Positive              79          1757         4.99   
+
+       price_original  discount  steam_deck  
+16051            9.99       0.0        True  
+32559            0.00       0.0        True  
+10014            9.99       0.0        True  
+9364             4.99       0.0        True  
+35817            0.00       0.0        True  
+11214            4.99       0.0        True  
+11441            9.99       0.0        True  
+17624            4.99       0.0        True  
+12938            4.99       0.0        True  
+9365             4.99       0.0        True  
+&lt;---the 10 earliest games on steam ---&gt;
+                      title
+       Carmageddon Max Pack
+                     POSTAL
+                  Half-Life
+      Team Fortress Classic
+Legacy of Kain: Soul Reaver
+  Half-Life: Opposing Force
+             Counter-Strike
+                   Ricochet
+      Half-Life: Blue Shift
+         Deathmatch Classic
+just the title of the top 10 games
+                           title
+Counter-Strike: Global Offensive
+             PUBG: BATTLEGROUNDS
+                          Dota 2
+              Grand Theft Auto V
+ Tom Clancy's Rainbow Six® Siege
+                 Team Fortress 2
+                        Terraria
+                     Garry's Mod
+                            Rust
+       The Witcher® 3: Wild Hunt
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> <span class="n">complete</span> <span class="n">output</span> 
+<span class="o">--</span><span class="n">the</span> <span class="n">top</span> <span class="mi">10</span> <span class="n">most</span> <span class="n">popular</span> <span class="n">steam</span> <span class="n">games</span> <span class="p">(</span><span class="n">by</span> <span class="n">user</span> <span class="n">reviews</span><span class="p">)</span><span class="o">------</span>
+       <span class="n">app_id</span>                             <span class="n">title</span> <span class="n">date_release</span>   <span class="n">win</span>    <span class="n">mac</span>  \
+<span class="mi">19041</span>     <span class="mi">730</span>  <span class="n">Counter</span><span class="o">-</span><span class="n">Strike</span><span class="p">:</span> <span class="n">Global</span> <span class="n">Offensive</span>   <span class="mi">2012</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">21</span>  <span class="kc">True</span>   <span class="kc">True</span>   
+<span class="mi">19489</span>  <span class="mi">578080</span>               <span class="n">PUBG</span><span class="p">:</span> <span class="n">BATTLEGROUNDS</span>   <span class="mi">2017</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">21</span>  <span class="kc">True</span>  <span class="kc">False</span>   
+<span class="mi">8746</span>      <span class="mi">570</span>                            <span class="n">Dota</span> <span class="mi">2</span>   <span class="mi">2013</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">09</span>  <span class="kc">True</span>   <span class="kc">True</span>   
+<span class="mi">5347</span>   <span class="mi">271590</span>                <span class="n">Grand</span> <span class="n">Theft</span> <span class="n">Auto</span> <span class="n">V</span>   <span class="mi">2015</span><span class="o">-</span><span class="mi">04</span><span class="o">-</span><span class="mi">13</span>  <span class="kc">True</span>  <span class="kc">False</span>   
+<span class="mi">19473</span>  <span class="mi">359550</span>   <span class="n">Tom</span> <span class="n">Clancy</span><span class="s1">'s Rainbow Six® Siege   2015-12-01  True  False   </span>
+<span class="mi">9811</span>      <span class="mi">440</span>                   <span class="n">Team</span> <span class="n">Fortress</span> <span class="mi">2</span>   <span class="mi">2007</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">10</span>  <span class="kc">True</span>   <span class="kc">True</span>   
+<span class="mi">7342</span>   <span class="mi">105600</span>                          <span class="n">Terraria</span>   <span class="mi">2011</span><span class="o">-</span><span class="mi">05</span><span class="o">-</span><span class="mi">16</span>  <span class="kc">True</span>   <span class="kc">True</span>   
+<span class="mi">2335</span>     <span class="mi">4000</span>                       <span class="n">Garry</span><span class="s1">'s Mod   2006-11-29  True   True   </span>
+<span class="mi">3764</span>   <span class="mi">252490</span>                              <span class="n">Rust</span>   <span class="mi">2018</span><span class="o">-</span><span class="mi">02</span><span class="o">-</span><span class="mi">08</span>  <span class="kc">True</span>   <span class="kc">True</span>   
+<span class="mi">7155</span>   <span class="mi">292030</span>         <span class="n">The</span> <span class="n">Witcher</span><span class="err">®</span> <span class="mi">3</span><span class="p">:</span> <span class="n">Wild</span> <span class="n">Hunt</span>   <span class="mi">2015</span><span class="o">-</span><span class="mi">05</span><span class="o">-</span><span class="mi">18</span>  <span class="kc">True</span>  <span class="kc">False</span>   
+
+       <span class="n">linux</span>                   <span class="n">rating</span>  <span class="n">positive_ratio</span>  <span class="n">user_reviews</span>  \
+<span class="mi">19041</span>   <span class="kc">True</span>            <span class="n">Very</span> <span class="n">Positive</span>              <span class="mi">88</span>       <span class="mi">6941137</span>   
+<span class="mi">19489</span>  <span class="kc">False</span>                    <span class="n">Mixed</span>              <span class="mi">57</span>       <span class="mi">2142372</span>   
+<span class="mi">8746</span>    <span class="kc">True</span>            <span class="n">Very</span> <span class="n">Positive</span>              <span class="mi">82</span>       <span class="mi">1930493</span>   
+<span class="mi">5347</span>   <span class="kc">False</span>            <span class="n">Very</span> <span class="n">Positive</span>              <span class="mi">85</span>       <span class="mi">1367837</span>   
+<span class="mi">19473</span>  <span class="kc">False</span>            <span class="n">Very</span> <span class="n">Positive</span>              <span class="mi">87</span>        <span class="mi">939992</span>   
+<span class="mi">9811</span>    <span class="kc">True</span>            <span class="n">Very</span> <span class="n">Positive</span>              <span class="mi">93</span>        <span class="mi">935635</span>   
+<span class="mi">7342</span>    <span class="kc">True</span>  <span class="n">Overwhelmingly</span> <span class="n">Positive</span>              <span class="mi">97</span>        <span class="mi">867226</span>   
+<span class="mi">2335</span>    <span class="kc">True</span>  <span class="n">Overwhelmingly</span> <span class="n">Positive</span>              <span class="mi">96</span>        <span class="mi">795170</span>   
+<span class="mi">3764</span>   <span class="kc">False</span>            <span class="n">Very</span> <span class="n">Positive</span>              <span class="mi">87</span>        <span class="mi">722973</span>   
+<span class="mi">7155</span>   <span class="kc">False</span>  <span class="n">Overwhelmingly</span> <span class="n">Positive</span>              <span class="mi">96</span>        <span class="mi">640996</span>   
+
+       <span class="n">price_final</span>  <span class="n">price_original</span>  <span class="n">discount</span>  <span class="n">steam_deck</span>  
+<span class="mi">19041</span>        <span class="mf">14.99</span>            <span class="mf">0.00</span>       <span class="mf">0.0</span>        <span class="kc">True</span>  
+<span class="mi">19489</span>         <span class="mf">0.00</span>            <span class="mf">0.00</span>       <span class="mf">0.0</span>        <span class="kc">True</span>  
+<span class="mi">8746</span>          <span class="mf">0.00</span>            <span class="mf">0.00</span>       <span class="mf">0.0</span>        <span class="kc">True</span>  
+<span class="mi">5347</span>          <span class="mf">0.00</span>            <span class="mf">0.00</span>       <span class="mf">0.0</span>        <span class="kc">True</span>  
+<span class="mi">19473</span>        <span class="mf">19.99</span>           <span class="mf">19.99</span>       <span class="mf">0.0</span>        <span class="kc">True</span>  
+<span class="mi">9811</span>          <span class="mf">0.00</span>            <span class="mf">0.00</span>       <span class="mf">0.0</span>        <span class="kc">True</span>  
+<span class="mi">7342</span>          <span class="mf">9.99</span>            <span class="mf">9.99</span>       <span class="mf">0.0</span>        <span class="kc">True</span>  
+<span class="mi">2335</span>          <span class="mf">9.99</span>            <span class="mf">9.99</span>       <span class="mf">0.0</span>        <span class="kc">True</span>  
+<span class="mi">3764</span>         <span class="mf">39.99</span>           <span class="mf">39.99</span>       <span class="mf">0.0</span>        <span class="kc">True</span>  
+<span class="mi">7155</span>         <span class="mf">39.99</span>           <span class="mf">39.99</span>       <span class="mf">0.0</span>        <span class="kc">True</span>  
+
+<span class="n">the</span> <span class="n">average</span> <span class="n">positive</span> <span class="n">ratio</span> <span class="n">of</span> <span class="n">the</span> <span class="n">top</span> <span class="mi">10</span> <span class="n">most</span> <span class="n">popular</span> <span class="n">steam</span> <span class="n">games</span> <span class="ow">is</span>  <span class="mf">86.8</span> <span class="o">%</span>
+
+<span class="n">the</span> <span class="n">average</span> <span class="n">cost</span> <span class="n">of</span> <span class="n">a</span> <span class="n">steam</span> <span class="n">game</span> <span class="ow">is</span>  <span class="mf">8.750796431357113</span> <span class="n">usd</span>
+
+<span class="n">the</span> <span class="n">average</span> <span class="n">cost</span> <span class="n">of</span> <span class="n">the</span> <span class="n">top</span> <span class="mi">100</span> <span class="n">most</span> <span class="n">popular</span> <span class="n">steam</span> <span class="n">games</span> <span class="ow">is</span>  <span class="mf">20.706500000000002</span> <span class="n">usd</span>
+<span class="o">--</span><span class="n">the</span> <span class="n">top</span> <span class="mi">10</span> <span class="n">oldest</span> <span class="n">steam</span> <span class="n">games</span> <span class="p">(</span><span class="n">by</span> <span class="n">date</span> <span class="n">of</span> <span class="n">release</span><span class="p">)</span><span class="o">------</span>
+
+       <span class="n">app_id</span>                        <span class="n">title</span> <span class="n">date_release</span>   <span class="n">win</span>    <span class="n">mac</span>  <span class="n">linux</span>  \
+<span class="mi">16051</span>  <span class="mi">282010</span>         <span class="n">Carmageddon</span> <span class="n">Max</span> <span class="n">Pack</span>   <span class="mi">1997</span><span class="o">-</span><span class="mi">06</span><span class="o">-</span><span class="mi">30</span>  <span class="kc">True</span>  <span class="kc">False</span>  <span class="kc">False</span>   
+<span class="mi">32559</span>  <span class="mi">232770</span>                       <span class="n">POSTAL</span>   <span class="mi">1997</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">14</span>  <span class="kc">True</span>   <span class="kc">True</span>   <span class="kc">True</span>   
+<span class="mi">10014</span>      <span class="mi">70</span>                    <span class="n">Half</span><span class="o">-</span><span class="n">Life</span>   <span class="mi">1998</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">08</span>  <span class="kc">True</span>   <span class="kc">True</span>   <span class="kc">True</span>   
+<span class="mi">9364</span>       <span class="mi">20</span>        <span class="n">Team</span> <span class="n">Fortress</span> <span class="n">Classic</span>   <span class="mi">1999</span><span class="o">-</span><span class="mi">04</span><span class="o">-</span><span class="mi">01</span>  <span class="kc">True</span>   <span class="kc">True</span>   <span class="kc">True</span>   
+<span class="mi">35817</span>  <span class="mi">224920</span>  <span class="n">Legacy</span> <span class="n">of</span> <span class="n">Kain</span><span class="p">:</span> <span class="n">Soul</span> <span class="n">Reaver</span>   <span class="mi">1999</span><span class="o">-</span><span class="mi">09</span><span class="o">-</span><span class="mi">08</span>  <span class="kc">True</span>  <span class="kc">False</span>  <span class="kc">False</span>   
+<span class="mi">11214</span>      <span class="mi">50</span>    <span class="n">Half</span><span class="o">-</span><span class="n">Life</span><span class="p">:</span> <span class="n">Opposing</span> <span class="n">Force</span>   <span class="mi">1999</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">01</span>  <span class="kc">True</span>   <span class="kc">True</span>   <span class="kc">True</span>   
+<span class="mi">11441</span>      <span class="mi">10</span>               <span class="n">Counter</span><span class="o">-</span><span class="n">Strike</span>   <span class="mi">2000</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">01</span>  <span class="kc">True</span>   <span class="kc">True</span>   <span class="kc">True</span>   
+<span class="mi">17624</span>      <span class="mi">60</span>                     <span class="n">Ricochet</span>   <span class="mi">2000</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">01</span>  <span class="kc">True</span>   <span class="kc">True</span>   <span class="kc">True</span>   
+<span class="mi">12938</span>     <span class="mi">130</span>        <span class="n">Half</span><span class="o">-</span><span class="n">Life</span><span class="p">:</span> <span class="n">Blue</span> <span class="n">Shift</span>   <span class="mi">2001</span><span class="o">-</span><span class="mi">06</span><span class="o">-</span><span class="mi">01</span>  <span class="kc">True</span>   <span class="kc">True</span>   <span class="kc">True</span>   
+<span class="mi">9365</span>       <span class="mi">40</span>           <span class="n">Deathmatch</span> <span class="n">Classic</span>   <span class="mi">2001</span><span class="o">-</span><span class="mi">06</span><span class="o">-</span><span class="mi">01</span>  <span class="kc">True</span>   <span class="kc">True</span>   <span class="kc">True</span>   
+
+                        <span class="n">rating</span>  <span class="n">positive_ratio</span>  <span class="n">user_reviews</span>  <span class="n">price_final</span>  \
+<span class="mi">16051</span>            <span class="n">Very</span> <span class="n">Positive</span>              <span class="mi">85</span>           <span class="mi">428</span>         <span class="mf">9.99</span>   
+<span class="mi">32559</span>            <span class="n">Very</span> <span class="n">Positive</span>              <span class="mi">85</span>          <span class="mi">2329</span>         <span class="mf">0.00</span>   
+<span class="mi">10014</span>  <span class="n">Overwhelmingly</span> <span class="n">Positive</span>              <span class="mi">96</span>         <span class="mi">68327</span>         <span class="mf">9.99</span>   
+<span class="mi">9364</span>             <span class="n">Very</span> <span class="n">Positive</span>              <span class="mi">85</span>          <span class="mi">5146</span>         <span class="mf">4.99</span>   
+<span class="mi">35817</span>          <span class="n">Mostly</span> <span class="n">Positive</span>              <span class="mi">73</span>          <span class="mi">1467</span>         <span class="mf">0.00</span>   
+<span class="mi">11214</span>  <span class="n">Overwhelmingly</span> <span class="n">Positive</span>              <span class="mi">95</span>         <span class="mi">14057</span>         <span class="mf">4.99</span>   
+<span class="mi">11441</span>  <span class="n">Overwhelmingly</span> <span class="n">Positive</span>              <span class="mi">97</span>        <span class="mi">132250</span>         <span class="mf">9.99</span>   
+<span class="mi">17624</span>            <span class="n">Very</span> <span class="n">Positive</span>              <span class="mi">80</span>          <span class="mi">3395</span>         <span class="mf">4.99</span>   
+<span class="mi">12938</span>            <span class="n">Very</span> <span class="n">Positive</span>              <span class="mi">91</span>         <span class="mi">10522</span>         <span class="mf">4.99</span>   
+<span class="mi">9365</span>           <span class="n">Mostly</span> <span class="n">Positive</span>              <span class="mi">79</span>          <span class="mi">1757</span>         <span class="mf">4.99</span>   
+
+       <span class="n">price_original</span>  <span class="n">discount</span>  <span class="n">steam_deck</span>  
+<span class="mi">16051</span>            <span class="mf">9.99</span>       <span class="mf">0.0</span>        <span class="kc">True</span>  
+<span class="mi">32559</span>            <span class="mf">0.00</span>       <span class="mf">0.0</span>        <span class="kc">True</span>  
+<span class="mi">10014</span>            <span class="mf">9.99</span>       <span class="mf">0.0</span>        <span class="kc">True</span>  
+<span class="mi">9364</span>             <span class="mf">4.99</span>       <span class="mf">0.0</span>        <span class="kc">True</span>  
+<span class="mi">35817</span>            <span class="mf">0.00</span>       <span class="mf">0.0</span>        <span class="kc">True</span>  
+<span class="mi">11214</span>            <span class="mf">4.99</span>       <span class="mf">0.0</span>        <span class="kc">True</span>  
+<span class="mi">11441</span>            <span class="mf">9.99</span>       <span class="mf">0.0</span>        <span class="kc">True</span>  
+<span class="mi">17624</span>            <span class="mf">4.99</span>       <span class="mf">0.0</span>        <span class="kc">True</span>  
+<span class="mi">12938</span>            <span class="mf">4.99</span>       <span class="mf">0.0</span>        <span class="kc">True</span>  
+<span class="mi">9365</span>             <span class="mf">4.99</span>       <span class="mf">0.0</span>        <span class="kc">True</span>  
+<span class="o">&lt;---</span><span class="n">the</span> <span class="mi">10</span> <span class="n">earliest</span> <span class="n">games</span> <span class="n">on</span> <span class="n">steam</span> <span class="o">---&gt;</span>
+       <span class="n">title</span>
+<span class="n">Carmageddon</span> <span class="n">Max</span> <span class="n">Pack</span>
+      <span class="n">POSTAL</span>
+   <span class="n">Half</span><span class="o">-</span><span class="n">Life</span>
+<span class="n">Team</span> <span class="n">Fortress</span> <span class="n">Classic</span>
+<span class="n">Legacy</span> <span class="n">of</span> <span class="n">Kain</span><span class="p">:</span> <span class="n">Soul</span> <span class="n">Reaver</span>
+<span class="n">Half</span><span class="o">-</span><span class="n">Life</span><span class="p">:</span> <span class="n">Opposing</span> <span class="n">Force</span>
+<span class="n">Counter</span><span class="o">-</span><span class="n">Strike</span>
+    <span class="n">Ricochet</span>
+<span class="n">Half</span><span class="o">-</span><span class="n">Life</span><span class="p">:</span> <span class="n">Blue</span> <span class="n">Shift</span>
+<span class="n">Deathmatch</span> <span class="n">Classic</span>
+<span class="n">just</span> <span class="n">the</span> <span class="n">title</span> <span class="n">of</span> <span class="n">the</span> <span class="n">top</span> <span class="mi">10</span> <span class="n">games</span>
+                           <span class="n">title</span>
+<span class="n">Counter</span><span class="o">-</span><span class="n">Strike</span><span class="p">:</span> <span class="n">Global</span> <span class="n">Offensive</span>
+             <span class="n">PUBG</span><span class="p">:</span> <span class="n">BATTLEGROUNDS</span>
+                          <span class="n">Dota</span> <span class="mi">2</span>
+              <span class="n">Grand</span> <span class="n">Theft</span> <span class="n">Auto</span> <span class="n">V</span>
+ <span class="n">Tom</span> <span class="n">Clancy</span><span class="s1">'s Rainbow Six® Siege</span>
+                 <span class="n">Team</span> <span class="n">Fortress</span> <span class="mi">2</span>
+                        <span class="n">Terraria</span>
+                     <span class="n">Garry</span><span class="s1">'s Mod</span>
+                            <span class="n">Rust</span>
+       <span class="n">The</span> <span class="n">Witcher</span><span class="err">®</span> <span class="mi">3</span><span class="p">:</span> <span class="n">Wild</span> <span class="n">Hunt</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+</div>
+
+
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="Jyustin/test-fastpages"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/test-fastpages/performancetask/2023/04/24/testingwytf.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/test-fastpages/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="https://jyustin.github.io/test-fastpages/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/test-fastpages/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>Justin&#39;s personal fastpages blog</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
