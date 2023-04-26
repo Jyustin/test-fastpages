@@ -98,7 +98,11 @@ window.onload = wrap_img;
   <div class="post-content e-content" itemprop="articleBody">
     <ul id="toc" class="section-nav">
 <li class="toc-entry toc-h1"><a href="#binary-numbers-hacks">binary numbers hacks </a></li>
-<li class="toc-entry toc-h1"><a href="#binary-subtraction">binary subtraction</a></li>
+<li class="toc-entry toc-h1"><a href="#binary-subtraction">binary subtraction</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#result">result</a></li>
+</ul>
+</li>
 </ul><body>
 <!--
 #################################################
@@ -179,11 +183,13 @@ window.onload = wrap_img;
   <input type="text" id="math2" placeholder="number 2">
 
   <button onclick="subtract()">Subtract numbers</button>
-  <p id="result"></p>
+  <h2 id="result">
+<a class="anchor" href="#result" aria-hidden="true"><span class="octicon octicon-link"></span></a>result</h2>
   <script>
     function subtract() {
       math3 = parseInt(math1) - parseInt(math2)
       result = (math3)
+      console.log(math3)
     }
   </script>
 
