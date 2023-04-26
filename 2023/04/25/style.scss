@@ -1,0 +1,12 @@
+$primary-color: #ff06b4; // prefix is the cash symbol with a colon 
+$secondary-color: #098cf8;
+
+h1 {
+  background-color: $primary-color;
+  color: $secondary-color;
+}
+
+.button {
+  background-color: $secondary-color;
+  color: $primary-color;
+}
