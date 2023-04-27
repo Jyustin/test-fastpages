@@ -3,8 +3,29 @@ h1 {
   color: #098cf8;
 }
 
-button {
+.button {
   background-color: #098cf8;
   color: #ff06b4;
-}/*# sourceMappingURL=style.css.map */
+}
 
+big {
+  color: #ff06b4;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.image {
+  animation: fade-in;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}/*# sourceMappingURL=style.css.map */
