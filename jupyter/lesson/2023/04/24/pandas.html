@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Pandas - Mati &amp; Caleb | blog for ap csp (Justin N)</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Pandas - Mati &amp; Caleb" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This lesson introduces students to the Pandas library in Python for data analysis and manipulation, covering topics such as data loading, table creation, manipulation, and visualization using real-world examples." />
+<meta property="og:description" content="This lesson introduces students to the Pandas library in Python for data analysis and manipulation, covering topics such as data loading, table creation, manipulation, and visualization using real-world examples." />
+<link rel="canonical" href="https://jyustin.github.io/test-fastpages/jupyter/lesson/2023/04/24/pandas.html" />
+<meta property="og:url" content="https://jyustin.github.io/test-fastpages/jupyter/lesson/2023/04/24/pandas.html" />
+<meta property="og:site_name" content="blog for ap csp (Justin N)" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-04-24T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Pandas - Mati &amp; Caleb" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-04-24T00:00:00-05:00","datePublished":"2023-04-24T00:00:00-05:00","description":"This lesson introduces students to the Pandas library in Python for data analysis and manipulation, covering topics such as data loading, table creation, manipulation, and visualization using real-world examples.","headline":"Pandas - Mati &amp; Caleb","mainEntityOfPage":{"@type":"WebPage","@id":"https://jyustin.github.io/test-fastpages/jupyter/lesson/2023/04/24/pandas.html"},"url":"https://jyustin.github.io/test-fastpages/jupyter/lesson/2023/04/24/pandas.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/test-fastpages/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://jyustin.github.io/test-fastpages/feed.xml" title="blog for ap csp (Justin N)" /><link rel="shortcut icon" type="image/x-icon" href="/test-fastpages/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/test-fastpages/">blog for ap csp (Justin N)</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/test-fastpages/about/">About Me (Justin)</a><a class="page-link" href="/test-fastpages/apis/">api</a><a class="page-link" href="/test-fastpages/notes/">notes for ap csp</a><a class="page-link" href="/test-fastpages/personal-progress/">personal csp progress</a><a class="page-link" href="/test-fastpages/search/">Search</a><a class="page-link" href="/test-fastpages/categories/">Tags</a><a class="page-link" href="/test-fastpages/vocab/">vocab for ap csp</a><a class="page-link" href="/test-fastpages/js/">Javascript week 5 hack</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Pandas - Mati &amp; Caleb</h1><p class="page-description">This lesson introduces students to the Pandas library in Python for data analysis and manipulation, covering topics such as data loading, table creation, manipulation, and visualization using real-world examples.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-04-24T00:00:00-05:00" itemprop="datePublished">
+        Apr 24, 2023
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      14 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/test-fastpages/categories/#jupyter">jupyter</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/test-fastpages/categories/#lesson">lesson</a>
+        
+      
+      </p>
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <div class="px-2">
+
+    <a href="https://github.com/Jyustin/test-fastpages/tree/master/_notebooks/2023-04-24-pandas.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/test-fastpages/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/Jyustin/test-fastpages/master?filepath=_notebooks%2F2023-04-24-pandas.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/test-fastpages/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/Jyustin/test-fastpages/blob/master/_notebooks/2023-04-24-pandas.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/test-fastpages/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          <div class="px-2">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2FJyustin%2Ftest-fastpages%2Fblob%2Fmaster%2F_notebooks%2F2023-04-24-pandas.ipynb" target="_blank">
+      <img class="notebook-badge-image" src="/test-fastpages/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
+  </a>
+</div>
+
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h1"><a href="#before-we-start-this-portion-of-the-lesson:">before we start this portion of the lesson: </a></li>
+<li class="toc-entry toc-h1"><a href="#Overview:">Overview: </a></li>
+<li class="toc-entry toc-h1"><a href="#Learning-Objectives:">Learning Objectives: </a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#Question">Question </a>
+<ul>
+<li class="toc-entry toc-h6"><a href="#(should-be-all-odf-you-because-all-of-you-have-used-it-in-this-class-before.-)">(should be all odf you because all of you have used it in this class before. ) </a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#what-is-pandas?">what is pandas? </a></li>
+<li class="toc-entry toc-h1"><a href="#Question-#2-&-3:">Question #2 &amp; 3: </a></li>
+<li class="toc-entry toc-h1"><a href="#but-why-is-pandas-useful?">but why is pandas useful? </a></li>
+<li class="toc-entry toc-h1"><a href="#Question-#4:">Question #4: </a></li>
+<li class="toc-entry toc-h1"><a href="#how-do-i-flipping-use-it?-its-so-hard,-my-puny-brain-cant-understand-it">how do i flipping use it? its so hard, my puny brain cant understand it </a></li>
+<li class="toc-entry toc-h1"><a href="#example-code-on-how-to-load-a-csv-into-a-chart">example code on how to load a csv into a chart </a></li>
+<li class="toc-entry toc-h1"><a href="#how-to-manipulate-the-data-in-pandas.">how to manipulate the data in pandas. </a></li>
+<li class="toc-entry toc-h1"><a href="#how-do-i-put-it-into-a-chart-😩">how do i put it into a chart 😩 </a></li>
+<li class="toc-entry toc-h1"><a href="#Hacks">Hacks </a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#Questions">Questions </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#note">note </a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#no-questions-answered">no questions answered </a></li>
+<li class="toc-entry toc-h2"><a href="#questions-answered">questions answered </a></li>
+</ul>
+</li>
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2023-04-24-pandas.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="before-we-start-this-portion-of-the-lesson:">
+<a class="anchor" href="#before-we-start-this-portion-of-the-lesson:" aria-hidden="true"><span class="octicon octicon-link"></span></a>before we start this portion of the lesson:<a class="anchor-link" href="#before-we-start-this-portion-of-the-lesson:"> </a>
+</h1>
+<p>check if you have pip installed since we are going to be installing some libraries today!!!!!!
+if you arnt sure if you have pip, check it by running this command:</p>
+<div class="highlight"><pre><span></span>pip
+</pre></div>
+<p>if your terminal says "command not found" or something else on linux, run this:</p>
+<div class="highlight"><pre><span></span>python3 -m ensurepip --default-pip
+</pre></div>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Overview:">
+<a class="anchor" href="#Overview:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overview:<a class="anchor-link" href="#Overview:"> </a>
+</h1>
+<p>Pandas is a powerful tool in Python that is used for data analysis and manipulation. In this lesson, we will explore how to use Pandas to work with datasets, analyze them, and visualize the results.</p>
+<h1 id="Learning-Objectives:">
+<a class="anchor" href="#Learning-Objectives:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Learning Objectives:<a class="anchor-link" href="#Learning-Objectives:"> </a>
+</h1>
+<p>By the end of this lesson, students should be able to:</p>
+<ul>
+<li>Understand what Pandas is and why it is useful for data analysis</li>
+<li>Load data into Pandas and create tables to store it</li>
+<li>Use different functions in Pandas to manipulate data, such as filtering, sorting, and grouping</li>
+<li>Visualize data using graphs and charts</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Question">
+<a class="anchor" href="#Question" aria-hidden="true"><span class="octicon octicon-link"></span></a>Question<a class="anchor-link" href="#Question"> </a>
+</h2>
+<p>Who here has used numpy????</p>
+<h6 id="(should-be-all-odf-you-because-all-of-you-have-used-it-in-this-class-before.-)">
+<a class="anchor" href="#(should-be-all-odf-you-because-all-of-you-have-used-it-in-this-class-before.-)" aria-hidden="true"><span class="octicon octicon-link"></span></a>(should be all odf you because all of you have used it in this class before. )<a class="anchor-link" href="#(should-be-all-odf-you-because-all-of-you-have-used-it-in-this-class-before.-)"> </a>
+</h6>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="what-is-pandas?">
+<a class="anchor" href="#what-is-pandas?" aria-hidden="true"><span class="octicon octicon-link"></span></a>what is pandas?<a class="anchor-link" href="#what-is-pandas?"> </a>
+</h1>
+<p>this:</p>
+<ul>
+<li>Pandas is a Python library used for data analysis and manipulation.</li>
+<li>it can handle different types of data, including CSV files and databases.</li>
+<li>it also allows you to create tables to store and work with your data.</li>
+<li>it has functions for filtering, sorting, and grouping data to make it easier to work with.</li>
+<li>it also has tools for visualizing data with graphs and charts.</li>
+<li>it is widely used in the industry for data analysis and is a valuable skill to learn.</li>
+<li>companies that use Pandas include JPMorgan Chase, Google, NASA, the New York Times, and many others. </li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Question-#2-&amp;-3:">
+<a class="anchor" href="#Question-#2-&amp;-3:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Question #2 &amp; 3:<a class="anchor-link" href="#Question-#2-&amp;-3:"> </a>
+</h1>
+<ul>
+<li>which companies use pandas? </li>
+<li>what is pandas?</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="but-why-is-pandas-useful?">
+<a class="anchor" href="#but-why-is-pandas-useful?" aria-hidden="true"><span class="octicon octicon-link"></span></a>but why is pandas useful?<a class="anchor-link" href="#but-why-is-pandas-useful?"> </a>
+</h1>
+<ul>
+<li>it can provides tools for handling and manipulating tabular data, which is a common format for storing and analyzing data.</li>
+<li>it can handle different types of data, including CSV files and databases.</li>
+<li>it allows you to perform tasks such as filtering, sorting, and grouping data, making it easier to analyze and work with.</li>
+<li>it has functions for handling missing data and can fill in or remove missing values, which is important for accurate data analysis.</li>
+<li>it also has tools for creating visualizations such as graphs and charts, making it easier to communicate insights from the data.</li>
+<li>it is fast and efficient, even for large datasets, which is important for time-critical data analysis.</li>
+<li>it is widely used in the industry and has a large community of users and developers, making it easy to find support and resources.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Question-#4:">
+<a class="anchor" href="#Question-#4:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Question #4:<a class="anchor-link" href="#Question-#4:"> </a>
+</h1>
+<ul>
+<li>why is pandas useful? </li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="how-do-i-flipping-use-it?-its-so-hard,-my-puny-brain-cant-understand-it">
+<a class="anchor" href="#how-do-i-flipping-use-it?-its-so-hard,-my-puny-brain-cant-understand-it" aria-hidden="true"><span class="octicon octicon-link"></span></a>how do i flipping use it? its so hard, my puny brain cant understand it<a class="anchor-link" href="#how-do-i-flipping-use-it?-its-so-hard,-my-puny-brain-cant-understand-it"> </a>
+</h1>
+<p>it is actually really simple</p>
+<p>here is numpy doing simple math:</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'files/example.csv'</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Average age:"</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Age'</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+
+<span class="n">females</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">'Gender'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'Female'</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">females</span><span class="p">)</span>
+
+<span class="n">sorted_data</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">'Salary'</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sorted_data</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">ParserError</span>                               Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">/home/id/vscode/test-fastpages/_notebooks/2023-04-24-pandas.ipynb Cell 10</span> in <span class="ansi-cyan-fg">&lt;cell line: 5&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/id/vscode/test-fastpages/_notebooks/2023-04-24-pandas.ipynb#X12sdnNjb2RlLXJlbW90ZQ%3D%3D?line=0'&gt;1&lt;/a&gt;</span> # dummy code, just like you.
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/id/vscode/test-fastpages/_notebooks/2023-04-24-pandas.ipynb#X12sdnNjb2RlLXJlbW90ZQ%3D%3D?line=2'&gt;3&lt;/a&gt;</span> import pandas as pd
+<span class="ansi-green-fg">----&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/id/vscode/test-fastpages/_notebooks/2023-04-24-pandas.ipynb#X12sdnNjb2RlLXJlbW90ZQ%3D%3D?line=4'&gt;5&lt;/a&gt;</span> df = pd.read_csv('files/example.csv')
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/id/vscode/test-fastpages/_notebooks/2023-04-24-pandas.ipynb#X12sdnNjb2RlLXJlbW90ZQ%3D%3D?line=6'&gt;7&lt;/a&gt;</span> print(df.head())
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/id/vscode/test-fastpages/_notebooks/2023-04-24-pandas.ipynb#X12sdnNjb2RlLXJlbW90ZQ%3D%3D?line=8'&gt;9&lt;/a&gt;</span> print("Average age:", df['Age'].mean())
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/pandas/util/_decorators.py:311</span>, in <span class="ansi-cyan-fg">deprecate_nonkeyword_arguments.&lt;locals&gt;.decorate.&lt;locals&gt;.wrapper</span><span class="ansi-blue-fg">(*args, **kwargs)</span>
+<span class="ansi-green-intense-fg ansi-bold">    305</span> if len(args) &gt; num_allow_args:
+<span class="ansi-green-intense-fg ansi-bold">    306</span>     warnings.warn(
+<span class="ansi-green-intense-fg ansi-bold">    307</span>         msg.format(arguments=arguments),
+<span class="ansi-green-intense-fg ansi-bold">    308</span>         FutureWarning,
+<span class="ansi-green-intense-fg ansi-bold">    309</span>         stacklevel=stacklevel,
+<span class="ansi-green-intense-fg ansi-bold">    310</span>     )
+<span class="ansi-green-fg">--&gt; 311</span> return func(*args, **kwargs)
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/pandas/io/parsers/readers.py:680</span>, in <span class="ansi-cyan-fg">read_csv</span><span class="ansi-blue-fg">(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, squeeze, prefix, mangle_dupe_cols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, encoding_errors, dialect, error_bad_lines, warn_bad_lines, on_bad_lines, delim_whitespace, low_memory, memory_map, float_precision, storage_options)</span>
+<span class="ansi-green-intense-fg ansi-bold">    665</span> kwds_defaults = _refine_defaults_read(
+<span class="ansi-green-intense-fg ansi-bold">    666</span>     dialect,
+<span class="ansi-green-intense-fg ansi-bold">    667</span>     delimiter,
+<span class="ansi-green-fg">   (...)</span>
+<span class="ansi-green-intense-fg ansi-bold">    676</span>     defaults={"delimiter": ","},
+<span class="ansi-green-intense-fg ansi-bold">    677</span> )
+<span class="ansi-green-intense-fg ansi-bold">    678</span> kwds.update(kwds_defaults)
+<span class="ansi-green-fg">--&gt; 680</span> return _read(filepath_or_buffer, kwds)
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/pandas/io/parsers/readers.py:581</span>, in <span class="ansi-cyan-fg">_read</span><span class="ansi-blue-fg">(filepath_or_buffer, kwds)</span>
+<span class="ansi-green-intense-fg ansi-bold">    578</span>     return parser
+<span class="ansi-green-intense-fg ansi-bold">    580</span> with parser:
+<span class="ansi-green-fg">--&gt; 581</span>     return parser.read(nrows)
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/pandas/io/parsers/readers.py:1254</span>, in <span class="ansi-cyan-fg">TextFileReader.read</span><span class="ansi-blue-fg">(self, nrows)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1252</span> nrows = validate_integer("nrows", nrows)
+<span class="ansi-green-intense-fg ansi-bold">   1253</span> try:
+<span class="ansi-green-fg">-&gt; 1254</span>     index, columns, col_dict = self._engine.read(nrows)
+<span class="ansi-green-intense-fg ansi-bold">   1255</span> except Exception:
+<span class="ansi-green-intense-fg ansi-bold">   1256</span>     self.close()
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/pandas/io/parsers/c_parser_wrapper.py:225</span>, in <span class="ansi-cyan-fg">CParserWrapper.read</span><span class="ansi-blue-fg">(self, nrows)</span>
+<span class="ansi-green-intense-fg ansi-bold">    223</span> try:
+<span class="ansi-green-intense-fg ansi-bold">    224</span>     if self.low_memory:
+<span class="ansi-green-fg">--&gt; 225</span>         chunks = self._reader.read_low_memory(nrows)
+<span class="ansi-green-intense-fg ansi-bold">    226</span>         # destructive to chunks
+<span class="ansi-green-intense-fg ansi-bold">    227</span>         data = _concatenate_chunks(chunks)
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/pandas/_libs/parsers.pyx:805</span>, in <span class="ansi-cyan-fg">pandas._libs.parsers.TextReader.read_low_memory</span><span class="ansi-blue-fg">()</span>
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/pandas/_libs/parsers.pyx:861</span>, in <span class="ansi-cyan-fg">pandas._libs.parsers.TextReader._read_rows</span><span class="ansi-blue-fg">()</span>
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/pandas/_libs/parsers.pyx:847</span>, in <span class="ansi-cyan-fg">pandas._libs.parsers.TextReader._tokenize_rows</span><span class="ansi-blue-fg">()</span>
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/pandas/_libs/parsers.pyx:1960</span>, in <span class="ansi-cyan-fg">pandas._libs.parsers.raise_parser_error</span><span class="ansi-blue-fg">()</span>
+
+<span class="ansi-red-fg">ParserError</span>: Error tokenizing data. C error: Expected 1 fields in line 28, saw 367
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>uh oh!!! no pandas 😢</p>
+<p>if see this error, enter these into your terminal:</p>
+<div class="highlight"><pre><span></span>pip install wheel
+pip install pandas
+</pre></div>
+<p>on stack overflow, it said pandas is disturbed through pip as a wheel. so you need that too.</p>
+<p>link to full forum if curious: 
+<a href="https://stackoverflow.com/questions/33481974/importerror-no-module-named-pandas">https://stackoverflow.com/questions/33481974/importerror-no-module-named-pandas</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>ps: do this for this to work on ur laptop:</p>
+<div class="highlight"><pre><span></span>wget https://raw.githubusercontent.com/KKcbal/amongus/master/_notebooks/files/example.csv
+</pre></div>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="example-code-on-how-to-load-a-csv-into-a-chart">
+<a class="anchor" href="#example-code-on-how-to-load-a-csv-into-a-chart" aria-hidden="true"><span class="octicon octicon-link"></span></a>example code on how to load a csv into a chart<a class="anchor-link" href="#example-code-on-how-to-load-a-csv-into-a-chart"> </a>
+</h1>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="c1"># read the CSV file</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'files/example.csv'</span><span class="p">)</span>
+
+<span class="c1"># print the first five rows</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+
+<span class="c1"># define a function to assign each age to an age group</span>
+<span class="k">def</span> <span class="nf">assign_age_group</span><span class="p">(</span><span class="n">age</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">age</span> <span class="o">&lt;</span> <span class="mi">30</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">'&lt;30'</span>
+    <span class="k">elif</span> <span class="n">age</span> <span class="o">&lt;</span> <span class="mi">40</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">'30-40'</span>
+    <span class="k">elif</span> <span class="n">age</span> <span class="o">&lt;</span> <span class="mi">50</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">'40-50'</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">'&gt;50'</span>
+
+<span class="c1"># apply the function to the Age column to create a new column with age groups</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">'Age Group'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Age'</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">assign_age_group</span><span class="p">)</span>
+
+<span class="c1"># group by age group and count the number of people in each group</span>
+<span class="n">age_counts</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">'Age Group'</span><span class="p">)[</span><span class="s1">'Name'</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+
+<span class="c1"># print the age group counts</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">age_counts</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">ParserError</span>                               Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">/home/id/vscode/test-fastpages/_notebooks/2023-04-24-pandas.ipynb Cell 14</span> in <span class="ansi-cyan-fg">&lt;cell line: 4&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/id/vscode/test-fastpages/_notebooks/2023-04-24-pandas.ipynb#X16sdnNjb2RlLXJlbW90ZQ%3D%3D?line=0'&gt;1&lt;/a&gt;</span> import pandas as pd
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/id/vscode/test-fastpages/_notebooks/2023-04-24-pandas.ipynb#X16sdnNjb2RlLXJlbW90ZQ%3D%3D?line=2'&gt;3&lt;/a&gt;</span> # read the CSV file
+<span class="ansi-green-fg">----&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/id/vscode/test-fastpages/_notebooks/2023-04-24-pandas.ipynb#X16sdnNjb2RlLXJlbW90ZQ%3D%3D?line=3'&gt;4&lt;/a&gt;</span> df = pd.read_csv('files/example.csv')
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/id/vscode/test-fastpages/_notebooks/2023-04-24-pandas.ipynb#X16sdnNjb2RlLXJlbW90ZQ%3D%3D?line=5'&gt;6&lt;/a&gt;</span> # print the first five rows
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/id/vscode/test-fastpages/_notebooks/2023-04-24-pandas.ipynb#X16sdnNjb2RlLXJlbW90ZQ%3D%3D?line=6'&gt;7&lt;/a&gt;</span> print(df.head())
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/pandas/util/_decorators.py:311</span>, in <span class="ansi-cyan-fg">deprecate_nonkeyword_arguments.&lt;locals&gt;.decorate.&lt;locals&gt;.wrapper</span><span class="ansi-blue-fg">(*args, **kwargs)</span>
+<span class="ansi-green-intense-fg ansi-bold">    305</span> if len(args) &gt; num_allow_args:
+<span class="ansi-green-intense-fg ansi-bold">    306</span>     warnings.warn(
+<span class="ansi-green-intense-fg ansi-bold">    307</span>         msg.format(arguments=arguments),
+<span class="ansi-green-intense-fg ansi-bold">    308</span>         FutureWarning,
+<span class="ansi-green-intense-fg ansi-bold">    309</span>         stacklevel=stacklevel,
+<span class="ansi-green-intense-fg ansi-bold">    310</span>     )
+<span class="ansi-green-fg">--&gt; 311</span> return func(*args, **kwargs)
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/pandas/io/parsers/readers.py:680</span>, in <span class="ansi-cyan-fg">read_csv</span><span class="ansi-blue-fg">(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, squeeze, prefix, mangle_dupe_cols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, encoding_errors, dialect, error_bad_lines, warn_bad_lines, on_bad_lines, delim_whitespace, low_memory, memory_map, float_precision, storage_options)</span>
+<span class="ansi-green-intense-fg ansi-bold">    665</span> kwds_defaults = _refine_defaults_read(
+<span class="ansi-green-intense-fg ansi-bold">    666</span>     dialect,
+<span class="ansi-green-intense-fg ansi-bold">    667</span>     delimiter,
+<span class="ansi-green-fg">   (...)</span>
+<span class="ansi-green-intense-fg ansi-bold">    676</span>     defaults={"delimiter": ","},
+<span class="ansi-green-intense-fg ansi-bold">    677</span> )
+<span class="ansi-green-intense-fg ansi-bold">    678</span> kwds.update(kwds_defaults)
+<span class="ansi-green-fg">--&gt; 680</span> return _read(filepath_or_buffer, kwds)
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/pandas/io/parsers/readers.py:581</span>, in <span class="ansi-cyan-fg">_read</span><span class="ansi-blue-fg">(filepath_or_buffer, kwds)</span>
+<span class="ansi-green-intense-fg ansi-bold">    578</span>     return parser
+<span class="ansi-green-intense-fg ansi-bold">    580</span> with parser:
+<span class="ansi-green-fg">--&gt; 581</span>     return parser.read(nrows)
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/pandas/io/parsers/readers.py:1254</span>, in <span class="ansi-cyan-fg">TextFileReader.read</span><span class="ansi-blue-fg">(self, nrows)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1252</span> nrows = validate_integer("nrows", nrows)
+<span class="ansi-green-intense-fg ansi-bold">   1253</span> try:
+<span class="ansi-green-fg">-&gt; 1254</span>     index, columns, col_dict = self._engine.read(nrows)
+<span class="ansi-green-intense-fg ansi-bold">   1255</span> except Exception:
+<span class="ansi-green-intense-fg ansi-bold">   1256</span>     self.close()
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/pandas/io/parsers/c_parser_wrapper.py:225</span>, in <span class="ansi-cyan-fg">CParserWrapper.read</span><span class="ansi-blue-fg">(self, nrows)</span>
+<span class="ansi-green-intense-fg ansi-bold">    223</span> try:
+<span class="ansi-green-intense-fg ansi-bold">    224</span>     if self.low_memory:
+<span class="ansi-green-fg">--&gt; 225</span>         chunks = self._reader.read_low_memory(nrows)
+<span class="ansi-green-intense-fg ansi-bold">    226</span>         # destructive to chunks
+<span class="ansi-green-intense-fg ansi-bold">    227</span>         data = _concatenate_chunks(chunks)
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/pandas/_libs/parsers.pyx:805</span>, in <span class="ansi-cyan-fg">pandas._libs.parsers.TextReader.read_low_memory</span><span class="ansi-blue-fg">()</span>
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/pandas/_libs/parsers.pyx:861</span>, in <span class="ansi-cyan-fg">pandas._libs.parsers.TextReader._read_rows</span><span class="ansi-blue-fg">()</span>
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/pandas/_libs/parsers.pyx:847</span>, in <span class="ansi-cyan-fg">pandas._libs.parsers.TextReader._tokenize_rows</span><span class="ansi-blue-fg">()</span>
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/pandas/_libs/parsers.pyx:1960</span>, in <span class="ansi-cyan-fg">pandas._libs.parsers.raise_parser_error</span><span class="ansi-blue-fg">()</span>
+
+<span class="ansi-red-fg">ParserError</span>: Error tokenizing data. C error: Expected 1 fields in line 28, saw 367
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="how-to-manipulate-the-data-in-pandas.">
+<a class="anchor" href="#how-to-manipulate-the-data-in-pandas." aria-hidden="true"><span class="octicon octicon-link"></span></a>how to manipulate the data in pandas.<a class="anchor-link" href="#how-to-manipulate-the-data-in-pandas."> </a>
+</h1>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="c1"># load the csv file</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'example.csv'</span><span class="p">)</span>
+
+<span class="c1"># print the first five rows</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+
+<span class="c1"># filter the data to include only people aged 30 or older</span>
+<span class="n">df_filtered</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">'Age'</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">30</span><span class="p">]</span>
+
+<span class="c1"># sort the data by age in descending order</span>
+<span class="n">df_sorted</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">'Age'</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="c1"># group the data by gender and calculate the mean age for each group</span>
+<span class="n">age_by_gender</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">'Gender'</span><span class="p">)[</span><span class="s1">'Age'</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+<span class="c1"># print the filtered data</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df_filtered</span><span class="p">)</span>
+
+<span class="c1"># print the sorted data</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df_sorted</span><span class="p">)</span>
+
+<span class="c1"># print the mean age by gender</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">age_by_gender</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">FileNotFoundError</span>                         Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">/home/id/vscode/test-fastpages/_notebooks/2023-04-24-pandas.ipynb Cell 16</span> in <span class="ansi-cyan-fg">&lt;cell line: 4&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/id/vscode/test-fastpages/_notebooks/2023-04-24-pandas.ipynb#X21sdnNjb2RlLXJlbW90ZQ%3D%3D?line=0'&gt;1&lt;/a&gt;</span> import pandas as pd
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/id/vscode/test-fastpages/_notebooks/2023-04-24-pandas.ipynb#X21sdnNjb2RlLXJlbW90ZQ%3D%3D?line=2'&gt;3&lt;/a&gt;</span> # load the csv file
+<span class="ansi-green-fg">----&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/id/vscode/test-fastpages/_notebooks/2023-04-24-pandas.ipynb#X21sdnNjb2RlLXJlbW90ZQ%3D%3D?line=3'&gt;4&lt;/a&gt;</span> df = pd.read_csv('example.csv')
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/id/vscode/test-fastpages/_notebooks/2023-04-24-pandas.ipynb#X21sdnNjb2RlLXJlbW90ZQ%3D%3D?line=5'&gt;6&lt;/a&gt;</span> # print the first five rows
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/id/vscode/test-fastpages/_notebooks/2023-04-24-pandas.ipynb#X21sdnNjb2RlLXJlbW90ZQ%3D%3D?line=6'&gt;7&lt;/a&gt;</span> print(df.head())
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/pandas/util/_decorators.py:311</span>, in <span class="ansi-cyan-fg">deprecate_nonkeyword_arguments.&lt;locals&gt;.decorate.&lt;locals&gt;.wrapper</span><span class="ansi-blue-fg">(*args, **kwargs)</span>
+<span class="ansi-green-intense-fg ansi-bold">    305</span> if len(args) &gt; num_allow_args:
+<span class="ansi-green-intense-fg ansi-bold">    306</span>     warnings.warn(
+<span class="ansi-green-intense-fg ansi-bold">    307</span>         msg.format(arguments=arguments),
+<span class="ansi-green-intense-fg ansi-bold">    308</span>         FutureWarning,
+<span class="ansi-green-intense-fg ansi-bold">    309</span>         stacklevel=stacklevel,
+<span class="ansi-green-intense-fg ansi-bold">    310</span>     )
+<span class="ansi-green-fg">--&gt; 311</span> return func(*args, **kwargs)
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/pandas/io/parsers/readers.py:680</span>, in <span class="ansi-cyan-fg">read_csv</span><span class="ansi-blue-fg">(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, squeeze, prefix, mangle_dupe_cols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, encoding_errors, dialect, error_bad_lines, warn_bad_lines, on_bad_lines, delim_whitespace, low_memory, memory_map, float_precision, storage_options)</span>
+<span class="ansi-green-intense-fg ansi-bold">    665</span> kwds_defaults = _refine_defaults_read(
+<span class="ansi-green-intense-fg ansi-bold">    666</span>     dialect,
+<span class="ansi-green-intense-fg ansi-bold">    667</span>     delimiter,
+<span class="ansi-green-fg">   (...)</span>
+<span class="ansi-green-intense-fg ansi-bold">    676</span>     defaults={"delimiter": ","},
+<span class="ansi-green-intense-fg ansi-bold">    677</span> )
+<span class="ansi-green-intense-fg ansi-bold">    678</span> kwds.update(kwds_defaults)
+<span class="ansi-green-fg">--&gt; 680</span> return _read(filepath_or_buffer, kwds)
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/pandas/io/parsers/readers.py:575</span>, in <span class="ansi-cyan-fg">_read</span><span class="ansi-blue-fg">(filepath_or_buffer, kwds)</span>
+<span class="ansi-green-intense-fg ansi-bold">    572</span> _validate_names(kwds.get("names", None))
+<span class="ansi-green-intense-fg ansi-bold">    574</span> # Create the parser.
+<span class="ansi-green-fg">--&gt; 575</span> parser = TextFileReader(filepath_or_buffer, **kwds)
+<span class="ansi-green-intense-fg ansi-bold">    577</span> if chunksize or iterator:
+<span class="ansi-green-intense-fg ansi-bold">    578</span>     return parser
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/pandas/io/parsers/readers.py:933</span>, in <span class="ansi-cyan-fg">TextFileReader.__init__</span><span class="ansi-blue-fg">(self, f, engine, **kwds)</span>
+<span class="ansi-green-intense-fg ansi-bold">    930</span>     self.options["has_index_names"] = kwds["has_index_names"]
+<span class="ansi-green-intense-fg ansi-bold">    932</span> self.handles: IOHandles | None = None
+<span class="ansi-green-fg">--&gt; 933</span> self._engine = self._make_engine(f, self.engine)
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/pandas/io/parsers/readers.py:1217</span>, in <span class="ansi-cyan-fg">TextFileReader._make_engine</span><span class="ansi-blue-fg">(self, f, engine)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1213</span>     mode = "rb"
+<span class="ansi-green-intense-fg ansi-bold">   1214</span> # error: No overload variant of "get_handle" matches argument types
+<span class="ansi-green-intense-fg ansi-bold">   1215</span> # "Union[str, PathLike[str], ReadCsvBuffer[bytes], ReadCsvBuffer[str]]"
+<span class="ansi-green-intense-fg ansi-bold">   1216</span> # , "str", "bool", "Any", "Any", "Any", "Any", "Any"
+<span class="ansi-green-fg">-&gt; 1217</span> self.handles = get_handle(  # type: ignore[call-overload]
+<span class="ansi-green-intense-fg ansi-bold">   1218</span>     f,
+<span class="ansi-green-intense-fg ansi-bold">   1219</span>     mode,
+<span class="ansi-green-intense-fg ansi-bold">   1220</span>     encoding=self.options.get("encoding", None),
+<span class="ansi-green-intense-fg ansi-bold">   1221</span>     compression=self.options.get("compression", None),
+<span class="ansi-green-intense-fg ansi-bold">   1222</span>     memory_map=self.options.get("memory_map", False),
+<span class="ansi-green-intense-fg ansi-bold">   1223</span>     is_text=is_text,
+<span class="ansi-green-intense-fg ansi-bold">   1224</span>     errors=self.options.get("encoding_errors", "strict"),
+<span class="ansi-green-intense-fg ansi-bold">   1225</span>     storage_options=self.options.get("storage_options", None),
+<span class="ansi-green-intense-fg ansi-bold">   1226</span> )
+<span class="ansi-green-intense-fg ansi-bold">   1227</span> assert self.handles is not None
+<span class="ansi-green-intense-fg ansi-bold">   1228</span> f = self.handles.handle
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/pandas/io/common.py:789</span>, in <span class="ansi-cyan-fg">get_handle</span><span class="ansi-blue-fg">(path_or_buf, mode, encoding, compression, memory_map, is_text, errors, storage_options)</span>
+<span class="ansi-green-intense-fg ansi-bold">    784</span> elif isinstance(handle, str):
+<span class="ansi-green-intense-fg ansi-bold">    785</span>     # Check whether the filename is to be opened in binary mode.
+<span class="ansi-green-intense-fg ansi-bold">    786</span>     # Binary mode does not support 'encoding' and 'newline'.
+<span class="ansi-green-intense-fg ansi-bold">    787</span>     if ioargs.encoding and "b" not in ioargs.mode:
+<span class="ansi-green-intense-fg ansi-bold">    788</span>         # Encoding
+<span class="ansi-green-fg">--&gt; 789</span>         handle = open(
+<span class="ansi-green-intense-fg ansi-bold">    790</span>             handle,
+<span class="ansi-green-intense-fg ansi-bold">    791</span>             ioargs.mode,
+<span class="ansi-green-intense-fg ansi-bold">    792</span>             encoding=ioargs.encoding,
+<span class="ansi-green-intense-fg ansi-bold">    793</span>             errors=errors,
+<span class="ansi-green-intense-fg ansi-bold">    794</span>             newline="",
+<span class="ansi-green-intense-fg ansi-bold">    795</span>         )
+<span class="ansi-green-intense-fg ansi-bold">    796</span>     else:
+<span class="ansi-green-intense-fg ansi-bold">    797</span>         # Binary mode
+<span class="ansi-green-intense-fg ansi-bold">    798</span>         handle = open(handle, ioargs.mode)
+
+<span class="ansi-red-fg">FileNotFoundError</span>: [Errno 2] No such file or directory: 'example.csv'</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="how-do-i-put-it-into-a-chart-😩">
+<a class="anchor" href="#how-do-i-put-it-into-a-chart-%F0%9F%98%A9" aria-hidden="true"><span class="octicon octicon-link"></span></a>how do i put it into a chart 😩<a class="anchor-link" href="#how-do-i-put-it-into-a-chart-%F0%9F%98%A9"> </a>
+</h1>
+<p>here is how:</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># read the CSV file</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'files/example.csv'</span><span class="p">)</span>
+
+<span class="c1"># create a bar chart of the number of people in each age group</span>
+<span class="n">age_groups</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'&lt;30'</span><span class="p">,</span> <span class="s1">'30-40'</span><span class="p">,</span> <span class="s1">'40-50'</span><span class="p">,</span> <span class="s1">'&gt;50'</span><span class="p">]</span>
+<span class="n">age_counts</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'Age'</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Age'</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()],</span> <span class="n">labels</span><span class="o">=</span><span class="n">age_groups</span><span class="p">,</span> <span class="n">include_lowest</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">age_counts</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">age_counts</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">'Number of people in each age group'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'Age group'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">'Number of people'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># create a pie chart of the gender distribution</span>
+<span class="n">gender_counts</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Gender'</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span><span class="n">gender_counts</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="n">gender_counts</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">autopct</span><span class="o">=</span><span class="s1">'</span><span class="si">%1.1f%%</span><span class="s1">'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">'Gender distribution'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># create a scatter plot of age vs. income</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'Age'</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Income'</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">'Age vs. Income'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'Age'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">'Income'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">ParserError</span>                               Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">/home/id/vscode/test-fastpages/_notebooks/2023-04-24-pandas.ipynb Cell 18</span> in <span class="ansi-cyan-fg">&lt;cell line: 5&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/id/vscode/test-fastpages/_notebooks/2023-04-24-pandas.ipynb#X23sdnNjb2RlLXJlbW90ZQ%3D%3D?line=1'&gt;2&lt;/a&gt;</span> import matplotlib.pyplot as plt
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/id/vscode/test-fastpages/_notebooks/2023-04-24-pandas.ipynb#X23sdnNjb2RlLXJlbW90ZQ%3D%3D?line=3'&gt;4&lt;/a&gt;</span> # read the CSV file
+<span class="ansi-green-fg">----&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/id/vscode/test-fastpages/_notebooks/2023-04-24-pandas.ipynb#X23sdnNjb2RlLXJlbW90ZQ%3D%3D?line=4'&gt;5&lt;/a&gt;</span> df = pd.read_csv('files/example.csv')
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/id/vscode/test-fastpages/_notebooks/2023-04-24-pandas.ipynb#X23sdnNjb2RlLXJlbW90ZQ%3D%3D?line=6'&gt;7&lt;/a&gt;</span> # create a bar chart of the number of people in each age group
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/id/vscode/test-fastpages/_notebooks/2023-04-24-pandas.ipynb#X23sdnNjb2RlLXJlbW90ZQ%3D%3D?line=7'&gt;8&lt;/a&gt;</span> age_groups = ['&lt;30', '30-40', '40-50', '&gt;50']
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/pandas/util/_decorators.py:311</span>, in <span class="ansi-cyan-fg">deprecate_nonkeyword_arguments.&lt;locals&gt;.decorate.&lt;locals&gt;.wrapper</span><span class="ansi-blue-fg">(*args, **kwargs)</span>
+<span class="ansi-green-intense-fg ansi-bold">    305</span> if len(args) &gt; num_allow_args:
+<span class="ansi-green-intense-fg ansi-bold">    306</span>     warnings.warn(
+<span class="ansi-green-intense-fg ansi-bold">    307</span>         msg.format(arguments=arguments),
+<span class="ansi-green-intense-fg ansi-bold">    308</span>         FutureWarning,
+<span class="ansi-green-intense-fg ansi-bold">    309</span>         stacklevel=stacklevel,
+<span class="ansi-green-intense-fg ansi-bold">    310</span>     )
+<span class="ansi-green-fg">--&gt; 311</span> return func(*args, **kwargs)
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/pandas/io/parsers/readers.py:680</span>, in <span class="ansi-cyan-fg">read_csv</span><span class="ansi-blue-fg">(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, squeeze, prefix, mangle_dupe_cols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, encoding_errors, dialect, error_bad_lines, warn_bad_lines, on_bad_lines, delim_whitespace, low_memory, memory_map, float_precision, storage_options)</span>
+<span class="ansi-green-intense-fg ansi-bold">    665</span> kwds_defaults = _refine_defaults_read(
+<span class="ansi-green-intense-fg ansi-bold">    666</span>     dialect,
+<span class="ansi-green-intense-fg ansi-bold">    667</span>     delimiter,
+<span class="ansi-green-fg">   (...)</span>
+<span class="ansi-green-intense-fg ansi-bold">    676</span>     defaults={"delimiter": ","},
+<span class="ansi-green-intense-fg ansi-bold">    677</span> )
+<span class="ansi-green-intense-fg ansi-bold">    678</span> kwds.update(kwds_defaults)
+<span class="ansi-green-fg">--&gt; 680</span> return _read(filepath_or_buffer, kwds)
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/pandas/io/parsers/readers.py:581</span>, in <span class="ansi-cyan-fg">_read</span><span class="ansi-blue-fg">(filepath_or_buffer, kwds)</span>
+<span class="ansi-green-intense-fg ansi-bold">    578</span>     return parser
+<span class="ansi-green-intense-fg ansi-bold">    580</span> with parser:
+<span class="ansi-green-fg">--&gt; 581</span>     return parser.read(nrows)
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/pandas/io/parsers/readers.py:1254</span>, in <span class="ansi-cyan-fg">TextFileReader.read</span><span class="ansi-blue-fg">(self, nrows)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1252</span> nrows = validate_integer("nrows", nrows)
+<span class="ansi-green-intense-fg ansi-bold">   1253</span> try:
+<span class="ansi-green-fg">-&gt; 1254</span>     index, columns, col_dict = self._engine.read(nrows)
+<span class="ansi-green-intense-fg ansi-bold">   1255</span> except Exception:
+<span class="ansi-green-intense-fg ansi-bold">   1256</span>     self.close()
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/pandas/io/parsers/c_parser_wrapper.py:225</span>, in <span class="ansi-cyan-fg">CParserWrapper.read</span><span class="ansi-blue-fg">(self, nrows)</span>
+<span class="ansi-green-intense-fg ansi-bold">    223</span> try:
+<span class="ansi-green-intense-fg ansi-bold">    224</span>     if self.low_memory:
+<span class="ansi-green-fg">--&gt; 225</span>         chunks = self._reader.read_low_memory(nrows)
+<span class="ansi-green-intense-fg ansi-bold">    226</span>         # destructive to chunks
+<span class="ansi-green-intense-fg ansi-bold">    227</span>         data = _concatenate_chunks(chunks)
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/pandas/_libs/parsers.pyx:805</span>, in <span class="ansi-cyan-fg">pandas._libs.parsers.TextReader.read_low_memory</span><span class="ansi-blue-fg">()</span>
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/pandas/_libs/parsers.pyx:861</span>, in <span class="ansi-cyan-fg">pandas._libs.parsers.TextReader._read_rows</span><span class="ansi-blue-fg">()</span>
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/pandas/_libs/parsers.pyx:847</span>, in <span class="ansi-cyan-fg">pandas._libs.parsers.TextReader._tokenize_rows</span><span class="ansi-blue-fg">()</span>
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/pandas/_libs/parsers.pyx:1960</span>, in <span class="ansi-cyan-fg">pandas._libs.parsers.raise_parser_error</span><span class="ansi-blue-fg">()</span>
+
+<span class="ansi-red-fg">ParserError</span>: Error tokenizing data. C error: Expected 1 fields in line 28, saw 367
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>uh oh!!!! another error!??!!??!?!  install this library:</p>
+<div class="highlight"><pre><span></span>pip install matplotlib
+</pre></div>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># read the CSV file</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'files/example.csv'</span><span class="p">)</span>
+
+<span class="c1"># define age groups</span>
+<span class="n">age_groups</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'&lt;30'</span><span class="p">,</span> <span class="s1">'30-40'</span><span class="p">,</span> <span class="s1">'40-50'</span><span class="p">,</span> <span class="s1">'&gt;50'</span><span class="p">]</span>
+
+<span class="c1"># create a new column with the age group for each person</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">'Age Group'</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'Age'</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">inf</span><span class="p">],</span> <span class="n">labels</span><span class="o">=</span><span class="n">age_groups</span><span class="p">,</span> <span class="n">include_lowest</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># group by age group and count the number of people in each group</span>
+<span class="n">age_counts</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">'Age Group'</span><span class="p">)[</span><span class="s1">'Name'</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+
+<span class="c1"># create a bar chart of the age counts</span>
+<span class="n">age_counts</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">'bar'</span><span class="p">)</span>
+
+<span class="c1"># set the title and axis labels</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">'Number of People in Each Age Group'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'Age Group'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">'Number of People'</span><span class="p">)</span>
+
+<span class="c1"># show the chart</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">ParserError</span>                               Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">/home/id/vscode/test-fastpages/_notebooks/2023-04-24-pandas.ipynb Cell 20</span> in <span class="ansi-cyan-fg">&lt;cell line: 6&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/id/vscode/test-fastpages/_notebooks/2023-04-24-pandas.ipynb#X25sdnNjb2RlLXJlbW90ZQ%3D%3D?line=2'&gt;3&lt;/a&gt;</span> import numpy as np
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/id/vscode/test-fastpages/_notebooks/2023-04-24-pandas.ipynb#X25sdnNjb2RlLXJlbW90ZQ%3D%3D?line=4'&gt;5&lt;/a&gt;</span> # read the CSV file
+<span class="ansi-green-fg">----&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/id/vscode/test-fastpages/_notebooks/2023-04-24-pandas.ipynb#X25sdnNjb2RlLXJlbW90ZQ%3D%3D?line=5'&gt;6&lt;/a&gt;</span> df = pd.read_csv('files/example.csv')
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/id/vscode/test-fastpages/_notebooks/2023-04-24-pandas.ipynb#X25sdnNjb2RlLXJlbW90ZQ%3D%3D?line=7'&gt;8&lt;/a&gt;</span> # define age groups
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/id/vscode/test-fastpages/_notebooks/2023-04-24-pandas.ipynb#X25sdnNjb2RlLXJlbW90ZQ%3D%3D?line=8'&gt;9&lt;/a&gt;</span> age_groups = ['&lt;30', '30-40', '40-50', '&gt;50']
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/pandas/util/_decorators.py:311</span>, in <span class="ansi-cyan-fg">deprecate_nonkeyword_arguments.&lt;locals&gt;.decorate.&lt;locals&gt;.wrapper</span><span class="ansi-blue-fg">(*args, **kwargs)</span>
+<span class="ansi-green-intense-fg ansi-bold">    305</span> if len(args) &gt; num_allow_args:
+<span class="ansi-green-intense-fg ansi-bold">    306</span>     warnings.warn(
+<span class="ansi-green-intense-fg ansi-bold">    307</span>         msg.format(arguments=arguments),
+<span class="ansi-green-intense-fg ansi-bold">    308</span>         FutureWarning,
+<span class="ansi-green-intense-fg ansi-bold">    309</span>         stacklevel=stacklevel,
+<span class="ansi-green-intense-fg ansi-bold">    310</span>     )
+<span class="ansi-green-fg">--&gt; 311</span> return func(*args, **kwargs)
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/pandas/io/parsers/readers.py:680</span>, in <span class="ansi-cyan-fg">read_csv</span><span class="ansi-blue-fg">(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, squeeze, prefix, mangle_dupe_cols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, encoding_errors, dialect, error_bad_lines, warn_bad_lines, on_bad_lines, delim_whitespace, low_memory, memory_map, float_precision, storage_options)</span>
+<span class="ansi-green-intense-fg ansi-bold">    665</span> kwds_defaults = _refine_defaults_read(
+<span class="ansi-green-intense-fg ansi-bold">    666</span>     dialect,
+<span class="ansi-green-intense-fg ansi-bold">    667</span>     delimiter,
+<span class="ansi-green-fg">   (...)</span>
+<span class="ansi-green-intense-fg ansi-bold">    676</span>     defaults={"delimiter": ","},
+<span class="ansi-green-intense-fg ansi-bold">    677</span> )
+<span class="ansi-green-intense-fg ansi-bold">    678</span> kwds.update(kwds_defaults)
+<span class="ansi-green-fg">--&gt; 680</span> return _read(filepath_or_buffer, kwds)
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/pandas/io/parsers/readers.py:581</span>, in <span class="ansi-cyan-fg">_read</span><span class="ansi-blue-fg">(filepath_or_buffer, kwds)</span>
+<span class="ansi-green-intense-fg ansi-bold">    578</span>     return parser
+<span class="ansi-green-intense-fg ansi-bold">    580</span> with parser:
+<span class="ansi-green-fg">--&gt; 581</span>     return parser.read(nrows)
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/pandas/io/parsers/readers.py:1254</span>, in <span class="ansi-cyan-fg">TextFileReader.read</span><span class="ansi-blue-fg">(self, nrows)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1252</span> nrows = validate_integer("nrows", nrows)
+<span class="ansi-green-intense-fg ansi-bold">   1253</span> try:
+<span class="ansi-green-fg">-&gt; 1254</span>     index, columns, col_dict = self._engine.read(nrows)
+<span class="ansi-green-intense-fg ansi-bold">   1255</span> except Exception:
+<span class="ansi-green-intense-fg ansi-bold">   1256</span>     self.close()
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/pandas/io/parsers/c_parser_wrapper.py:225</span>, in <span class="ansi-cyan-fg">CParserWrapper.read</span><span class="ansi-blue-fg">(self, nrows)</span>
+<span class="ansi-green-intense-fg ansi-bold">    223</span> try:
+<span class="ansi-green-intense-fg ansi-bold">    224</span>     if self.low_memory:
+<span class="ansi-green-fg">--&gt; 225</span>         chunks = self._reader.read_low_memory(nrows)
+<span class="ansi-green-intense-fg ansi-bold">    226</span>         # destructive to chunks
+<span class="ansi-green-intense-fg ansi-bold">    227</span>         data = _concatenate_chunks(chunks)
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/pandas/_libs/parsers.pyx:805</span>, in <span class="ansi-cyan-fg">pandas._libs.parsers.TextReader.read_low_memory</span><span class="ansi-blue-fg">()</span>
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/pandas/_libs/parsers.pyx:861</span>, in <span class="ansi-cyan-fg">pandas._libs.parsers.TextReader._read_rows</span><span class="ansi-blue-fg">()</span>
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/pandas/_libs/parsers.pyx:847</span>, in <span class="ansi-cyan-fg">pandas._libs.parsers.TextReader._tokenize_rows</span><span class="ansi-blue-fg">()</span>
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/pandas/_libs/parsers.pyx:1960</span>, in <span class="ansi-cyan-fg">pandas._libs.parsers.raise_parser_error</span><span class="ansi-blue-fg">()</span>
+
+<span class="ansi-red-fg">ParserError</span>: Error tokenizing data. C error: Expected 1 fields in line 28, saw 367
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>magic!!!!!!</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Hacks">
+<a class="anchor" href="#Hacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hacks<a class="anchor-link" href="#Hacks"> </a>
+</h1>
+<ol>
+<li>make your own data using your brian, google or chatgpt, should look different than mine. </li>
+<li>modify my code or write your own</li>
+<li>output your data other than a bar graph.</li>
+<li>write an 850+ word essay on how pandas, python or irl, affected your life. If AI score below 85%, then -1 grading point (CRINGE DONT USE)</li>
+<li>answer the questions below, the more explained the better. </li>
+</ol>
+<h2 id="Questions">
+<a class="anchor" href="#Questions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Questions<a class="anchor-link" href="#Questions"> </a>
+</h2>
+<ol>
+<li>What are the two primary data structures in pandas and how do they differ?</li>
+<li>How do you read a CSV file into a pandas DataFrame?</li>
+<li>How do you select a single column from a pandas DataFrame?</li>
+<li>How do you filter rows in a pandas DataFrame based on a condition?</li>
+<li>How do you group rows in a pandas DataFrame by a particular column?</li>
+<li>How do you aggregate data in a pandas DataFrame using functions like sum and mean?</li>
+<li>How do you handle missing values in a pandas DataFrame?</li>
+<li>How do you merge two pandas DataFrames together?</li>
+<li>How do you export a pandas DataFrame to a CSV file?</li>
+<li>What is the difference between a Series and a DataFrame in Pandas?</li>
+</ol>
+<h1 id="note">
+<a class="anchor" href="#note" aria-hidden="true"><span class="octicon octicon-link"></span></a>note<a class="anchor-link" href="#note"> </a>
+</h1>
+<p>all hacks due saturday night, the more earlier you get them in the higher score you will get. if you miss the due date, you will get a 0. there will be no tolerance.</p>
+<h2 id="no-questions-answered">
+<a class="anchor" href="#no-questions-answered" aria-hidden="true"><span class="octicon octicon-link"></span></a>no questions answered<a class="anchor-link" href="#no-questions-answered"> </a>
+</h2>
+<p>Tonight- 2.9</p>
+<p>Friday Night- 2.8</p>
+<p>Saturday Night - 2.7</p>
+<p>Sunday Night - 0.0</p>
+<h2 id="questions-answered">
+<a class="anchor" href="#questions-answered" aria-hidden="true"><span class="octicon octicon-link"></span></a>questions answered<a class="anchor-link" href="#questions-answered"> </a>
+</h2>
+<p>Tonight- 3.0</p>
+<p>Friday Night- 2.9</p>
+<p>Saturday Night - 2.8</p>
+<p>Sunday Night - 0.0</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>wdfasdf</p>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="Jyustin/test-fastpages"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/test-fastpages/jupyter/lesson/2023/04/24/pandas.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/test-fastpages/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="https://jyustin.github.io/test-fastpages/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/test-fastpages/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>Justin&#39;s personal fastpages blog</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
