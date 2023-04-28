@@ -4,10 +4,10 @@
 <link rel="stylesheet" href="./style.css" />
 <style>
   body {
-  background-color: lightblue;
+  background-color: gray;
   color: blue;
 }
-.button {
+.button1 {
   background-color: #0000ff;
   border: none;
   color: lightblue;
@@ -19,16 +19,45 @@
   margin: 4px 2px;
   cursor: pointer;
 }
+.button2 {
+  background-color: #ff0000;
+  border: none;
+  color: blue;
+  padding: 50px 50px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 45px;
+  font-family: "Times New Roman", Times, serif;
+  margin: 4px 2px;
+  cursor: pointer;
+  position:relative; left:700px; top:500px;
+}
+.die2 {
+  color: blue;
+  background-color: lightgrey;
+  position:relative; left:600px; top:500px;
+}
+button:hover, h1:hover {
+  background-color: yellow;
+}
+
 </style>
-<img id="image" src="https://www.w3schools.com/images/w3schools_green.jpg" alt="W3Schools.com" />
   <title>Guess the Number</title>
 </head>
 <body>
   <h1>Guess the Number</h1>
-  <button class="button" onclick="checkGuess()">Button to check</button>
+  <button class="button1" onclick="checkGuess()">Button to check</button>
+  <button class="button2" onclick="rolldie()">Roll a 6 sided die!</button>
+
   <p>Try to guess the number between 1 and 100.</p>
   <input type="text" id="guess" placeholder="Enter your guess" />
   <p id="result"></p>
+
+  
+  <div id="die2" style="position:fixed; left:750px; top:400px; background-color:orange; padding: 50px 50px; font-size: 45px;"> 
+  Die result will show up here!</div>
+
 
   <script>
     // Generate a random number between 1 and 100
@@ -51,6 +80,13 @@
         document.getElementById("result").innerHTML = "Too high. Guess again.";
       }
     }
+    function rolldie() {
+      sides = 6
+      var randomNumber = Math.floor(Math.random() * this.sides) + 1;
+      alert("rolled")
+      document.getElementById("die2").innerHTML = ("you rolled a", randomNumber);
+    }
   </script>
 </body>
+
 </html>
