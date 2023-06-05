@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: base
 description: cool lol
 title: Last reflection for CSP of Night at the Museum
 ---
